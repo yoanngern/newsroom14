@@ -1,0 +1,28 @@
+{% extends "::layout.html.twig" %}
+
+{% block body %}
+    
+    <h1>Ajouter un article au guide</h1>
+    
+    <form action="{{ path('comem_newsroom_guide_add') }}" method="post" {{ form_enctype(form) }}>
+    
+    	{{ form_errors(form) }}
+    	
+    	<h2>Titre</h2>
+    	{{ form_widget(form.title) }}
+    	
+    	<h2>Description</h2>
+    	{{ form_widget(form.description) }}
+    	
+    	<h2>Lien</h2>
+    	{{ form_widget(form.link) }}
+    	
+    	<h2>Adresse</h2>
+    	{{ form_widget(form.address) }}
+    	
+    	<input type="submit" />
+        
+        {{ form_rest(form) }}
+    </form>
+
+{% endblock %}

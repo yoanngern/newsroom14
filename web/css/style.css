@@ -23,3 +23,10 @@ article, aside, footer, header, hgroup, nav, section, figure, figcaption {
 
 body {
   font-family: "helvetica", sans-serif; }
+
+h1 {
+  font-size: 1.4em; }
+
+article {
+  margin: 20px;
+  border: 1px solid #a1a1a1; }

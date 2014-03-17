@@ -1,3 +1,12 @@
 comem_newsroom_home:
     pattern:  /
     defaults: { _controller: comemNewsroomBundle:Default:home }
+
+
+comem_newsroom_guide:
+    pattern:  /guide
+    defaults: { _controller: comemNewsroomBundle:Guide:list }
+    
+comem_newsroom_guide_add:
+    pattern:  /guide/add
+    defaults: { _controller: comemNewsroomBundle:Guide:add }

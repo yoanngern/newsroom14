@@ -1,0 +1,16 @@
+{% extends "::layout.html.twig" %}
+
+{% block body %}
+
+    {% for ad in ads %}
+        <article>
+            <h1>{{ ad.title }}</h1>
+            <p>{{ ad.description }}</p>
+            <p>{{ ad.link }}</p>
+            <p>{{ ad.address }}</p>
+        </article>
+    {% else %}
+        <p>Il n'y a pas d'articles dans le guide.</p>
+    {% endfor %}
+
+{% endblock %}
