@@ -41,6 +41,20 @@ class Ad
      * @ORM\Column(name="link", type="string", length=255)
      */
     private $link;
+    
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="phone", type="string", length=255)
+     */
+    private $phone;
+    
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="category", type="string", length=255)
+     */
+    private $category;
 
     /**
      * @var string
@@ -48,6 +62,13 @@ class Ad
      * @ORM\Column(name="address", type="text")
      */
     private $address;
+    
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="grade", type="integer")
+     */
+    private $grade;
 
 
     /**
@@ -150,5 +171,74 @@ class Ad
     public function getAddress()
     {
         return $this->address;
+    }
+
+    /**
+     * Set grade
+     *
+     * @param integer $grade
+     * @return Ad
+     */
+    public function setGrade($grade)
+    {
+        $this->grade = $grade;
+
+        return $this;
+    }
+
+    /**
+     * Get grade
+     *
+     * @return integer 
+     */
+    public function getGrade()
+    {
+        return $this->grade;
+    }
+
+    /**
+     * Set phone
+     *
+     * @param string $phone
+     * @return Ad
+     */
+    public function setPhone($phone)
+    {
+        $this->phone = $phone;
+
+        return $this;
+    }
+
+    /**
+     * Get phone
+     *
+     * @return string 
+     */
+    public function getPhone()
+    {
+        return $this->phone;
+    }
+
+    /**
+     * Set category
+     *
+     * @param string $category
+     * @return Ad
+     */
+    public function setCategory($category)
+    {
+        $this->category = $category;
+
+        return $this;
+    }
+
+    /**
+     * Get category
+     *
+     * @return string 
+     */
+    public function getCategory()
+    {
+        return $this->category;
     }
 }

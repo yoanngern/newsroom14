@@ -1,5 +1,9 @@
 {% extends "::layout.html.twig" %}
 
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/form.css') }}" type="text/css" />
+{% endblock %}
+
 {% block body %}
     
     <h1>Ajouter un article au guide</h1>
@@ -19,6 +23,15 @@
     	
     	<h2>Adresse</h2>
     	{{ form_widget(form.address) }}
+    	
+    	<h2>Téléphone</h2>
+    	{{ form_widget(form.phone) }}
+    	
+    	<h2>Note</h2>
+    	{{ form_widget(form.grade) }}
+    	
+    	<h2>Catégorie</h2>
+    	{{ form_widget(form.category) }}
     	
     	<input type="submit" />
         

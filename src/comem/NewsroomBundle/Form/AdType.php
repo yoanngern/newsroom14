@@ -18,7 +18,21 @@ class AdType extends AbstractType
             ->add('title',          'text')
             ->add('description',    'textarea')
             ->add('link',           'text')
-            ->add('address',        'textarea')
+            ->add('address',        'textarea', array('required' => false))
+            ->add('phone',          'text', array('required' => false))
+            ->add('grade',          'number')
+            ->add('category',       'text')
+            ->add('category',       'choice', array(
+                                        'choices'   => array(
+                                            'alimentation'  => 'Alimentation',
+                                            'logement'      => 'Logement',
+                                            'social'        => 'Social',
+                                            'travail'       => 'Travail',
+                                            'hygiene'       => 'Hygiène'
+                                        ),
+                                        'expanded' => true,
+                                        'multiple'  => true,
+                                        'empty_value'   => 'Catégorie'))
         ;
     }
     
