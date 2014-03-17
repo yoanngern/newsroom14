@@ -1,4 +1,4 @@
-newsroom14
+# Newsroom 2014
 ==========
 
-Study of MM40 project
+This is a study project of the class MM40.
