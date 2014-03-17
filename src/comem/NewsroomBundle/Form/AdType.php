@@ -17,7 +17,7 @@ class AdType extends AbstractType
         $builder
             ->add('title',          'text')
             ->add('description',    'textarea')
-            ->add('link',           'text')
+            ->add('link',           'text', array('required' => false))
             ->add('address',        'textarea', array('required' => false))
             ->add('phone',          'text', array('required' => false))
             ->add('grade',          'number')

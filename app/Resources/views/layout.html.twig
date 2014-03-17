@@ -17,6 +17,39 @@
         
     </head>
     <body>
-	    {% block body %}{% endblock %}
+        <section id="container">
+            
+            <header>
+                <nav>
+                    <ul>
+                        <li>Alimentation</li>
+                        <li>Hygiène</li>
+                        <li>Transports</li>
+                        <li>Logement</li>
+                        <li>Relations sociales</li>
+                        <li>Santé</li>
+                        <li>Vêtements</li>
+                    </ul>
+                </nav>
+            </header>
+            
+            <section id="content">
+                <header>
+                    <h1>Titre</h1>
+                </header>
+                {% block body %}{% endblock %}
+                
+                <article id="help">
+                    <h1>Les aides</h1>
+                    
+                    <section>
+                        <h1>Emmaus</h1>
+                        <p>blablabla</p>
+                        <p>www.emmaus.ch</p>
+                    </section>
+                </article>
+            </section>
+            
+        </section>
     </body>
 </html>
