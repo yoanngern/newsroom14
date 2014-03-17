@@ -1,0 +1,7 @@
+parameters:
+#    comem_newsroom.example.class: comem\NewsroomBundle\Example
+
+services:
+#    comem_newsroom.example:
+#        class: %comem_newsroom.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

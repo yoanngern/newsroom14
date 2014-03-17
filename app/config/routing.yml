@@ -1,0 +1,4 @@
+comem_newsroom:
+    resource: "@comemNewsroomBundle/Resources/config/routing.yml"
+    prefix:   /
+
