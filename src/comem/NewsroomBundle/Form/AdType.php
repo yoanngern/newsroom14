@@ -16,25 +16,27 @@ class AdType extends AbstractType
     {
         $builder
             ->add('title',          'text')
-            ->add('description',    'textarea')
+            ->add('description',    'textarea', array('required' => false))
             ->add('link',           'text', array('required' => false))
             ->add('address',        'textarea', array('required' => false))
             ->add('phone',          'text', array('required' => false))
             ->add('grade',          'number')
-            ->add('category',       'text')
-            ->add('category',       'choice', array(
+            ->add('place',          'choice', array(
                                         'choices'   => array(
-                                            'alimentation'  => 'Alimentation',
-                                            'higiene'       => 'Hygiène',
-                                            'transports'    => 'Transports',
-                                            'logement'      => 'Logement',
-                                            'social'        => 'Relations sociales',
-                                            'sante'         => 'Santé',
-                                            'vetements'     => 'Vêtements'
+                                            'vd'    => 'Vaud',
+                                            'ge'    => 'Genève',
+                                            'fr'    => 'Fribourg',
+                                            'ne'    => 'Neuchâtel',
+                                            'vs'    => 'Valais',
+                                            'ju'    => 'Jura',
+                                            'ch'    => 'Suisse'
                                         ),
-                                        'expanded' => true,
-                                        'multiple'  => true,
-                                        'empty_value'   => 'Catégorie'))
+                                        'multiple'  => false,
+                                        'empty_value'   => 'Sélectionner un lieu'))
+            ->add('theme',          'entity', array(    'class'         => 'comemNewsroomBundle:Theme',
+                                                        'empty_value'   => 'Sélectionner un thème',
+                                                        'multiple'      => false,
+                                                        'property'      => 'title'))
         ;
     }
     

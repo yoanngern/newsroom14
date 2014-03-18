@@ -10,6 +10,10 @@ comem_newsroom_directory_add:
     pattern:  /annuaire/add
     defaults: { _controller: comemNewsroomBundle:Directory:add }
     
+comem_newsroom_directory_edit:
+    pattern:  /annuaire/edit/{ad}
+    defaults: { _controller: comemNewsroomBundle:Directory:edit }
+    
 comem_newsroom_theme:
     pattern:  /{theme}
     defaults: { _controller: comemNewsroomBundle:Article:theme }

@@ -17,7 +17,9 @@ class AdRepository extends EntityRepository
     {
         $qb = $this->createQueryBuilder('a');
         
-        $qb->where('a.category = :theme')
+        $qb->join('a.theme', 't');
+        
+        $qb->where('t.ref = :theme')
             ->setParameter('theme', $theme);
             
         

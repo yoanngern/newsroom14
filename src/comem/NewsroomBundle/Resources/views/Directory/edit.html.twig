@@ -6,9 +6,9 @@
 
 {% block content %}
     
-    <h1>Ajouter une annonce à l'annuaire</h1>
+    <h1>Modifier une annonce</h1>
     
-    <form action="{{ path('comem_newsroom_directory_add') }}" method="post" {{ form_enctype(form) }}>
+    <form action="{{ path('comem_newsroom_directory_edit', {'ad': ad.id}) }}" method="post" {{ form_enctype(form) }}>
     
     	{{ form_errors(form) }}
     	

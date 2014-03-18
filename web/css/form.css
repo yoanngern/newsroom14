@@ -75,6 +75,38 @@ body {
         padding: 5px;
         display: inline-block; }
 
-article {
+#content > h1 {
+  font-size: 2em;
+  text-align: center; }
+#content form {
+  padding-left: 20px; }
+  #content form h2 {
+    padding-top: 10px;
+    font-family: "Helvetica-Bold", "helvetica", sans-serif; }
+  #content form input,
+  #content form textarea,
+  #content form select {
+    border: 1px solid #1a1a1a;
+    line-height: 1.3em;
+    font-size: 1.3em;
+    width: 300px;
+    padding: 3px; }
+  #content form input[type=submit] {
+    width: auto;
+    background: none;
+    display: block;
+    margin-top: 20px;
+    cursor: pointer;
+    padding: 0px 3px;
+    font-family: "helvetica", sans-serif; }
+#content > a.ad {
   margin: 20px;
-  border: 1px solid #1a1a1a; }
+  display: block;
+  border: 1px solid #1a1a1a;
+  color: #1a1a1a;
+  text-decoration: none; }
+  #content > a.ad h1 {
+    padding: 5px;
+    font-size: 1.3em; }
+  #content > a.ad p {
+    padding: 0 0 0 5px !important; }

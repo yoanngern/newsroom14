@@ -1,9 +1,17 @@
 {% extends "::layout.html.twig" %}
 
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/form.css') }}" type="text/css" />
+{% endblock %}
+
 {% block content %}
 
+    <h1>Annuaire</h1>
+    
+    <a href="{{ path('comem_newsroom_directory_add') }}">Ajouter une annonce</a>
+
     {% for ad in ads %}
-        <article>
+        <a class="ad" href="{{ path('comem_newsroom_directory_edit', {'ad': ad.id}) }}">
             <h1>{{ ad.title }}</h1>
             <p>{{ ad.description }}</p>
             <p>{{ ad.link }}</p>
@@ -11,7 +19,7 @@
             <p>{{ ad.phone }}</p>
             <p>{{ ad.grade }}</p>
             <p>{{ ad.category }}</p>
-        </article>
+        </a>
     {% else %}
         <p>Il n'y a pas d'articles dans le guide.</p>
     {% endfor %}
