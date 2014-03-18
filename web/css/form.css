@@ -29,6 +29,13 @@ article, aside, footer, header, hgroup, nav, section, figure, figcaption {
   font-style: normal; }
 
 @font-face {
+  font-family: 'dejavu_sansbold';
+  src: url("../fonts/DejaVuSans-Bold-webfont.eot");
+  src: url("../fonts/DejaVuSans-Bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/DejaVuSans-Bold-webfont.woff") format("woff"), url("../fonts/DejaVuSans-Bold-webfont.ttf") format("truetype"), url("../fonts/DejaVuSans-Bold-webfont.svg#dejavu_sansbold") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
   font-family: 'dejavu_serifCnBdIt';
   src: url("../fonts/DejaVuSerifCondensed-BoldItalic-webfont.eot");
   src: url("../fonts/DejaVuSerifCondensed-BoldItalic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/DejaVuSerifCondensed-BoldItalic-webfont.woff") format("woff"), url("../fonts/DejaVuSerifCondensed-BoldItalic-webfont.ttf") format("truetype"), url("../fonts/DejaVuSerifCondensed-BoldItalic-webfont.svg#dejavu_serifCnBdIt") format("svg");
@@ -53,69 +60,118 @@ body {
   font-family: "gentium_basicregular", helvetica, sans-serif;
   background: white; }
   body > header {
-    background: #7b1717;
-    width: 1280px;
-    margin: 0 auto; }
-    body > header nav ul {
-      margin: 0 auto;
-      text-align: center;
-      position: static; }
-      body > header nav ul li {
-        display: inline-block;
-        padding: 15px 5px; }
-        body > header nav ul li a {
-          color: white;
-          font-family: "dejavu_serifCnBdIt", times, serif;
-          text-decoration: none; }
-          body > header nav ul li a.actif {
-            color: #ffd517; }
+    background: #652d2a;
+    max-width: 1280px;
+    width: 100%;
+    min-width: 960px;
+    margin: 0 auto;
+    height: 50px;
+    z-index: 100;
+    overflow: hidden; }
+    body > header nav {
+      width: 960px;
+      margin: 0 auto; }
+      body > header nav ul {
+        margin: 0 auto;
+        text-align: center;
+        position: static; }
+        body > header nav ul li {
+          display: inline-block;
+          padding: 10px 10px; }
+          body > header nav ul li a {
+            color: white;
+            font-family: "dejavu_sansbold", helvetica, sans-serif;
+            text-decoration: none;
+            font-size: 1.05em; }
+            body > header nav ul li a.actif {
+              color: #1a1a1a; }
   body > article {
-    background: white;
     width: 960px;
     margin: 0 auto; }
-    body > article header h1 {
-      font-family: "dejavu_serifcondensed", times, serif;
-      font-size: 3em;
-      color: #7b1717; }
-    body > article p {
-      padding: 15px;
-      text-align: left; }
-    body > article #help {
-      background: #7b1717;
-      padding-bottom: 20px; }
-      body > article #help > h1 {
-        font-size: 2em;
-        padding: 5px 0px 5px 20px; }
-      body > article #help section {
-        display: inline-block;
-        width: 300px;
-        height: 150px;
-        background: green;
-        margin: 10px; }
-  body > footer {
-    text-align: center;
-    padding-bottom: 10px; }
-    body > footer a {
-      padding: 5px;
-      display: inline-block; }
+    body > article section.top {
+      z-index: 100;
+      min-width: 960px; }
+      body > article section.top #topBg {
+        height: 100%;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        width: 100%;
+        display: block;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        z-index: -5;
+        min-width: 960px;
+        overflow: auto; }
+      body > article section.top section.stats {
+        font-family: "gentium_basicitalic", helvetica, sans-serif;
+        font-size: 1.55em;
+        color: #652d2a;
+        margin: 30px 20px 30px 0px;
+        position: relative;
+        top: 5%;
+        width: 480px;
+        float: right; }
+      body > article section.top header {
+        margin: 100px 0 0 0;
+        position: absolute;
+        top: 12%;
+        width: 960px; }
+        body > article section.top header h1 {
+          font-family: "dejavu_serifcondensed", times, serif;
+          font-size: 3.5em;
+          color: #652d2a; }
+      body > article section.top section {
+        position: absolute;
+        top: 60%;
+        width: 960px; }
+    body > article section.bottom {
+      position: absolute;
+      width: 960px;
+      top: 100%;
+      margin-top: 30px; }
+      body > article section.bottom > footer {
+        text-align: center;
+        padding-bottom: 10px;
+        position: static;
+        bottom: 0px; }
+        body > article section.bottom > footer a {
+          padding: 5px;
+          display: inline-block; }
+      body > article section.bottom p {
+        padding: 15px;
+        text-align: left; }
+      body > article section.bottom #help {
+        background: #652d2a;
+        padding-bottom: 20px; }
+        body > article section.bottom #help > h1 {
+          font-size: 2em;
+          padding: 5px 0px 5px 20px; }
+        body > article section.bottom #help section {
+          display: inline-block;
+          width: 300px;
+          height: 150px;
+          background: green;
+          margin: 10px; }
 
-#content > h1 {
+#main > h1 {
   font-size: 2em;
   text-align: center; }
-#content form {
+#main form {
   padding-left: 20px; }
-  #content form h2 {
+  #main form h2 {
     padding-top: 10px;
     font-family: "Helvetica-Bold", "helvetica", sans-serif; }
-  #content form input,
-  #content form textarea,
-  #content form select {
+  #main form input,
+  #main form textarea,
+  #main form select {
     border: 1px solid #1a1a1a;
     line-height: 1.3em;
     font-size: 1.3em;
     width: 300px;
     padding: 3px; }
-  #content form input[type=submit] {
+  #main form input[type=submit] {
     width: auto;
     background: none;
     display: block;
@@ -123,20 +179,20 @@ body {
     cursor: pointer;
     padding: 0px 3px;
     font-family: "helvetica", sans-serif; }
-  #content form input[type=checkbox] {
+  #main form input[type=checkbox] {
     width: initial;
     display: inline-block; }
-  #content form label {
+  #main form label {
     display: block;
     padding-left: 20px; }
-#content > a.ad {
+#main > a.ad {
   margin: 20px;
   display: block;
   border: 1px solid #1a1a1a;
   color: #1a1a1a;
   text-decoration: none; }
-  #content > a.ad h1 {
+  #main > a.ad h1 {
     padding: 5px;
     font-size: 1.3em; }
-  #content > a.ad p {
+  #main > a.ad p {
     padding: 0 0 0 5px !important; }

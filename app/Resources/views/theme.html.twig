@@ -1,28 +1,58 @@
 {% extends "::layout.html.twig" %}
 
+{% block stylesheets %}
+    {{ parent() }}
+    
+    {% set link = 'images/' ~ theme.ref ~ '.jpg' %}
+    
+    <style>
+        #topBg {
+            background-image: url('{{ asset(link) }}');
+        }
+    </style>
+{% endblock %}
+
 {% block content %}
     
-    <section class="stats">
-    {% block stats %}{% endblock %}
-    </section>
-                
-    <header>
-        <h1>{{ theme.title }}</h1>
-    </header>
-    {% block article %}{% endblock %}
+    <section class="top">
     
-    {% if ads|length %}
-        <article id="help">
-            <h1>Les aides</h1>
+        <div id="topBg"></div>
+    
+        <section class="stats">
+            {% block stats %}{% endblock %}
+        </section>
+         
+        <header>
+            <h1>{{ theme.title }}</h1>
+            {% block lead %}{% endblock %}
             
-            {% for ad in ads %}
-                <section>
-                    <h1>{{ ad.title }}</h1>
-                    <p>{{ ad.description }}</p>
-                    <p>{{ ad.link }}</p>
-                </section>
-            {% endfor %}
-        </article>
-    {% endif %}
+        </header>
+        
+        {% block article_top %}{% endblock %}
+    
+    </section>
+    
+    <section class="bottom">
+        {% block article_bottom %}{% endblock %}
+        
+        {% if ads|length %}
+            <section id="help">
+                <h1>Les aides</h1>
+                
+                {% for ad in ads %}
+                    <section>
+                        <h1>{{ ad.title }}</h1>
+                        <p>{{ ad.description }}</p>
+                        <p>{{ ad.link }}</p>
+                    </section>
+                {% endfor %}
+            </section>
+        {% endif %}
+        
+        <footer>
+            <a href="http://www.comem.ch">comem+</a>
+            <a href="{{ path('comem_newsroom_directory') }}">Annuaire</a>
+        </footer>
+    </section>
     
 {% endblock %}

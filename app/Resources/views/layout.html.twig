@@ -22,6 +22,7 @@
         <header>
             <nav>
                 <ul>
+                    <li><a href="{{ path('comem_newsroom_home') }}">Intro</a></li>
                     <li><a class="{% if theme.ref == 'alimentation' %}actif{% endif %}" href="{{ path('comem_newsroom_theme', {'theme': 'alimentation'}) }}">Alimentation</a></li>
                     <li><a class="{% if theme.ref == 'hygiene' %}actif{% endif %}" href="{{ path('comem_newsroom_theme', {'theme': 'hygiene'}) }}">Hygiène</a></li>
                     <li><a class="{% if theme.ref == 'transports' %}actif{% endif %}" href="{{ path('comem_newsroom_theme', {'theme': 'transports'}) }}">Transports</a></li>
@@ -37,11 +38,6 @@
             {% block content %}
             {% endblock %}
         </article>
-            
-        </section>
-        <footer>
-            <a href="http://www.comem.ch">comem+</a>
-            <a href="{{ path('comem_newsroom_directory') }}">Annuaire</a>
-        </footer>
+        
     </body>
 </html>
