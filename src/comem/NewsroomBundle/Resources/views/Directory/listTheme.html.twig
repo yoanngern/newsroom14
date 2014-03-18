@@ -8,12 +8,14 @@
 
     <h1>Thèmes</h1>
     
-    <a href="{{ path('comem_newsroom_directory_add') }}">Ajouter une annonce</a>
     <a href="{{ path('comem_newsroom_directory') }}">Annuaire</a>
     <a href="{{ path('comem_newsroom_directory_theme') }}">Thèmes</a>
+    
+    <a href="{{ path('comem_newsroom_directory_add') }}">Ajouter une annonce</a>
+    <a href="{{ path('comem_newsroom_directory_theme_add') }}">Ajouter un thème</a>
 
     {% for theme in themes %}
-        <a class="ad" href="">
+        <a class="ad" href="{{ path('comem_newsroom_directory_theme_edit', {'theme': theme.ref}) }}">
             <h1>{{ theme.title }}</h1>
             <p>{{ theme.ref }}</p>
         </a>

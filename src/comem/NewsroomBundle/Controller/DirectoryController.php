@@ -7,6 +7,9 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use comem\NewsroomBundle\Entity\Ad;
 use comem\NewsroomBundle\Form\AdType;
 
+use comem\NewsroomBundle\Entity\Theme;
+use comem\NewsroomBundle\Form\ThemeType;
+
 class DirectoryController extends Controller
 {
     public function listAction()
@@ -130,6 +133,38 @@ class DirectoryController extends Controller
         }
         
         return $this->render('comemNewsroomBundle:Directory:addTheme.html.twig', array(
+            'form' => $form->createView()
+        ));
+    }
+    
+    
+    /*
+     *   Edit a theme
+     */
+    public function editThemeAction(Theme $theme)
+    {
+        $form = $this->createForm(new ThemeType, $theme);
+        
+        $request = $this->get('request');
+        
+        if($request->getMethod() == 'POST')
+        {
+            $form->bind($request);
+            
+            if($form->isValid())
+            {
+                $em = $this->getDoctrine()->getManager();
+                $em->persist($theme);
+                $em->flush();
+                
+                $this->get('session')->getFlashBag()->add('info', 'Le thème a été modifié.');
+                
+                return $this->redirect( $this->generateUrl('comem_newsroom_directory_theme'));
+            }
+        }
+        
+        return $this->render('comemNewsroomBundle:Directory:editTheme.html.twig', array(
+            'theme' => $theme,
             'form' => $form->createView()
         ));
     }

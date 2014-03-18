@@ -8,9 +8,11 @@
 
     <h1>Annuaire</h1>
     
-    <a href="{{ path('comem_newsroom_directory_add') }}">Ajouter une annonce</a>
     <a href="{{ path('comem_newsroom_directory') }}">Annuaire</a>
     <a href="{{ path('comem_newsroom_directory_theme') }}">Thèmes</a>
+    
+    <a href="{{ path('comem_newsroom_directory_add') }}">Ajouter une annonce</a>
+    <a href="{{ path('comem_newsroom_directory_theme_add') }}">Ajouter un thème</a>
 
     {% for ad in ads %}
         <a class="ad" href="{{ path('comem_newsroom_directory_edit', {'ad': ad.id}) }}">

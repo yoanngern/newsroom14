@@ -22,6 +22,10 @@ comem_newsroom_directory_theme_add:
     pattern:  /theme/add
     defaults: { _controller: comemNewsroomBundle:Directory:addTheme }
     
+comem_newsroom_directory_theme_edit:
+    pattern:  /theme/edit/{theme}
+    defaults: { _controller: comemNewsroomBundle:Directory:editTheme }
+    
 comem_newsroom_theme:
     pattern:  /{theme}
     defaults: { _controller: comemNewsroomBundle:Article:theme }

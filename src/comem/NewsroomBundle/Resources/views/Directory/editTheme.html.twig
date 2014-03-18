@@ -8,33 +8,15 @@
     
     <h1>Modifier une annonce</h1>
     
-    <form action="{{ path('comem_newsroom_directory_edit', {'ad': ad.id}) }}" method="post" {{ form_enctype(form) }}>
+    <form action="{{ path('comem_newsroom_directory_theme_edit', {'theme': theme.ref}) }}" method="post" {{ form_enctype(form) }}>
     
     	{{ form_errors(form) }}
     	
-    	<h2>Titre *</h2>
+    	<h2>Thème *</h2>
     	{{ form_widget(form.title) }}
     	
-    	<h2>Description</h2>
-    	{{ form_widget(form.description) }}
-    	
-    	<h2>Lien</h2>
-    	{{ form_widget(form.link) }}
-    	
-    	<h2>Adresse</h2>
-    	{{ form_widget(form.address) }}
-    	
-    	<h2>Téléphone</h2>
-    	{{ form_widget(form.phone) }}
-    	
-    	<h2>Note *</h2>
-    	{{ form_widget(form.grade) }}
-    	
-    	<h2>Lieux *</h2>
-    	{{ form_widget(form.place) }}
-    	
-    	<h2>Catégorie *</h2>
-    	{{ form_widget(form.theme) }}
+    	<h2>Ref *</h2>
+    	{{ form_widget(form.ref) }}
     	
     	<input type="submit" />
         
