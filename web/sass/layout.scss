@@ -80,5 +80,15 @@ body {
                 }
             }
         }
+        
+        footer {
+            text-align: center;
+            padding-bottom: 10px;
+            
+            a {
+                padding: 5px;
+                display: inline-block;
+            }
+        }
     }
 }

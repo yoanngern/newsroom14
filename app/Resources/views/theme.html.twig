@@ -1,0 +1,24 @@
+{% extends "::layout.html.twig" %}
+
+{% block content %}
+                
+    <header>
+        <h1>{{ theme }}</h1>
+    </header>
+    {% block article %}{% endblock %}
+    
+    {% if ads|length %}
+        <article id="help">
+            <h1>Les aides</h1>
+            
+            {% for ad in ads %}
+                <section>
+                    <h1>{{ ad.title }}</h1>
+                    <p>{{ ad.description }}</p>
+                    <p>{{ ad.link }}</p>
+                </section>
+            {% endfor %}
+        </article>
+    {% endif %}
+    
+{% endblock %}

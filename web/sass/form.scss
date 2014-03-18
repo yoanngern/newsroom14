@@ -1,15 +1,4 @@
-@import 'color';
-@import 'reset';
-@import 'functions';
-@import 'font';
-
-body {
-    font-family: $font-regular;
-}
-
-h1 {
-    font-size: 1.4em;
-}
+@import 'layout';
 
 article {
     margin: 20px;

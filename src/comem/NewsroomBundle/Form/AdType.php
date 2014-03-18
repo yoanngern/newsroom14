@@ -25,10 +25,12 @@ class AdType extends AbstractType
             ->add('category',       'choice', array(
                                         'choices'   => array(
                                             'alimentation'  => 'Alimentation',
+                                            'higiene'       => 'Hygiène',
+                                            'transports'    => 'Transports',
                                             'logement'      => 'Logement',
-                                            'social'        => 'Social',
-                                            'travail'       => 'Travail',
-                                            'hygiene'       => 'Hygiène'
+                                            'social'        => 'Relations sociales',
+                                            'sante'         => 'Santé',
+                                            'vetements'     => 'Vêtements'
                                         ),
                                         'expanded' => true,
                                         'multiple'  => true,

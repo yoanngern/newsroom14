@@ -1,12 +1,16 @@
 comem_newsroom_home:
     pattern:  /
-    defaults: { _controller: comemNewsroomBundle:Default:home }
-
-
-comem_newsroom_guide:
-    pattern:  /guide
-    defaults: { _controller: comemNewsroomBundle:Guide:list }
+    defaults: { _controller: comemNewsroomBundle:Article:home }
     
-comem_newsroom_guide_add:
-    pattern:  /guide/add
-    defaults: { _controller: comemNewsroomBundle:Guide:add }
+comem_newsroom_directory:
+    pattern:  /annuaire
+    defaults: { _controller: comemNewsroomBundle:Directory:list }
+    
+comem_newsroom_directory_add:
+    pattern:  /annuaire/add
+    defaults: { _controller: comemNewsroomBundle:Directory:add }
+    
+comem_newsroom_theme:
+    pattern:  /{theme}
+    defaults: { _controller: comemNewsroomBundle:Article:theme }
+

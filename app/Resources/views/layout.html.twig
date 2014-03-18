@@ -22,34 +22,26 @@
             <header>
                 <nav>
                     <ul>
-                        <li>Alimentation</li>
-                        <li>Hygiène</li>
-                        <li>Transports</li>
-                        <li>Logement</li>
-                        <li>Relations sociales</li>
-                        <li>Santé</li>
-                        <li>Vêtements</li>
+                        <li><a href="{{ path('comem_newsroom_theme', {'theme': 'alimentation'}) }}">Alimentation</a></li>
+                        <li><a href="{{ path('comem_newsroom_theme', {'theme': 'hygiene'}) }}">Hygiène</a></li>
+                        <li><a href="{{ path('comem_newsroom_theme', {'theme': 'transports'}) }}">Transports</a></li>
+                        <li><a href="{{ path('comem_newsroom_theme', {'theme': 'logement'}) }}">Logement</a></li>
+                        <li><a href="{{ path('comem_newsroom_theme', {'theme': 'social'}) }}">Relations sociales</a></li>
+                        <li><a href="{{ path('comem_newsroom_theme', {'theme': 'sante'}) }}">Santé</a></li>
+                        <li><a href="{{ path('comem_newsroom_theme', {'theme': 'vetements'}) }}">Vêtements</a></li>
                     </ul>
                 </nav>
             </header>
             
             <section id="content">
-                <header>
-                    <h1>Titre</h1>
-                </header>
-                {% block body %}{% endblock %}
-                
-                <article id="help">
-                    <h1>Les aides</h1>
-                    
-                    <section>
-                        <h1>Emmaus</h1>
-                        <p>blablabla</p>
-                        <p>www.emmaus.ch</p>
-                    </section>
-                </article>
+                {% block content %}
+                {% endblock %}
             </section>
             
+            <footer>
+                <a href="http://www.comem.ch">comem+</a>
+                <a href="{{ path('comem_newsroom_directory') }}">Annuaire</a>
+            </footer>
         </section>
     </body>
 </html>

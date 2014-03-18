@@ -7,7 +7,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use comem\NewsroomBundle\Entity\Ad;
 use comem\NewsroomBundle\Form\AdType;
 
-class GuideController extends Controller
+class DirectoryController extends Controller
 {
     public function listAction()
     {
@@ -16,7 +16,7 @@ class GuideController extends Controller
         
         $ads = $em->getRepository('comemNewsroomBundle:Ad')->findAll();
         
-        return $this->render('comemNewsroomBundle:Guide:list.html.twig', array(
+        return $this->render('comemNewsroomBundle:Directory:list.html.twig', array(
             'ads' => $ads,
         ));
     }
@@ -50,7 +50,7 @@ class GuideController extends Controller
             }
         }
         
-        return $this->render('comemNewsroomBundle:Guide:add.html.twig', array(
+        return $this->render('comemNewsroomBundle:Directory:add.html.twig', array(
             'form' => $form->createView()
         ));
     }

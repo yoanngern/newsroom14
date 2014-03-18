@@ -12,4 +12,16 @@ use Doctrine\ORM\EntityRepository;
  */
 class AdRepository extends EntityRepository
 {
+
+    public function findAllByTheme($theme)
+    {
+        $qb = $this->createQueryBuilder('a');
+        
+        $qb->where('a.category = :theme')
+            ->setParameter('theme', $theme);
+            
+        
+        return $qb->getQuery()->getResult();
+    }
+
 }
