@@ -17,31 +17,33 @@
         
     </head>
     <body>
+        
+            
+        <header>
+            <nav>
+                <ul>
+                    <li><a class="{% if theme.ref == 'alimentation' %}actif{% endif %}" href="{{ path('comem_newsroom_theme', {'theme': 'alimentation'}) }}">Alimentation</a></li>
+                    <li><a class="{% if theme.ref == 'hygiene' %}actif{% endif %}" href="{{ path('comem_newsroom_theme', {'theme': 'hygiene'}) }}">Hygiène</a></li>
+                    <li><a class="{% if theme.ref == 'transports' %}actif{% endif %}" href="{{ path('comem_newsroom_theme', {'theme': 'transports'}) }}">Transports</a></li>
+                    <li><a class="{% if theme.ref == 'logement' %}actif{% endif %}" href="{{ path('comem_newsroom_theme', {'theme': 'logement'}) }}">Logement</a></li>
+                    <li><a class="{% if theme.ref == 'social' %}actif{% endif %}" href="{{ path('comem_newsroom_theme', {'theme': 'social'}) }}">Relations sociales</a></li>
+                    <li><a class="{% if theme.ref == 'sante' %}actif{% endif %}" href="{{ path('comem_newsroom_theme', {'theme': 'sante'}) }}">Santé</a></li>
+                    <li><a class="{% if theme.ref == 'vetements' %}actif{% endif %}" href="{{ path('comem_newsroom_theme', {'theme': 'vetements'}) }}">Vêtements</a></li>
+                </ul>
+            </nav>
+        </header>
+        
         <section id="container">
-            
-            <header>
-                <nav>
-                    <ul>
-                        <li><a href="{{ path('comem_newsroom_theme', {'theme': 'alimentation'}) }}">Alimentation</a></li>
-                        <li><a href="{{ path('comem_newsroom_theme', {'theme': 'hygiene'}) }}">Hygiène</a></li>
-                        <li><a href="{{ path('comem_newsroom_theme', {'theme': 'transports'}) }}">Transports</a></li>
-                        <li><a href="{{ path('comem_newsroom_theme', {'theme': 'logement'}) }}">Logement</a></li>
-                        <li><a href="{{ path('comem_newsroom_theme', {'theme': 'social'}) }}">Relations sociales</a></li>
-                        <li><a href="{{ path('comem_newsroom_theme', {'theme': 'sante'}) }}">Santé</a></li>
-                        <li><a href="{{ path('comem_newsroom_theme', {'theme': 'vetements'}) }}">Vêtements</a></li>
-                    </ul>
-                </nav>
-            </header>
-            
             <section id="content">
                 {% block content %}
                 {% endblock %}
             </section>
             
-            <footer>
-                <a href="http://www.comem.ch">comem+</a>
-                <a href="{{ path('comem_newsroom_directory') }}">Annuaire</a>
-            </footer>
+            
         </section>
+        <footer>
+            <a href="http://www.comem.ch">comem+</a>
+            <a href="{{ path('comem_newsroom_directory') }}">Annuaire</a>
+        </footer>
     </body>
 </html>

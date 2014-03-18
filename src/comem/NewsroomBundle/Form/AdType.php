@@ -35,7 +35,8 @@ class AdType extends AbstractType
                                         'empty_value'   => 'Sélectionner un lieu'))
             ->add('theme',          'entity', array(    'class'         => 'comemNewsroomBundle:Theme',
                                                         'empty_value'   => 'Sélectionner un thème',
-                                                        'multiple'      => false,
+                                                        'multiple'      => true,
+                                                        'expanded'      => true,
                                                         'property'      => 'title'))
         ;
     }

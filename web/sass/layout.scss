@@ -5,29 +5,45 @@
 
 body {
     font-family: $font-regular;
-    background: $black;
+    background: $white;
+    
+    & > header {
+        background: $red;
+        width: 1280px;
+        margin: 0 auto;
+        
+        nav {
+            ul {
+                margin: 0 auto;
+                text-align: center;
+                position: static;
+                
+                li {
+                    display: inline-block;
+                    padding: 15px 5px;
+                    color: $white;
+                    
+                    a {
+                        color: $white;
+                        text-decoration: none;
+                        
+                        &.actif {
+                            color: $yellow;
+                        }
+                    }
+                }
+            }
+        }
+    }
     
     #container {
         width: 1024px;
         margin: 0 auto;
         background: $white;
         
-        header {
-            nav {
-                ul {
-                    margin: 0 auto;
-                    text-align: center;
-                    position: static;
-                    
-                    li {
-                        display: inline-block;
-                        padding: 15px 5px;
-                    }
-                }
-            }
-        }
-        
         #content {
+            width: 960px;
+            
             
             header {
                 height: 140px;
@@ -80,15 +96,15 @@ body {
                 }
             }
         }
+    }
+    
+    footer {
+        text-align: center;
+        padding-bottom: 10px;
         
-        footer {
-            text-align: center;
-            padding-bottom: 10px;
-            
-            a {
-                padding: 5px;
-                display: inline-block;
-            }
+        a {
+            padding: 5px;
+            display: inline-block;
         }
     }
 }

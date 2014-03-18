@@ -35,6 +35,16 @@
             padding: 0px 3px;
             font-family: $font-regular;
         }
+        
+        input[type=checkbox] {
+            width: initial;
+            display: inline-block;
+        }
+        
+        label {
+            display: block;
+            padding-left: 20px;
+        }
     }
     
     & > a.ad {

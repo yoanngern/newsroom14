@@ -1,6 +1,10 @@
 {% extends "::layout.html.twig" %}
 
 {% block content %}
+    
+    <section class="stats">
+    {% block stats %}{% endblock %}
+    </section>
                 
     <header>
         <h1>{{ theme.title }}</h1>
