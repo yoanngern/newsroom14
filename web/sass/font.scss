@@ -2,3 +2,55 @@ $font-regular: 'helvetica', sans-serif;
 $font-light: 'Helvetica-Light', 'helvetica', sans-serif;
 $font-medium: 'Helvetica-Medium', 'helvetica', sans-serif;
 $font-bold: 'Helvetica-Bold', 'helvetica', sans-serif;
+
+@font-face {
+    font-family: 'dejavu_serifcondensed';
+    src: url('../fonts/DejaVuSerifCondensed-Italic-webfont.eot');
+    src: url('../fonts/DejaVuSerifCondensed-Italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/DejaVuSerifCondensed-Italic-webfont.woff') format('woff'),
+         url('../fonts/DejaVuSerifCondensed-Italic-webfont.ttf') format('truetype'),
+         url('../fonts/DejaVuSerifCondensed-Italic-webfont.svg#dejavu_serifcondensed') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'dejavu_serifCnBdIt';
+    src: url('../fonts/DejaVuSerifCondensed-BoldItalic-webfont.eot');
+    src: url('../fonts/DejaVuSerifCondensed-BoldItalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/DejaVuSerifCondensed-BoldItalic-webfont.woff') format('woff'),
+         url('../fonts/DejaVuSerifCondensed-BoldItalic-webfont.ttf') format('truetype'),
+         url('../fonts/DejaVuSerifCondensed-BoldItalic-webfont.svg#dejavu_serifCnBdIt') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'gentium_basicregular';
+    src: url('../fonts/genbasr-webfont.eot');
+    src: url('../fonts/genbasr-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/genbasr-webfont.woff') format('woff'),
+         url('../fonts/genbasr-webfont.ttf') format('truetype'),
+         url('../fonts/genbasr-webfont.svg#gentium_basicregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'gentium_basicitalic';
+    src: url('../fonts/genbasi-webfont.eot');
+    src: url('../fonts/genbasi-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/genbasi-webfont.woff') format('woff'),
+         url('../fonts/genbasi-webfont.ttf') format('truetype'),
+         url('../fonts/genbasi-webfont.svg#gentium_basicitalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+$font-title-h1: 'dejavu_serifcondensed', times, serif;
+
+$font-title-h2: 'dejavu_serifCnBdIt', times, serif;
+
+$font-text: 'gentium_basicregular', helvetica, sans-serif;
+
+$font-text-italic: 'gentium_basicitalic', helvetica, sans-serif;
