@@ -14,6 +14,14 @@ comem_newsroom_directory_edit:
     pattern:  /annuaire/edit/{ad}
     defaults: { _controller: comemNewsroomBundle:Directory:edit }
     
+comem_newsroom_directory_theme:
+    pattern:  /theme
+    defaults: { _controller: comemNewsroomBundle:Directory:listTheme }
+    
+comem_newsroom_directory_theme_add:
+    pattern:  /theme/add
+    defaults: { _controller: comemNewsroomBundle:Directory:addTheme }
+    
 comem_newsroom_theme:
     pattern:  /{theme}
     defaults: { _controller: comemNewsroomBundle:Article:theme }

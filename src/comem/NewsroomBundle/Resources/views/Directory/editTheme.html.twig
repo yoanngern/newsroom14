@@ -1,0 +1,44 @@
+{% extends "::layout.html.twig" %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/form.css') }}" type="text/css" />
+{% endblock %}
+
+{% block content %}
+    
+    <h1>Modifier une annonce</h1>
+    
+    <form action="{{ path('comem_newsroom_directory_edit', {'ad': ad.id}) }}" method="post" {{ form_enctype(form) }}>
+    
+    	{{ form_errors(form) }}
+    	
+    	<h2>Titre *</h2>
+    	{{ form_widget(form.title) }}
+    	
+    	<h2>Description</h2>
+    	{{ form_widget(form.description) }}
+    	
+    	<h2>Lien</h2>
+    	{{ form_widget(form.link) }}
+    	
+    	<h2>Adresse</h2>
+    	{{ form_widget(form.address) }}
+    	
+    	<h2>Téléphone</h2>
+    	{{ form_widget(form.phone) }}
+    	
+    	<h2>Note *</h2>
+    	{{ form_widget(form.grade) }}
+    	
+    	<h2>Lieux *</h2>
+    	{{ form_widget(form.place) }}
+    	
+    	<h2>Catégorie *</h2>
+    	{{ form_widget(form.theme) }}
+    	
+    	<input type="submit" />
+        
+        {{ form_rest(form) }}
+    </form>
+
+{% endblock %}

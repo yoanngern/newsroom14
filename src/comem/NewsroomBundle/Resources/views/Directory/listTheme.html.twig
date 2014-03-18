@@ -6,24 +6,19 @@
 
 {% block content %}
 
-    <h1>Annuaire</h1>
+    <h1>Thèmes</h1>
     
     <a href="{{ path('comem_newsroom_directory_add') }}">Ajouter une annonce</a>
     <a href="{{ path('comem_newsroom_directory') }}">Annuaire</a>
     <a href="{{ path('comem_newsroom_directory_theme') }}">Thèmes</a>
 
-    {% for ad in ads %}
-        <a class="ad" href="{{ path('comem_newsroom_directory_edit', {'ad': ad.id}) }}">
-            <h1>{{ ad.title }}</h1>
-            <p>{{ ad.description }}</p>
-            <p>{{ ad.link }}</p>
-            <p>{{ ad.address }}</p>
-            <p>{{ ad.phone }}</p>
-            <p>{{ ad.grade }}</p>
-            <p>{{ ad.category }}</p>
+    {% for theme in themes %}
+        <a class="ad" href="">
+            <h1>{{ theme.title }}</h1>
+            <p>{{ theme.ref }}</p>
         </a>
     {% else %}
-        <p>Il n'y a pas d'articles dans le guide.</p>
+        <p>Il n'y a pas de thème dans l'annuaire.</p>
     {% endfor %}
 
 {% endblock %}

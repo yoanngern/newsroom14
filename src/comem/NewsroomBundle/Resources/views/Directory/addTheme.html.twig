@@ -1,0 +1,23 @@
+{% extends "::layout.html.twig" %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/form.css') }}" type="text/css" />
+{% endblock %}
+
+{% block content %}
+    
+    <h1>Ajouter un thème</h1>
+    
+    <form action="{{ path('comem_newsroom_directory_theme_add') }}" method="post" {{ form_enctype(form) }}>
+    
+    	{{ form_errors(form) }}
+    	
+    	<h2>Thème *</h2>
+    	{{ form_widget(form.title) }}
+    	
+    	<input type="submit" />
+        
+        {{ form_rest(form) }}
+    </form>
+
+{% endblock %}
