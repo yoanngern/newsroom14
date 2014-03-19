@@ -32,9 +32,29 @@ class AdRepository extends EntityRepository
     {
         $qb = $this->createQueryBuilder('a');
         
-        $qb->where("a.title LIKE :search ")
-            ->setParameter('search', $search);
+        $qb->join('a.themes', 't');
+
+        $searches= explode(' ', $search);
+
+        foreach ($searches as $word) {
+            $qb->orWhere("a.title LIKE :search")
+                ->setParameter('search', '%'.$word.'%');
             
+            $qb->orWhere("a.description LIKE :search")
+                ->setParameter('search', '%'.$word.'%');
+                
+            $qb->orWhere("a.address LIKE :search")
+                ->setParameter('search', '%'.$word.'%');
+                
+            $qb->orWhere("t.title LIKE :search")
+                ->setParameter('search', '%'.$word.'%');
+                
+            $qb->orWhere("t.ref LIKE :search")
+                ->setParameter('search', '%'.$word.'%');
+        }
+        
+        $qb->groupBy('a.id');
+        
         $qb->orderBy('a.grade', 'DESC');
         
         
