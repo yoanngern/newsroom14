@@ -140,11 +140,7 @@ body {
       width: 960px;
       top: 100%;
       margin-top: 30px; }
-<<<<<<< HEAD
       body > article section.bottom > section {
-=======
-      body > article section.bottom section {
->>>>>>> 5b3a1921843049eee7a8195d69f430e7dddb3111
         margin-top: 2em; }
       body > article section.bottom:first-child {
         margin-top: 0; }
@@ -180,7 +176,6 @@ section.tcol p {
   -moz-columns: 3;
   columns: 3; }
 
-<<<<<<< HEAD
 .hr, section.quote > div.hr, section.smalltalks div.hr {
   display: inline-block;
   height: 4px;
@@ -190,33 +185,16 @@ section.quote {
   clear: both; }
   section.quote > div.hr {
     width: 20%;
-=======
-section.quote {
-  clear: both; }
-  section.quote > .hr {
-    display: inline-block;
-    height: 2px;
-    background-color: #652d2a;
-    width: 192px;
->>>>>>> 5b3a1921843049eee7a8195d69f430e7dddb3111
     position: relative;
     top: -33%; }
   section.quote quote.big {
     color: #652d2a;
-<<<<<<< HEAD
     font-size: 2em;
     width: 58%;
     margin: 0 0.5%;
     display: inline-block;
     text-align: center;
     line-height: 1.5em; }
-=======
-    font-size: 1.5em;
-    width: 556.8px;
-    display: inline-block;
-    text-align: center;
-    line-height: 1.2em; }
->>>>>>> 5b3a1921843049eee7a8195d69f430e7dddb3111
     section.quote quote.big:before {
       content: "<< ";
       font-family: "gentium_basicregular", helvetica, sans-serif; }
@@ -224,7 +202,6 @@ section.quote {
       content: " >>";
       font-family: "gentium_basicregular", helvetica, sans-serif; }
 
-<<<<<<< HEAD
 section.twothird > section {
   display: inline-block; }
   section.twothird > section.left {
@@ -282,28 +259,3 @@ section.smalltalks {
     -webkit-columns: 3;
     -moz-columns: 3;
     columns: 3; }
-=======
-section.twothird > * {
-  display: inline-block;
-  margin: 0 1.5%; }
-section.twothird img {
-  float: left;
-  margin: 0;
-  width: 60%; }
-section.twothird quote.small {
-  margin-top: 100px;
-  width: 37%;
-  font-family: "gentium_basicitalic", helvetica, sans-serif;
-  font-size: 1.5em; }
-  section.twothird quote.small:before {
-    content: "<< ";
-    font-family: "gentium_basicitalic", helvetica, sans-serif; }
-  section.twothird quote.small:after {
-    content: " >>";
-    font-family: "gentium_basicitalic", helvetica, sans-serif; }
-section.twothird > p {
-  margin-top: 30px;
-  width: 37%; }
-section.twothird span.name {
-  text-transform: uppercase; }
->>>>>>> 5b3a1921843049eee7a8195d69f430e7dddb3111
