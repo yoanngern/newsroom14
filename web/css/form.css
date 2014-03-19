@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* RESET */
 html, body, div, ul, ol, li, dl, dt, dd, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, fieldset, input, abbr, article, aside, command, details, figcaption, figure, footer, header, hgroup, mark, meter, nav, output, progress, section, summary, time {
   margin: 0;
@@ -196,10 +197,10 @@ section.quote {
     text-align: center;
     line-height: 1.5em; }
     section.quote quote.big:before {
-      content: "<< ";
+      content: "« ";
       font-family: "gentium_basicregular", helvetica, sans-serif; }
     section.quote quote.big:after {
-      content: " >>";
+      content: " »";
       font-family: "gentium_basicregular", helvetica, sans-serif; }
 
 section.twothird > section {
@@ -215,10 +216,10 @@ section.twothird > section {
       font-family: "gentium_basicitalic", helvetica, sans-serif;
       font-size: 2em; }
       section.twothird > section.right quote.small:before {
-        content: "<< ";
+        content: "« ";
         font-family: "gentium_basicitalic", helvetica, sans-serif; }
       section.twothird > section.right quote.small:after {
-        content: " >>";
+        content: " »";
         font-family: "gentium_basicitalic", helvetica, sans-serif; }
     section.twothird > section.right span.name {
       text-transform: uppercase; }

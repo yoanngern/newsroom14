@@ -45,6 +45,7 @@
         section.top {
             z-index: 100;
             min-width: 960px;
+            
             #topBg {
                 height: 100%;
                 background-repeat: no-repeat;
@@ -59,6 +60,7 @@
                 min-width: 960px;
                 overflow: auto;
             }
+            
             section.stats {
                 font-family: $font-text-italic;
                 font-size: 1.55em;
@@ -161,11 +163,11 @@ section.quote {
         text-align: center;
         line-height: 1.5em;
         &:before {
-            content: "<< ";
+            content: "« ";
             font-family: $font-text;
         }
         &:after {
-            content: " >>";
+            content: " »";
             font-family: $font-text;
         }
     }
@@ -186,11 +188,11 @@ section.twothird {
                 font-family: $font-text-italic;
                 font-size: 2em;
                 &:before {
-                    content: "<< ";
+                    content: "« ";
                     font-family: $font-text-italic;
                 }
                 &:after {
-                    content: " >>";
+                    content: " »";
                     font-family: $font-text-italic;
                 }
             }
