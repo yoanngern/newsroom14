@@ -16,3 +16,8 @@
        -o-border-radius: $radius;
           border-radius: $radius;
 }
+@mixin x-columns($nbCol){
+    -webkit-columns: $nbCol;
+    -moz-columns: $nbCol;
+    columns: $nbCol;
+}

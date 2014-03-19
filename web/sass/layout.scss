@@ -2,13 +2,10 @@
 @import 'reset';
 @import 'functions';
 @import 'font';
-
-$contentWidth: 960px;
-
-body {
+ $contentWidth:960px;
+ body {
     font-family: $font-text;
     background: $white;
-    
     & > header {
         background: $red;
         max-width: 1280px;
@@ -18,26 +15,21 @@ body {
         height: 50px;
         z-index: 100;
         overflow: hidden;
-        
         nav {
             width: $contentWidth;
             margin: 0 auto;
-            
             ul {
                 margin: 0 auto;
                 text-align: center;
                 position: static;
-                
                 li {
                     display: inline-block;
                     padding: 10px 10px;
-                    
                     a {
                         color: $white;
                         font-family: $font-nav;
                         text-decoration: none;
                         font-size: 1.05em;
-                        
                         &.actif {
                             color: $black;
                         }
@@ -46,15 +38,12 @@ body {
             }
         }
     }
-    
     & > article {
         width: $contentWidth;
         margin: 0 auto;
-        
         section.top {
             z-index: 100;
             min-width: 960px;
-            
             #topBg {
                 height: 100%;
                 background-repeat: no-repeat;
@@ -67,9 +56,8 @@ body {
                 left: 0px;
                 z-index: -5;
                 min-width: 960px;
-                overflow:auto;
+                overflow: auto;
             }
-            
             section.stats {
                 font-family: $font-text-italic;
                 font-size: 1.55em;
@@ -81,60 +69,55 @@ body {
                 float: right;
                 text-align: right;
             }
-            
             header {
                 margin: 100px 0 0 0;
                 position: absolute;
                 top: 12%;
                 width: $contentWidth;
-                
-                
                 h1 {
                     font-family: $font-title-h1;
                     font-size: 3.5em;
                     color: $red;
                 }
             }
-            
             section {
                 position: absolute;
                 top: 60%;
                 width: $contentWidth;
             }
         }
-                
         section.bottom {
             position: absolute;
             width: $contentWidth;
             top: 100%;
             margin-top: 30px;
-            
+            section {
+                margin-top: 2em;
+            }
+            &:first-child {
+                margin-top: 0;
+            }
             & > footer {
                 text-align: center;
                 padding-bottom: 10px;
                 position: static;
                 bottom: 0px;
-                
                 a {
                     padding: 5px;
                     display: inline-block;
                 }
             }
-            
             p {
-                padding: 15px;
+                padding: 1em 0;
                 text-align: left;
             }
-            
             #help {
                 background: $red;
                 padding-bottom: 20px;
-                
                 & > h1 {
                     font-size: 2em;
                     padding: 5px 0px 5px 20px;
                 }
-                
                 section {
                     display: inline-block;
                     width: 300px;
@@ -144,5 +127,73 @@ body {
                 }
             }
         }
+    }
+}
+section.tcol {
+    & > h1 {
+        font-family: $font-title-h2;
+        font-size: 2em;
+    }
+    p {
+        @include x-columns(3);
+    }
+}
+section.quote {
+    clear: both;
+    & > .hr {
+        display: inline-block;
+        height: 2px;
+        background-color: $red;
+        width: $contentWidth * 0.2;
+        position: relative;
+        top: -33%;
+    }
+    quote.big {
+        color: $red;
+        font-size: 1.5em;
+        width: $contentWidth * 0.58;
+        display: inline-block;
+        text-align: center;
+        line-height: 1.2em;
+        &:before {
+            content: "<< ";
+            font-family: $font-text;
+        }
+        &:after {
+            content: " >>";
+            font-family: $font-text;
+        }
+    }
+}
+section.twothird {
+    &>* {
+        display: inline-block;
+        margin: 0 1.5%;
+    }
+    img {
+        float: left;
+        margin: 0;
+        width: 60%;
+    }
+    quote.small {
+        margin-top: 100px;
+        width: 37%;
+        font-family: $font-text-italic;
+        font-size: 1.5em;
+        &:before {
+            content: "<< ";
+            font-family: $font-text-italic;
+        }
+        &:after {
+            content: " >>";
+            font-family: $font-text-italic;
+        }
+    }
+    &>p {
+        margin-top: 30px;
+        width: 37%;
+    }
+    span.name {
+        text-transform: uppercase;
     }
 }
