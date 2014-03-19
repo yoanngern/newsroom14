@@ -40,7 +40,7 @@ class Ad
      * @var string
      *
      * @ORM\Column(name="link", type="string", length=255)
-     * @ORM\JoinColumn(nullable=true)
+     * @ORM\JoinColumn(nullable=false)
      */
     private $link;
     
@@ -79,7 +79,8 @@ class Ad
      * @ORM\ManyToOne(targetEntity="comem\NewsroomBundle\Entity\Theme", inversedBy="ad")
      */
     private $theme;
-
+    
+    
 
     /**
      * Get id
@@ -161,6 +162,29 @@ class Ad
     }
 
     /**
+     * Set phone
+     *
+     * @param string $phone
+     * @return Ad
+     */
+    public function setPhone($phone)
+    {
+        $this->phone = $phone;
+
+        return $this;
+    }
+
+    /**
+     * Get phone
+     *
+     * @return string 
+     */
+    public function getPhone()
+    {
+        return $this->phone;
+    }
+
+    /**
      * Set address
      *
      * @param string $address
@@ -181,6 +205,29 @@ class Ad
     public function getAddress()
     {
         return $this->address;
+    }
+
+    /**
+     * Set place
+     *
+     * @param string $place
+     * @return Ad
+     */
+    public function setPlace($place)
+    {
+        $this->place = $place;
+
+        return $this;
+    }
+
+    /**
+     * Get place
+     *
+     * @return string 
+     */
+    public function getPlace()
+    {
+        return $this->place;
     }
 
     /**
@@ -207,58 +254,12 @@ class Ad
     }
 
     /**
-     * Set phone
-     *
-     * @param string $phone
-     * @return Ad
-     */
-    public function setPhone($phone)
-    {
-        $this->phone = $phone;
-
-        return $this;
-    }
-
-    /**
-     * Get phone
-     *
-     * @return string 
-     */
-    public function getPhone()
-    {
-        return $this->phone;
-    }
-
-    /**
-     * Set category
-     *
-     * @param string $category
-     * @return Ad
-     */
-    public function setCategory($category)
-    {
-        $this->category = $category;
-
-        return $this;
-    }
-
-    /**
-     * Get category
-     *
-     * @return string 
-     */
-    public function getCategory()
-    {
-        return $this->category;
-    }
-
-    /**
      * Set theme
      *
      * @param \comem\NewsroomBundle\Entity\Theme $theme
      * @return Ad
      */
-    public function setTheme(\comem\NewsroomBundle\Entity\Theme $theme)
+    public function setTheme(\comem\NewsroomBundle\Entity\Theme $theme = null)
     {
         $this->theme = $theme;
 
@@ -273,28 +274,5 @@ class Ad
     public function getTheme()
     {
         return $this->theme;
-    }
-
-    /**
-     * Set place
-     *
-     * @param string $place
-     * @return Ad
-     */
-    public function setPlace($place)
-    {
-        $this->place = $place;
-
-        return $this;
-    }
-
-    /**
-     * Get place
-     *
-     * @return string 
-     */
-    public function getPlace()
-    {
-        return $this->place;
     }
 }

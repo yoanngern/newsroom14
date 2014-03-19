@@ -29,7 +29,7 @@ class Theme
     
     /**
      * 
-     * @ORM\OneToMany(targetEntity="comem\NewsroomBundle\Entity\Theme", mappedBy="theme")
+     * @ORM\OneToMany(targetEntity="comem\NewsroomBundle\Entity\Ad", mappedBy="theme")
      */
     private $ads;
     
@@ -40,6 +40,30 @@ class Theme
     public function __construct()
     {
         $this->ads = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+    
+
+    /**
+     * Set ref
+     *
+     * @param string $ref
+     * @return Theme
+     */
+    public function setRef($ref)
+    {
+        $this->ref = $ref;
+
+        return $this;
+    }
+
+    /**
+     * Get ref
+     *
+     * @return string 
+     */
+    public function getRef()
+    {
+        return $this->ref;
     }
 
     /**
@@ -66,35 +90,12 @@ class Theme
     }
 
     /**
-     * Set ref
-     *
-     * @param string $ref
-     * @return Theme
-     */
-    public function setRef($ref)
-    {
-        $this->ref = $ref;
-
-        return $this;
-    }
-
-    /**
-     * Get ref
-     *
-     * @return string 
-     */
-    public function getRef()
-    {
-        return $this->ref;
-    }
-
-    /**
      * Add ads
      *
-     * @param \comem\NewsroomBundle\Entity\Theme $ads
+     * @param \comem\NewsroomBundle\Entity\Ad $ads
      * @return Theme
      */
-    public function addAd(\comem\NewsroomBundle\Entity\Theme $ads)
+    public function addAd(\comem\NewsroomBundle\Entity\Ad $ads)
     {
         $this->ads[] = $ads;
 
@@ -104,9 +105,9 @@ class Theme
     /**
      * Remove ads
      *
-     * @param \comem\NewsroomBundle\Entity\Theme $ads
+     * @param \comem\NewsroomBundle\Entity\Ad $ads
      */
-    public function removeAd(\comem\NewsroomBundle\Entity\Theme $ads)
+    public function removeAd(\comem\NewsroomBundle\Entity\Ad $ads)
     {
         $this->ads->removeElement($ads);
     }
