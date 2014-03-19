@@ -139,6 +139,10 @@ body {
       width: 960px;
       top: 100%;
       margin-top: 30px; }
+      body > article section.bottom section {
+        margin-top: 2em; }
+      body > article section.bottom:first-child {
+        margin-top: 0; }
       body > article section.bottom > footer {
         text-align: center;
         padding-bottom: 10px;
@@ -148,7 +152,7 @@ body {
           padding: 5px;
           display: inline-block; }
       body > article section.bottom p {
-        padding: 15px;
+        padding: 1em 0;
         text-align: left; }
       body > article section.bottom #help {
         background: #652d2a;
@@ -162,6 +166,61 @@ body {
           height: 150px;
           background: green;
           margin: 10px; }
+
+section.tcol > h1 {
+  font-family: "dejavu_serifCnBdIt", times, serif;
+  font-size: 2em; }
+section.tcol p {
+  -webkit-columns: 3;
+  -moz-columns: 3;
+  columns: 3; }
+
+section.quote {
+  clear: both; }
+  section.quote > .hr {
+    display: inline-block;
+    height: 2px;
+    background-color: #652d2a;
+    width: 192px;
+    position: relative;
+    top: -33%; }
+  section.quote quote.big {
+    color: #652d2a;
+    font-size: 1.5em;
+    width: 556.8px;
+    display: inline-block;
+    text-align: center;
+    line-height: 1.2em; }
+    section.quote quote.big:before {
+      content: "<< ";
+      font-family: "gentium_basicregular", helvetica, sans-serif; }
+    section.quote quote.big:after {
+      content: " >>";
+      font-family: "gentium_basicregular", helvetica, sans-serif; }
+
+section.twothird > * {
+  display: inline-block;
+  margin: 0 1.5%; }
+section.twothird img {
+  float: left;
+  margin: 0;
+  width: 60%; }
+section.twothird quote.small {
+  margin-top: 100px;
+  width: 37%;
+  font-family: "gentium_basicitalic", helvetica, sans-serif;
+  font-size: 1.5em; }
+  section.twothird quote.small:before {
+    content: "<< ";
+    font-family: "gentium_basicitalic", helvetica, sans-serif; }
+  section.twothird quote.small:after {
+    content: " >>";
+    font-family: "gentium_basicitalic", helvetica, sans-serif; }
+section.twothird > p {
+  margin-top: 30px;
+  width: 37%; }
+section.twothird span.name {
+  text-transform: uppercase; }
 
 #main > h1 {
   font-size: 2em;
