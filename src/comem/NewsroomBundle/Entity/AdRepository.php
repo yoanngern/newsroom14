@@ -17,12 +17,28 @@ class AdRepository extends EntityRepository
     {
         $qb = $this->createQueryBuilder('a');
         
-        $qb->where('a.theme = :theme')
-            ->setParameter('theme', $theme);
+        $qb->join('a.themes', 't');
+        
+        $qb->where('t.ref = :theme')
+            ->setParameter('theme', $theme->getRef());
             
         $qb->orderBy('a.grade', 'DESC');
         
         return $qb->getQuery()->getResult();
+    }
+    
+    
+    public function search($search)
+    {
+        $qb = $this->createQueryBuilder('a');
+        
+        $qb->where("a.title LIKE :search ")
+            ->setParameter('search', $search);
+            
+        $qb->orderBy('a.grade', 'DESC');
+        
+        
+        return $qb->getQuery()->getArrayResult();
     }
 
 }

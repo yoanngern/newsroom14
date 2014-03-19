@@ -71,13 +71,19 @@ class Ad
     private $grade;
     
     /**
-     * @var string
-     *
-     * @ORM\Column(name="theme", type="string", length=255)
+     * 
+     * @ORM\ManyToMany(targetEntity="comem\NewsroomBundle\Entity\Theme", inversedBy="ads")
      */
-    private $theme;
-    
-    
+    private $themes;
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->themes = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
 
     /**
      * Get id
@@ -251,25 +257,35 @@ class Ad
     }
 
     /**
-     * Set theme
+     * Add themes
      *
-     * @param string $theme
+     * @param \comem\NewsroomBundle\Entity\Theme $themes
      * @return Ad
      */
-    public function setTheme($theme)
+    public function addTheme(\comem\NewsroomBundle\Entity\Theme $themes)
     {
-        $this->theme = $theme;
+        $this->themes[] = $themes;
 
         return $this;
     }
 
     /**
-     * Get theme
+     * Remove themes
      *
-     * @return string 
+     * @param \comem\NewsroomBundle\Entity\Theme $themes
      */
-    public function getTheme()
+    public function removeTheme(\comem\NewsroomBundle\Entity\Theme $themes)
     {
-        return $this->theme;
+        $this->themes->removeElement($themes);
+    }
+
+    /**
+     * Get themes
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getThemes()
+    {
+        return $this->themes;
     }
 }

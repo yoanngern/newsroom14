@@ -21,7 +21,11 @@
             <p>{{ ad.link }}</p>
             <p>{{ ad.address }}</p>
             <p>{{ ad.phone }}</p>
-            <p>{{ ad.theme }}</p>
+            <p>
+                {% for theme in ad.themes %}
+                    {{ theme.title }}
+                {% endfor %}
+            </p>
         </a>
     {% else %}
         <p>Il n'y a pas d'articles dans le guide.</p>
