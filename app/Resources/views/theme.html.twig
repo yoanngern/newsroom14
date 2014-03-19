@@ -1,17 +1,5 @@
 {% extends "::layout.html.twig" %}
 
-{% block stylesheets %}
-    {{ parent() }}
-    
-    {% set link = 'images/' ~ theme.ref ~ '.jpg' %}
-    
-    <style>
-        #topBg {
-            background-image: url('{{ asset(link) }}');
-        }
-    </style>
-{% endblock %}
-
 {% block content %}
     
     <section class="top">
@@ -23,7 +11,7 @@
         </section>
          
         <header>
-            <h1>{{ theme.title }}</h1>
+            <h1><span>{{ theme.title }}</span></h1>
             {% block lead %}{% endblock %}
             
         </header>

@@ -19,7 +19,7 @@ class DirectoryController extends Controller
         
         $em = $this->getDoctrine()->getManager();
         
-        $ads = $em->getRepository('comemNewsroomBundle:Ad')->findAll();
+        $ads = $em->getRepository('comemNewsroomBundle:Ad')->findAllOrder();
         
         return $this->render('comemNewsroomBundle:Directory:list.html.twig', array(
             'ads' => $ads,

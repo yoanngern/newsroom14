@@ -27,6 +27,15 @@ class AdRepository extends EntityRepository
         return $qb->getQuery()->getResult();
     }
     
+    public function findAllOrder()
+    {
+        $qb = $this->createQueryBuilder('a');
+            
+        $qb->orderBy('a.id', 'DESC');
+        
+        return $qb->getQuery()->getResult();
+    }
+    
     
     public function search($search)
     {

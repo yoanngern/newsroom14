@@ -1,7 +1,10 @@
-$font-regular: 'helvetica', sans-serif;
-$font-light: 'Helvetica-Light', 'helvetica', sans-serif;
-$font-medium: 'Helvetica-Medium', 'helvetica', sans-serif;
-$font-bold: 'Helvetica-Bold', 'helvetica', sans-serif;
+$font-nav: 'dejavu_sansbook', helvetica, sans-serif;
+$font-title-h1: 'dejavu_serifcondensed', times, serif;
+$font-title-h2: 'dejavu_serifCnBdIt', times, serif;
+$font-title-h3: 'gentium_basicbold', times, serif;
+$font-text: 'gentium_basicregular', helvetica, sans-serif;
+$font-text-italic: 'gentium_basicitalic', helvetica, sans-serif;
+
 
 @font-face {
     font-family: 'dejavu_serifcondensed';
@@ -10,6 +13,17 @@ $font-bold: 'Helvetica-Bold', 'helvetica', sans-serif;
          url('../fonts/DejaVuSerifCondensed-Italic-webfont.woff') format('woff'),
          url('../fonts/DejaVuSerifCondensed-Italic-webfont.ttf') format('truetype'),
          url('../fonts/DejaVuSerifCondensed-Italic-webfont.svg#dejavu_serifcondensed') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'gentium_basicbold';
+    src: url('../fonts/genbasb-webfont.eot');
+    src: url('../fonts/genbasb-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/genbasb-webfont.woff') format('woff'),
+         url('../fonts/genbasb-webfont.ttf') format('truetype'),
+         url('../fonts/genbasb-webfont.svg#gentium_basicbold') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -71,12 +85,3 @@ $font-bold: 'Helvetica-Bold', 'helvetica', sans-serif;
     font-style: normal;
 }
 
-$font-nav: 'dejavu_sansbook', helvetica, sans-serif;
-
-$font-title-h1: 'dejavu_serifcondensed', times, serif;
-
-$font-title-h2: 'dejavu_serifCnBdIt', times, serif;
-
-$font-text: 'gentium_basicregular', helvetica, sans-serif;
-
-$font-text-italic: 'gentium_basicitalic', helvetica, sans-serif;

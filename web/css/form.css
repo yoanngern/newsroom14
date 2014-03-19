@@ -30,6 +30,13 @@ article, aside, footer, header, hgroup, nav, section, figure, figcaption {
   font-style: normal; }
 
 @font-face {
+  font-family: 'gentium_basicbold';
+  src: url("../fonts/genbasb-webfont.eot");
+  src: url("../fonts/genbasb-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/genbasb-webfont.woff") format("woff"), url("../fonts/genbasb-webfont.ttf") format("truetype"), url("../fonts/genbasb-webfont.svg#gentium_basicbold") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
   font-family: 'dejavu_sansbold';
   src: url("../fonts/DejaVuSans-Bold-webfont.eot");
   src: url("../fonts/DejaVuSans-Bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/DejaVuSans-Bold-webfont.woff") format("woff"), url("../fonts/DejaVuSans-Bold-webfont.ttf") format("truetype"), url("../fonts/DejaVuSans-Bold-webfont.svg#dejavu_sansbold") format("svg");
@@ -68,6 +75,10 @@ body {
   font-family: "gentium_basicregular", helvetica, sans-serif;
   font-size: 16px;
   background: white; }
+  body p,
+  body td {
+    font-size: 1.3em;
+    line-height: 1.25em; }
   body > header {
     background: #652d2a;
     max-width: 1280px;
@@ -99,20 +110,21 @@ body {
     margin: 0 auto; }
     body > article section.top {
       z-index: 100;
-      min-width: 960px; }
+      min-width: 960px;
+      display: block; }
       body > article section.top #topBg {
-        height: 100%;
+        height: 70%;
         background-repeat: no-repeat;
         background-position: center center;
         background-size: cover;
+        background-image: url("../images/craft.jpg");
         width: 100%;
         display: block;
         position: absolute;
         top: 0px;
         left: 0px;
         z-index: -5;
-        min-width: 960px;
-        overflow: auto; }
+        min-width: 960px; }
       body > article section.top section.stats {
         font-family: "gentium_basicitalic", helvetica, sans-serif;
         font-size: 1.55em;
@@ -122,16 +134,51 @@ body {
         top: 5%;
         width: 480px;
         float: right;
-        text-align: right; }
+        text-align: right;
+        display: inline-block; }
+        body > article section.top section.stats p {
+          display: inline-block;
+          width: 365px;
+          height: auto;
+          line-height: 1em; }
+        body > article section.top section.stats figure {
+          width: 100px;
+          height: 100px;
+          display: inline-block;
+          margin-left: 10px; }
+          body > article section.top section.stats figure img {
+            width: 100%; }
       body > article section.top header {
         margin: 100px 0 0 0;
         position: absolute;
         top: 12%;
-        width: 960px; }
+        width: 960px;
+        border-bottom: 3px solid #652d2a;
+        padding-bottom: 20px; }
         body > article section.top header h1 {
+          text-align: left;
+          overflow: hidden;
+          width: 960px;
           font-family: "dejavu_serifcondensed", times, serif;
           font-size: 3.5em;
           color: #652d2a; }
+        body > article section.top header span {
+          display: inline-block;
+          position: relative; }
+          body > article section.top header span:after {
+            border-top: 3px solid #652d2a;
+            display: block;
+            height: 3px;
+            content: "";
+            width: 960px;
+            position: absolute;
+            top: 1.2em; }
+          body > article section.top header span:after {
+            margin-left: 10px;
+            left: 100%; }
+        body > article section.top header p {
+          font-family: "gentium_basicitalic", helvetica, sans-serif;
+          font-size: 2em; }
       body > article section.top section {
         position: absolute;
         top: 60%;
@@ -139,10 +186,10 @@ body {
     body > article section.bottom {
       position: absolute;
       width: 960px;
-      top: 100%;
+      top: 70%;
       margin-top: 30px; }
       body > article section.bottom > section {
-        margin-top: 2em; }
+        margin-top: 3em; }
       body > article section.bottom:first-child {
         margin-top: 0; }
       body > article section.bottom > footer {
@@ -168,6 +215,17 @@ body {
           height: 150px;
           background: green;
           margin: 10px; }
+    body > article > footer {
+      display: block;
+      text-align: center;
+      border-top: 3px solid #652d2a;
+      margin-top: 50px; }
+      body > article > footer a {
+        padding: 10px;
+        color: #652d2a;
+        font-size: 1.2em;
+        font-family: "gentium_basicbold", times, serif;
+        text-decoration: none; }
 
 section.tcol > h1 {
   font-family: "dejavu_serifCnBdIt", times, serif;
@@ -177,44 +235,66 @@ section.tcol p {
   -moz-columns: 3;
   columns: 3; }
 
-.hr, section.quote > div.hr, section.smalltalks div.hr {
+.hr, section.smalltalks div.hr {
   display: inline-block;
   height: 4px;
   background-color: #652d2a; }
 
 section.quote {
-  clear: both; }
-  section.quote > div.hr {
-    width: 20%;
+  text-align: center;
+  width: 960px;
+  overflow: hidden; }
+  section.quote quote {
+    display: inline-block;
     position: relative;
-    top: -33%; }
-  section.quote quote.big {
     color: #652d2a;
     font-size: 2em;
-    width: 58%;
     margin: 0 0.5%;
-    display: inline-block;
     text-align: center;
     line-height: 1.5em; }
-    section.quote quote.big:before {
-      content: "« ";
-      font-family: "gentium_basicregular", helvetica, sans-serif; }
-    section.quote quote.big:after {
-      content: " »";
-      font-family: "gentium_basicregular", helvetica, sans-serif; }
+    section.quote quote:before, section.quote quote:after {
+      border-top: 4px solid #652d2a;
+      display: inline-block;
+      height: 1px;
+      content: " ";
+      width: 960px;
+      position: absolute;
+      top: 50%; }
+    section.quote quote:after {
+      left: 100%;
+      margin-left: 15px; }
+    section.quote quote:before {
+      right: 100%;
+      margin-right: 15px; }
+    section.quote quote p {
+      position: relative;
+      display: inline; }
+      section.quote quote p span {
+        display: block;
+        text-align: center; }
+        section.quote quote p span:first-of-type:before {
+          content: "« ";
+          font-family: "gentium_basicregular", helvetica, sans-serif; }
+        section.quote quote p span:last-of-type:after {
+          content: " »";
+          font-family: "gentium_basicregular", helvetica, sans-serif; }
 
 section.twothird > section {
   display: inline-block; }
   section.twothird > section.left {
-    width: 60% img;
-      width-margin: 0;
-      width-width: 100%; }
+    width: 68%; }
+    section.twothird > section.left img {
+      margin: 0;
+      width: 100%;
+      margin-bottom: -10px; }
   section.twothird > section.right {
-    width: 39%;
-    margin-left: 1%; }
+    width: 28%;
+    margin-left: 2%; }
     section.twothird > section.right quote.small {
       font-family: "gentium_basicitalic", helvetica, sans-serif;
-      font-size: 2em; }
+      font-size: 2em;
+      padding-bottom: 30px;
+      display: block; }
       section.twothird > section.right quote.small:before {
         content: "« ";
         font-family: "gentium_basicitalic", helvetica, sans-serif; }
@@ -222,20 +302,24 @@ section.twothird > section {
         content: " »";
         font-family: "gentium_basicitalic", helvetica, sans-serif; }
     section.twothird > section.right span.name {
-      text-transform: uppercase; }
+      text-transform: uppercase;
+      padding-top: 30px;
+      display: block; }
 
 section.portrait > h1 {
   font-family: "dejavu_serifCnBdIt", times, serif;
   font-size: 2.5em; }
 section.portrait > h2 {
-  font-size: 2.4em; }
+  font-size: 2.4em;
+  margin-top: -15px;
+  margin-bottom: 15px; }
 section.portrait > img {
   width: 100%; }
 section.portrait > section.question {
-  margin-top: 30px; }
+  margin-top: 50px; }
   section.portrait > section.question h3 {
     color: #652d2a;
-    font-weight: bold;
+    font-family: "gentium_basicbold", times, serif;
     font-size: 1.5em; }
   section.portrait > section.question p {
     font-family: "gentium_basicitalic", helvetica, sans-serif;
@@ -245,7 +329,9 @@ section.portrait > table {
   margin-top: 30px;
   width: 60%; }
 section.portrait > footer {
-  margin-top: 30px; }
+  margin-top: 30px;
+  font-size: 1.3em;
+  line-height: 1.25em; }
   section.portrait > footer:before {
     content: "*"; }
 
@@ -264,47 +350,94 @@ section.smalltalks {
     -moz-columns: 3;
     columns: 3; }
 
-#main > h1 {
-  font-size: 2em;
-  text-align: center; }
-#main form {
-  padding-left: 20px; }
-  #main form h2 {
-    padding-top: 10px;
-    font-family: "Helvetica-Bold", "helvetica", sans-serif; }
-  #main form input,
-  #main form textarea,
-  #main form select {
-    border: 1px solid #1a1a1a;
-    line-height: 1.3em;
-    font-size: 1.3em;
-    width: 300px;
-    padding: 3px; }
-  #main form input[type=submit] {
-    width: auto;
-    background: none;
+#main {
+  overflow: hidden;
+  padding-bottom: 40px; }
+  #main > h1 {
+    font-size: 3em;
+    font-family: "dejavu_serifcondensed", times, serif;
+    color: #652d2a;
+    padding: 5px; }
+    #main > h1 span {
+      display: inline-block;
+      position: relative; }
+      #main > h1 span:after {
+        border-top: 3px solid #652d2a;
+        display: block;
+        height: 3px;
+        content: "";
+        width: 960px;
+        position: absolute;
+        top: 1.2em; }
+      #main > h1 span:after {
+        margin-left: 10px;
+        left: 100%; }
+  #main nav {
     display: block;
-    margin-top: 20px;
-    cursor: pointer;
-    padding: 0px 3px;
-    font-family: "helvetica", sans-serif; }
-  #main form input[type=checkbox] {
-    width: initial;
-    display: inline-block;
-    margin-top: 10px; }
-  #main form label {
+    text-align: center; }
+    #main nav a {
+      color: #652d2a;
+      text-decoration: none;
+      font-size: 1.3em;
+      font-family: "gentium_basicbold", times, serif;
+      padding: 10px;
+      text-align: center;
+      display: inline-block; }
+  #main form {
+    padding-left: 20px; }
+    #main form h2 {
+      padding-top: 10px;
+      font-family: "dejavu_serifCnBdIt", times, serif; }
+    #main form input,
+    #main form textarea,
+    #main form select {
+      border: 1px solid #652d2a;
+      line-height: 1.3em;
+      font-size: 1.3em;
+      width: 300px;
+      padding: 3px; }
+    #main form input[type=submit] {
+      width: auto;
+      background: none;
+      display: block;
+      margin-top: 20px;
+      cursor: pointer;
+      padding: 0px 3px;
+      font-family: "gentium_basicregular", helvetica, sans-serif; }
+    #main form input[type=checkbox] {
+      width: initial;
+      display: inline-block;
+      margin-top: 10px; }
+    #main form label {
+      display: block;
+      padding-left: 20px;
+      margin-top: -28px;
+      font-size: 1.4em; }
+  #main > a.ad {
+    margin: 20px;
     display: block;
-    padding-left: 20px;
-    margin-top: -28px;
-    font-size: 1.4em; }
-#main > a.ad {
-  margin: 20px;
-  display: block;
-  border: 1px solid #1a1a1a;
-  color: #1a1a1a;
-  text-decoration: none; }
-  #main > a.ad h1 {
-    padding: 5px;
-    font-size: 1.3em; }
-  #main > a.ad p {
-    padding: 0 0 0 5px !important; }
+    border: 1px solid #652d2a;
+    color: #1a1a1a;
+    text-decoration: none;
+    padding: 10px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px; }
+    #main > a.ad h1 {
+      padding: 5px;
+      font-size: 1.3em;
+      font-family: "gentium_basicbold", times, serif;
+      color: #652d2a; }
+    #main > a.ad p {
+      padding: 0 0 0 5px !important; }
+      #main > a.ad p.theme span {
+        display: inline-block;
+        padding: 1px 5px;
+        border: 1px solid #652d2a;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        -ms-border-radius: 3px;
+        -o-border-radius: 3px;
+        border-radius: 3px; }

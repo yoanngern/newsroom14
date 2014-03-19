@@ -2,11 +2,20 @@
 @import 'reset';
 @import 'functions';
 @import 'font';
- $contentWidth:960px;
+
+$contentWidth:960px;
+ 
  body {
     font-family: $font-text;
     font-size: 16px;
     background: $white;
+    
+    p,
+    td {
+        font-size: 1.3em;
+        line-height: 1.25em;
+    }
+    
     & > header {
         background: $red;
         max-width: 1280px;
@@ -16,21 +25,26 @@
         height: 50px;
         z-index: 100;
         overflow: hidden;
+        
         nav {
             width: $contentWidth;
             margin: 0 auto;
+            
             ul {
                 margin: 0 auto;
                 text-align: center;
                 position: static;
+                
                 li {
                     display: inline-block;
                     padding: 10px 10px;
+                    
                     a {
                         color: $white;
                         font-family: $font-nav;
                         text-decoration: none;
                         font-size: 1.05em;
+                        
                         &.actif {
                             color: $black;
                         }
@@ -42,15 +56,18 @@
     & > article {
         width: $contentWidth;
         margin: 0 auto;
+        
         section.top {
             z-index: 100;
             min-width: 960px;
+            display:block;
             
             #topBg {
-                height: 100%;
+                height: 70%;
                 background-repeat: no-repeat;
                 background-position: center center;
                 background-size: cover;
+                background-image: url('../images/craft.jpg');
                 width: 100%;
                 display: block;
                 position: absolute;
@@ -58,7 +75,6 @@
                 left: 0px;
                 z-index: -5;
                 min-width: 960px;
-                overflow: auto;
             }
             
             section.stats {
@@ -71,16 +87,64 @@
                 width: 0.5 * $contentWidth;
                 float: right;
                 text-align: right;
+                display: inline-block;
+                
+                p {
+                    display: inline-block;
+                    width: (0.5 * $contentWidth) - 115;
+                    height: auto;
+                    line-height: 1em;
+                }
+                
+                figure {
+                    width: 100px;
+                    height: 100px;
+                    display: inline-block;
+                    margin-left: 10px;
+                    
+                    img {
+                        width: 100%;
+                    }
+                }
             }
             header {
                 margin: 100px 0 0 0;
                 position: absolute;
                 top: 12%;
                 width: $contentWidth;
+                border-bottom: 3px solid $red;
+                padding-bottom: 20px;
+                
                 h1 {
+                    text-align: left;
+                    overflow: hidden;
+                    width: $contentWidth;
                     font-family: $font-title-h1;
                     font-size: 3.5em;
                     color: $red;
+                }
+                span {
+                    display: inline-block;
+                    position: relative;
+                    
+                    &:after {
+                        border-top: 3px solid $red;
+                        display: block;
+                        height: 3px;
+                        content: "";
+                        width: $contentWidth;
+                        position: absolute;
+                        top: 1.2em;
+                    }
+                    &:after {
+                       margin-left: 10px; 
+                       left: 100%;
+                    }
+                }
+                
+                p {
+                    font-family: $font-text-italic;
+                    font-size: 2em;
                 }
             }
             section {
@@ -92,10 +156,10 @@
         section.bottom {
             position: absolute;
             width: $contentWidth;
-            top: 100%;
+            top: 70%;
             margin-top: 30px;
             & > section {
-                margin-top: 2em;
+                margin-top: 3em;
             }
             &:first-child {
                 margin-top: 0;
@@ -130,7 +194,24 @@
                 }
             }
         }
+        
+        & > footer {
+            display: block;
+            text-align: center;
+            border-top: 3px solid $red;
+            margin-top: 50px;
+            
+            a {
+                padding: 10px;
+                color: $red;
+                font-size: 1.2em;
+                font-family: $font-title-h3;
+                text-decoration: none;
+            }
+        }
     }
+    
+    
 }
 section.tcol {
     & > h1 {
@@ -146,47 +227,93 @@ section.tcol {
     height: 4px;
     background-color: $red;
 }
+
 section.quote {
-    clear: both;
-    &> div.hr {
-        @extend .hr;
-        width: 20%;
+    text-align: center;
+    width: $contentWidth;
+    overflow: hidden;
+    
+    quote {
+        display: inline-block;  
         position: relative;
-        top: -33%;
-    }
-    quote.big {
         color: $red;
         font-size: 2em;
-        width: 58%;
         margin: 0 0.5%;
-        display: inline-block;
         text-align: center;
         line-height: 1.5em;
-        &:before {
-            content: "« ";
-            font-family: $font-text;
-        }
+        
+        &:before,
         &:after {
-            content: " »";
-            font-family: $font-text;
+            border-top: 4px solid $red;;
+            display: inline-block;
+            height: 1px;
+            content: " ";
+            width: $contentWidth;
+            position: absolute;
+            top: 50%;
         }
+        
+        &:after {
+           left: 100%;
+           margin-left: 15px; 
+        }
+        
+        &:before {
+           right: 100%;
+           margin-right: 15px; 
+        }
+        
+        p {
+            position: relative;
+            display: inline;
+            
+            span {
+                display: block;
+                text-align: center;
+                
+                &:first-of-type {
+                    &:before {
+                        content: "« ";
+                        font-family: $font-text;
+                    }
+                }
+                
+                &:last-of-type {
+                    &:after {
+                        content: " »";
+                        font-family: $font-text;
+                    }
+                }
+            }
+        }
+        
+        
     }
+    
 }
+
 section.twothird {
     &>section {
         display: inline-block;
         &.left {
-            width: 60% img {
+            width: 68%;
+            
+            img {
                 margin: 0;
                 width: 100%;
+                margin-bottom: -10px;
             }
         }
         &.right {
-            width: 39%;
-            margin-left: 1%;
+            width: 28%;
+            margin-left: 2%;
+            
             quote.small {
                 font-family: $font-text-italic;
                 font-size: 2em;
+                padding-bottom: 30px;
+                display: block;
+                
                 &:before {
                     content: "« ";
                     font-family: $font-text-italic;
@@ -198,6 +325,8 @@ section.twothird {
             }
             span.name {
                 text-transform: uppercase;
+                padding-top: 30px;
+                display: block;
             }
         }
     }
@@ -209,15 +338,17 @@ section.portrait {
     }
     &>h2 {
         font-size: 2.4em;
+        margin-top: -15px;
+        margin-bottom: 15px;
     }
     &>img {
         width: 100%;
     }
     &>section.question {
-        margin-top: 30px;
+        margin-top: 50px;
         h3 {
             color: $red;
-            font-weight: bold;
+            font-family: $font-title-h3;
             font-size: 1.5em;
         }
         p {
@@ -232,6 +363,8 @@ section.portrait {
     }
     &>footer {
         margin-top: 30px;
+        font-size: 1.3em;
+        line-height: 1.25em;
         &:before {
             content: "*";
         }

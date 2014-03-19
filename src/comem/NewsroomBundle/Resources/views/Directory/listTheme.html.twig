@@ -1,18 +1,20 @@
-{% extends "::layout.html.twig" %}
+{% extends "::repository.html.twig" %}
 
 {% block stylesheets %}
     <link rel="stylesheet" href="{{ asset('css/form.css') }}" type="text/css" />
 {% endblock %}
 
-{% block content %}
+{% block content_repository %}
 
-    <h1>Thèmes</h1>
+    <h1><span>Thèmes</span></h1>
     
-    <a href="{{ path('comem_newsroom_directory') }}">Adresses</a>
-    <a href="{{ path('comem_newsroom_directory_theme') }}">Thèmes</a>
-    
-    <a href="{{ path('comem_newsroom_directory_add') }}">Ajouter une adresse</a>
-    <a href="{{ path('comem_newsroom_directory_theme_add') }}">Ajouter un thème</a>
+    <nav>
+        <a href="{{ path('comem_newsroom_directory') }}">Adresses</a>
+        <a href="{{ path('comem_newsroom_directory_theme') }}">Thèmes</a>
+        
+        <a href="{{ path('comem_newsroom_directory_add') }}">Ajouter une adresse</a>
+        <a href="{{ path('comem_newsroom_directory_theme_add') }}">Ajouter un thème</a>
+    </nav>
 
     {% for theme in themes %}
         <a class="ad" href="{{ path('comem_newsroom_directory_theme_edit', {'theme': theme.ref}) }}">
