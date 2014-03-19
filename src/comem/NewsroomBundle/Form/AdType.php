@@ -33,35 +33,11 @@ class AdType extends AbstractType
                                         ),
                                         'multiple'  => false,
                                         'empty_value'   => 'Sélectionner un lieu'))
-            ->add('theme',          'choice', array(
-                                        'choices'   => array(
-                                            'alimentation'      => 'Alimentation',
-                                            'hygiene'           => 'Hygiene',
-                                            'social'            => 'Social',
-                                            'aide'              => 'Aide',
-                                            'sante'             => 'Santé',
-                                            'accueil'           => 'Accueil',
-                                            'personnes_agees'   => 'Personnes agées',
-                                            'famille'           => 'Famille',
-                                            'femme'             => 'Femme',
-                                            'enfants'           => 'Enfants',
-                                            'jeunes'            => 'Jeunes',
-                                            'logements'         => 'Logements',
-                                            'conseil'           => 'Conseil',
-                                            'formation'         => 'Formation',
-                                            'travail'           => 'Travail',
-                                            'integration'       => 'Intégration',
-                                            'renovation'        => 'Rénovation',
-                                            'toxicomanie'       => 'Toxicomanie',
-                                            'handicap'          => 'Handicap',
-                                            'vetements'         => 'Vêtements',
-                                            'tout'              => 'Tout',
-                                            'transport'         => 'Transport',
-                                            'finances'          => 'Finances',
-                                            
-                                        ),
-                                        'multiple'  => true,
-                                        'expanded'  => true))
+            ->add('themes',           'entity', array('class'         => 'comemNewsroomBundle:Theme',
+                                                        'required'      => true,
+                                                        'multiple'      => true,
+                                                        'expanded'      => true,
+                                                        'property'      => 'title'))
         ;
     }
     

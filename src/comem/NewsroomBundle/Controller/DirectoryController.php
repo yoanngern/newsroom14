@@ -3,6 +3,8 @@
 namespace comem\NewsroomBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 
 use comem\NewsroomBundle\Entity\Ad;
 use comem\NewsroomBundle\Form\AdType;
@@ -23,6 +25,27 @@ class DirectoryController extends Controller
             'ads' => $ads,
             'page' => 'address'
         ));
+    }
+    
+    
+    /*
+     *   Get JSON address
+     */
+    public function searchAction()
+    {   
+        $request = Request::createFromGlobals();
+        
+        $search = $request->query->get('search');
+        
+        $em = $this->getDoctrine()->getManager();
+        
+        $addresses = $em->getRepository('comemNewsroomBundle:Ad')->search($search);
+        
+        $response = new Response(json_encode($addresses));
+        
+        $response->headers->set('Content-Type', 'application/json');
+        
+        return $response;
     }
     
     /*

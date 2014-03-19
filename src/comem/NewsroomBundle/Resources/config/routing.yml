@@ -6,6 +6,10 @@ comem_newsroom_directory:
     pattern:  /annuaire
     defaults: { _controller: comemNewsroomBundle:Directory:list }
     
+comem_newsroom_directory_json:
+    pattern:  /annuaire.json
+    defaults: { _controller: comemNewsroomBundle:Directory:search }
+    
 comem_newsroom_directory_add:
     pattern:  /annuaire/add
     defaults: { _controller: comemNewsroomBundle:Directory:add }
