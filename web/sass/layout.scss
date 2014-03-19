@@ -5,6 +5,7 @@
  $contentWidth:960px;
  body {
     font-family: $font-text;
+    font-size: 16px;
     background: $white;
     & > header {
         background: $red;
@@ -91,7 +92,7 @@
             width: $contentWidth;
             top: 100%;
             margin-top: 30px;
-            section {
+            & > section {
                 margin-top: 2em;
             }
             &:first-child {
@@ -138,23 +139,27 @@ section.tcol {
         @include x-columns(3);
     }
 }
+.hr {
+    display: inline-block;
+    height: 4px;
+    background-color: $red;
+}
 section.quote {
     clear: both;
-    & > .hr {
-        display: inline-block;
-        height: 2px;
-        background-color: $red;
-        width: $contentWidth * 0.2;
+    &> div.hr {
+        @extend .hr;
+        width: 20%;
         position: relative;
         top: -33%;
     }
     quote.big {
         color: $red;
-        font-size: 1.5em;
-        width: $contentWidth * 0.58;
+        font-size: 2em;
+        width: 58%;
+        margin: 0 0.5%;
         display: inline-block;
         text-align: center;
-        line-height: 1.2em;
+        line-height: 1.5em;
         &:before {
             content: "<< ";
             font-family: $font-text;
@@ -166,34 +171,80 @@ section.quote {
     }
 }
 section.twothird {
-    &>* {
+    &>section {
         display: inline-block;
-        margin: 0 1.5%;
-    }
-    img {
-        float: left;
-        margin: 0;
-        width: 60%;
-    }
-    quote.small {
-        margin-top: 100px;
-        width: 37%;
-        font-family: $font-text-italic;
-        font-size: 1.5em;
-        &:before {
-            content: "<< ";
-            font-family: $font-text-italic;
+        &.left {
+            width: 60% img {
+                margin: 0;
+                width: 100%;
+            }
         }
-        &:after {
-            content: " >>";
-            font-family: $font-text-italic;
+        &.right {
+            width: 39%;
+            margin-left: 1%;
+            quote.small {
+                font-family: $font-text-italic;
+                font-size: 2em;
+                &:before {
+                    content: "<< ";
+                    font-family: $font-text-italic;
+                }
+                &:after {
+                    content: " >>";
+                    font-family: $font-text-italic;
+                }
+            }
+            span.name {
+                text-transform: uppercase;
+            }
         }
     }
-    &>p {
+}
+section.portrait {
+    &>h1 {
+        font-family: $font-title-h2;
+        font-size: 2.5em;
+    }
+    &>h2 {
+        font-size: 2.4em;
+    }
+    &>img {
+        width: 100%;
+    }
+    &>section.question {
         margin-top: 30px;
-        width: 37%;
+        h3 {
+            color: $red;
+            font-weight: bold;
+            font-size: 1.5em;
+        }
+        p {
+            font-family: $font-text-italic;
+            font-size: 1.5em;
+            padding-top: 0;
+        }
     }
-    span.name {
-        text-transform: uppercase;
+    &>footer {
+        margin-top: 30px;
+        &:before {
+            content: "*";
+        }
     }
+}
+section.smalltalks {
+    h1 {
+        font-family: $font-title-h1;
+        font-size: 3.5em;
+        color: $red;
+        display: inline-block;
+        width: $contentWidth*0.31;
+    }
+    div.hr {
+        @extend .hr;
+        width: $contentWidth*0.68;
+    }
+    p {
+        @include x-columns(3);
+    }
+    border-bottom: 4px solid $red;
 }

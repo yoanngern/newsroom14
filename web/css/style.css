@@ -65,6 +65,7 @@ article, aside, footer, header, hgroup, nav, section, figure, figcaption {
 
 body {
   font-family: "gentium_basicregular", helvetica, sans-serif;
+  font-size: 16px;
   background: white; }
   body > header {
     background: #652d2a;
@@ -139,6 +140,10 @@ body {
       width: 960px;
       top: 100%;
       margin-top: 30px; }
+      body > article section.bottom > section {
+        margin-top: 2em; }
+      body > article section.bottom:first-child {
+        margin-top: 0; }
       body > article section.bottom > footer {
         text-align: center;
         padding-bottom: 10px;
@@ -148,7 +153,7 @@ body {
           padding: 5px;
           display: inline-block; }
       body > article section.bottom p {
-        padding: 15px;
+        padding: 1em 0;
         text-align: left; }
       body > article section.bottom #help {
         background: #652d2a;
@@ -162,3 +167,95 @@ body {
           height: 150px;
           background: green;
           margin: 10px; }
+
+section.tcol > h1 {
+  font-family: "dejavu_serifCnBdIt", times, serif;
+  font-size: 2em; }
+section.tcol p {
+  -webkit-columns: 3;
+  -moz-columns: 3;
+  columns: 3; }
+
+.hr, section.quote > div.hr, section.smalltalks div.hr {
+  display: inline-block;
+  height: 4px;
+  background-color: #652d2a; }
+
+section.quote {
+  clear: both; }
+  section.quote > div.hr {
+    width: 20%;
+    position: relative;
+    top: -33%; }
+  section.quote quote.big {
+    color: #652d2a;
+    font-size: 2em;
+    width: 58%;
+    margin: 0 0.5%;
+    display: inline-block;
+    text-align: center;
+    line-height: 1.5em; }
+    section.quote quote.big:before {
+      content: "<< ";
+      font-family: "gentium_basicregular", helvetica, sans-serif; }
+    section.quote quote.big:after {
+      content: " >>";
+      font-family: "gentium_basicregular", helvetica, sans-serif; }
+
+section.twothird > section {
+  display: inline-block; }
+  section.twothird > section.left {
+    width: 60% img;
+      width-margin: 0;
+      width-width: 100%; }
+  section.twothird > section.right {
+    width: 39%;
+    margin-left: 1%; }
+    section.twothird > section.right quote.small {
+      font-family: "gentium_basicitalic", helvetica, sans-serif;
+      font-size: 2em; }
+      section.twothird > section.right quote.small:before {
+        content: "<< ";
+        font-family: "gentium_basicitalic", helvetica, sans-serif; }
+      section.twothird > section.right quote.small:after {
+        content: " >>";
+        font-family: "gentium_basicitalic", helvetica, sans-serif; }
+    section.twothird > section.right span.name {
+      text-transform: uppercase; }
+
+section.portrait > h1 {
+  font-family: "dejavu_serifCnBdIt", times, serif;
+  font-size: 2.5em; }
+section.portrait > h2 {
+  font-size: 2.4em; }
+section.portrait > img {
+  width: 100%; }
+section.portrait > section.question {
+  margin-top: 30px; }
+  section.portrait > section.question h3 {
+    color: #652d2a;
+    font-weight: bold;
+    font-size: 1.5em; }
+  section.portrait > section.question p {
+    font-family: "gentium_basicitalic", helvetica, sans-serif;
+    font-size: 1.5em;
+    padding-top: 0; }
+section.portrait > footer {
+  margin-top: 30px; }
+  section.portrait > footer:before {
+    content: "*"; }
+
+section.smalltalks {
+  border-bottom: 4px solid #652d2a; }
+  section.smalltalks h1 {
+    font-family: "dejavu_serifcondensed", times, serif;
+    font-size: 3.5em;
+    color: #652d2a;
+    display: inline-block;
+    width: 297.6px; }
+  section.smalltalks div.hr {
+    width: 652.8px; }
+  section.smalltalks p {
+    -webkit-columns: 3;
+    -moz-columns: 3;
+    columns: 3; }
