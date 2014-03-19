@@ -221,8 +221,12 @@ section.portrait {
         p {
             font-family: $font-text-italic;
             font-size: 1.5em;
-            padding-top: 0;
+            padding: 0;
         }
+    }
+    &>table {
+        margin-top: 30px;
+        width: 60%;
     }
     &>footer {
         margin-top: 30px;
