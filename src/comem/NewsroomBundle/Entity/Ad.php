@@ -31,32 +31,28 @@ class Ad
     /**
      * @var string
      *
-     * @ORM\Column(name="description", type="text")
-     * @ORM\JoinColumn(nullable=true)
+     * @ORM\Column(name="description", type="text", nullable=true)
      */
     private $description;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="link", type="string", length=255)
-     * @ORM\JoinColumn(nullable=false)
+     * @ORM\Column(name="link", type="string", length=255, nullable=true)
      */
     private $link;
     
     /**
      * @var string
      *
-     * @ORM\Column(name="phone", type="string", length=255)
-     * @ORM\JoinColumn(nullable=true)
+     * @ORM\Column(name="phone", type="string", length=255, nullable=true)
      */
     private $phone;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="address", type="text")
-     * @ORM\JoinColumn(nullable=true)
+     * @ORM\Column(name="address", type="text", nullable=true)
      */
     private $address;
     
@@ -75,8 +71,9 @@ class Ad
     private $grade;
     
     /**
-     * 
-     * @ORM\ManyToOne(targetEntity="comem\NewsroomBundle\Entity\Theme", inversedBy="ad")
+     * @var string
+     *
+     * @ORM\Column(name="theme", type="string", length=255)
      */
     private $theme;
     
@@ -256,10 +253,10 @@ class Ad
     /**
      * Set theme
      *
-     * @param \comem\NewsroomBundle\Entity\Theme $theme
+     * @param string $theme
      * @return Ad
      */
-    public function setTheme(\comem\NewsroomBundle\Entity\Theme $theme = null)
+    public function setTheme($theme)
     {
         $this->theme = $theme;
 
@@ -269,7 +266,7 @@ class Ad
     /**
      * Get theme
      *
-     * @return \comem\NewsroomBundle\Entity\Theme 
+     * @return string 
      */
     public function getTheme()
     {

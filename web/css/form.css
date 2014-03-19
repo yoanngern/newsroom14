@@ -189,10 +189,13 @@ body {
     font-family: "helvetica", sans-serif; }
   #main form input[type=checkbox] {
     width: initial;
-    display: inline-block; }
+    display: inline-block;
+    margin-top: 10px; }
   #main form label {
     display: block;
-    padding-left: 20px; }
+    padding-left: 20px;
+    margin-top: -28px;
+    font-size: 1.4em; }
 #main > a.ad {
   margin: 20px;
   display: block;

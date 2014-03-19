@@ -10,7 +10,9 @@ class ArticleController extends Controller
 {
     public function homeAction()
     {
-        return $this->render('comemNewsroomBundle:Article:home.html.twig');
+        return $this->render('comemNewsroomBundle:Article:home.html.twig', array(
+            'page' => 'intro'
+        ));
     }
     
     public function themeAction(Theme $theme)
@@ -22,7 +24,8 @@ class ArticleController extends Controller
         
         return $this->render('comemNewsroomBundle:Theme:'. $theme->getRef() .'.html.twig', array(
             'ads' => $ads,
-            'theme' => $theme
+            'theme' => $theme,
+            'page' => $theme->getRef()
         ));
     }
 }

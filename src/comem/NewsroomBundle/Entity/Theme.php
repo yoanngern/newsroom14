@@ -27,21 +27,6 @@ class Theme
      */
     private $title;
     
-    /**
-     * 
-     * @ORM\OneToMany(targetEntity="comem\NewsroomBundle\Entity\Ad", mappedBy="theme")
-     */
-    private $ads;
-    
-    
-    /*
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->ads = new \Doctrine\Common\Collections\ArrayCollection();
-    }
-    
 
     /**
      * Set ref
@@ -87,38 +72,5 @@ class Theme
     public function getTitle()
     {
         return $this->title;
-    }
-
-    /**
-     * Add ads
-     *
-     * @param \comem\NewsroomBundle\Entity\Ad $ads
-     * @return Theme
-     */
-    public function addAd(\comem\NewsroomBundle\Entity\Ad $ads)
-    {
-        $this->ads[] = $ads;
-
-        return $this;
-    }
-
-    /**
-     * Remove ads
-     *
-     * @param \comem\NewsroomBundle\Entity\Ad $ads
-     */
-    public function removeAd(\comem\NewsroomBundle\Entity\Ad $ads)
-    {
-        $this->ads->removeElement($ads);
-    }
-
-    /**
-     * Get ads
-     *
-     * @return \Doctrine\Common\Collections\Collection 
-     */
-    public function getAds()
-    {
-        return $this->ads;
     }
 }

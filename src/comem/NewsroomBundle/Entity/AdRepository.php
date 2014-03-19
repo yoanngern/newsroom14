@@ -17,10 +17,8 @@ class AdRepository extends EntityRepository
     {
         $qb = $this->createQueryBuilder('a');
         
-        $qb->join('a.theme', 't');
-        
-        $qb->where('t.ref = :theme')
-            ->setParameter('theme', $theme->getRef());
+        $qb->where('a.theme = :theme')
+            ->setParameter('theme', $theme);
             
         $qb->orderBy('a.grade', 'DESC');
         

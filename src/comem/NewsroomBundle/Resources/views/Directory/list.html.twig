@@ -6,12 +6,12 @@
 
 {% block content %}
 
-    <h1>Annuaire</h1>
+    <h1>Adresses</h1>
     
-    <a href="{{ path('comem_newsroom_directory') }}">Annuaire</a>
+    <a href="{{ path('comem_newsroom_directory') }}">Adresses</a>
     <a href="{{ path('comem_newsroom_directory_theme') }}">Thèmes</a>
     
-    <a href="{{ path('comem_newsroom_directory_add') }}">Ajouter une annonce</a>
+    <a href="{{ path('comem_newsroom_directory_add') }}">Ajouter une adresse</a>
     <a href="{{ path('comem_newsroom_directory_theme_add') }}">Ajouter un thème</a>
 
     {% for ad in ads %}
@@ -21,7 +21,7 @@
             <p>{{ ad.link }}</p>
             <p>{{ ad.address }}</p>
             <p>{{ ad.phone }}</p>
-            <p>{{ ad.category }}</p>
+            <p>{{ ad.theme }}</p>
         </a>
     {% else %}
         <p>Il n'y a pas d'articles dans le guide.</p>

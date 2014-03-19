@@ -39,11 +39,14 @@
         input[type=checkbox] {
             width: initial;
             display: inline-block;
+            margin-top: 10px;
         }
         
         label {
             display: block;
             padding-left: 20px;
+            margin-top: -28px;
+            font-size: 1.4em;
         }
     }
     

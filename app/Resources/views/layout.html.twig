@@ -23,13 +23,13 @@
             <nav>
                 <ul>
                     <li><a href="{{ path('comem_newsroom_home') }}">Intro</a></li>
-                    <li><a class="{% if theme.ref == 'alimentation' %}actif{% endif %}" href="{{ path('comem_newsroom_theme', {'theme': 'alimentation'}) }}">Alimentation</a></li>
-                    <li><a class="{% if theme.ref == 'hygiene' %}actif{% endif %}" href="{{ path('comem_newsroom_theme', {'theme': 'hygiene'}) }}">Hygiène</a></li>
-                    <li><a class="{% if theme.ref == 'transports' %}actif{% endif %}" href="{{ path('comem_newsroom_theme', {'theme': 'transports'}) }}">Transports</a></li>
-                    <li><a class="{% if theme.ref == 'logement' %}actif{% endif %}" href="{{ path('comem_newsroom_theme', {'theme': 'logement'}) }}">Logement</a></li>
-                    <li><a class="{% if theme.ref == 'social' %}actif{% endif %}" href="{{ path('comem_newsroom_theme', {'theme': 'social'}) }}">Relations sociales</a></li>
-                    <li><a class="{% if theme.ref == 'sante' %}actif{% endif %}" href="{{ path('comem_newsroom_theme', {'theme': 'sante'}) }}">Santé</a></li>
-                    <li><a class="{% if theme.ref == 'vetements' %}actif{% endif %}" href="{{ path('comem_newsroom_theme', {'theme': 'vetements'}) }}">Vêtements</a></li>
+                    <li><a class="{% if page == 'alimentation' %}actif{% endif %}" href="{{ path('comem_newsroom_theme', {'theme': 'alimentation'}) }}">Alimentation</a></li>
+                    <li><a class="{% if page == 'hygiene' %}actif{% endif %}" href="{{ path('comem_newsroom_theme', {'theme': 'hygiene'}) }}">Hygiène</a></li>
+                    <li><a class="{% if page == 'transports' %}actif{% endif %}" href="{{ path('comem_newsroom_theme', {'theme': 'transports'}) }}">Transports</a></li>
+                    <li><a class="{% if page == 'logement' %}actif{% endif %}" href="{{ path('comem_newsroom_theme', {'theme': 'logement'}) }}">Logement</a></li>
+                    <li><a class="{% if page == 'social' %}actif{% endif %}" href="{{ path('comem_newsroom_theme', {'theme': 'social'}) }}">Relations sociales</a></li>
+                    <li><a class="{% if page == 'sante' %}actif{% endif %}" href="{{ path('comem_newsroom_theme', {'theme': 'sante'}) }}">Santé</a></li>
+                    <li><a class="{% if page == 'vetements' %}actif{% endif %}" href="{{ path('comem_newsroom_theme', {'theme': 'vetements'}) }}">Vêtements</a></li>
                 </ul>
             </nav>
         </header>
