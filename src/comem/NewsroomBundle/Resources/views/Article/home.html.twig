@@ -2,14 +2,69 @@
 
 {% block content_home %}
 
-    <section class="twothird">
-        <section class="left"><p>contenu home</p></section>
+    <section id="content">
+        
+        <article class="top">
+            <h1><span>Micro-trottoir</span></h1>
+            <iframe id="ytplayer" type="text/html" width="960" height="540" src="http://www.youtube.com/embed/BDVoO0SA5KI?autoplay=0&autohide=1&color=red&controls=1&iv_load_policy=3&modestbranding=1&theme=light&showinfo=0" frameborder="0"></iframe>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </article>
+        
+        <section class="left">
+            <article>
+                <h1><span>Micro-trottoir</span></h1>
+                <img src="{{ asset('images/BoutiqueCaritas-2.jpg') }}" alt="Sharon West Caritas Yverdon" /> 
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </article>
+            
+            <article>
+                <h1><span>Small Talks</span></h1>
+                <img src="{{ asset('images/BoutiqueCaritas-2.jpg') }}" alt="Sharon West Caritas Yverdon" /> 
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </article>
+        </section>
+        
+        
+        
         <section class="right">
-            <h1>Annuaire</h1>
+            <h1><span>Interview</span></h1>
+            
+            <article>
+                <img src="{{ asset('images/BoutiqueCaritas-2.jpg') }}" alt="Sharon West Caritas Yverdon" /> 
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+            </article>
+            
+            <article>
+                <img src="{{ asset('images/BoutiqueCaritas-2.jpg') }}" alt="Sharon West Caritas Yverdon" /> 
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+            </article>
+            
+            <article>
+                <img src="{{ asset('images/BoutiqueCaritas-2.jpg') }}" alt="Sharon West Caritas Yverdon" /> 
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+            </article>
+        </section>
+        
+    </section>
+    
+    <section id="sidebar">
+        <article class="annuaire">
+            <h1><span>Annuaire</span></h1>
             <input id="search" type="text" />
             <section id="results">
-            </section>
-        </section>
+        </article>
+        
+        <article class="quiz">
+            <h1><span>Quiz</span></h1>
+            <p>Qu'est ce que la précarité pour vous ?</p>
+            <ul>
+                <li>Un point de vue</li>
+                <li>Un drame</li>
+                <li>Une fatalité</li>
+                <li>Le futur</li>
+            </ul>
+        </article>
+        
     </section>
 
 {% endblock %}

@@ -3,6 +3,7 @@
 @import 'functions';
 @import 'font';
  $contentWidth:960px;
+ $bigWidth:1280px;
  $minHeight:600px;
  body {
     font-family: $font-text;
@@ -27,6 +28,7 @@
     & > header {
         max-width: 1280px;
         width: 100%;
+        height: 80px;
         min-width: $contentWidth;
         margin: 0 auto;
         z-index: 100;
@@ -386,4 +388,135 @@ section.smalltalks {
         @include x-columns(3);
     }
     border-bottom:3px solid $red;
+}
+
+
+#main.accueil {
+    width: $bigWidth;
+    
+    #content {
+        width: $contentWidth;
+        display: inline-block;
+        margin: 0px;
+        
+        article.top {
+            
+            h1 {
+                text-align: left;
+                overflow: hidden;
+                width: $contentWidth;
+                font-family: $font-title-h1;
+                font-size: 3.5em;
+                color: $red;
+            }
+            span {
+                display: inline-block;
+                position: relative;
+                &:after {
+                    border-top: 3px solid $red;
+                    display: block;
+                    height: 3px;
+                    content: "";
+                    width: $contentWidth;
+                    position: absolute;
+                    top: 1.2em;
+                }
+                &:after {
+                    margin-left: 10px;
+                    left: 100%;
+                }
+            }
+        }
+        
+        section.left {
+            float: left;
+            width: 60%;
+            overflow: hidden;
+            
+            article {
+                h1 {
+                    text-align: left;
+                    overflow: hidden;
+                    width: $contentWidth;
+                    font-family: $font-title-h1;
+                    font-size: 3.5em;
+                    color: $red;
+                }
+                span {
+                    display: inline-block;
+                    position: relative;
+                    &:after {
+                        border-top: 3px solid $red;
+                        display: block;
+                        height: 3px;
+                        content: "";
+                        width: $contentWidth;
+                        position: absolute;
+                        top: 1.2em;
+                    }
+                    &:after {
+                        margin-left: 10px;
+                        left: 100%;
+                    }
+                }
+                
+                img {
+                    width: 100%;
+                }   
+            }
+        }
+        
+        
+        section.right {
+            float: right;
+            width: 30%;
+            margin-right: 5%;
+            overflow: hidden;
+            
+            h1 {
+                text-align: left;
+                overflow: hidden;
+                width: $contentWidth;
+                font-family: $font-title-h1;
+                font-size: 3.5em;
+                color: $red;
+            }
+            
+            span {
+                display: inline-block;
+                position: relative;
+                &:after {
+                    border-top: 3px solid $red;
+                    display: block;
+                    height: 3px;
+                    content: "";
+                    width: $contentWidth;
+                    position: absolute;
+                    top: 1.2em;
+                }
+                &:after {
+                    margin-left: 10px;
+                    left: 100%;
+                }
+            }
+            
+            article {
+                margin-bottom: 50px;
+                
+                
+                
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    
+    #sidebar {
+        width: $bigWidth - $contentWidth - 15px;
+        position: absolute;
+        right: 0px;
+        background-color: lighten( $red, 20% );
+        top: 50px;
+    }
 }
