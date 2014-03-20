@@ -28,7 +28,7 @@
                 <ul>
                     <li class="{% if page == 'accueil' %}actif{% endif %}"><a href="{{ path('comem_newsroom_home') }}">Accueil</a></li>
                     
-                    <li class="{% if page == ('alimentation' or 'vetements' or 'logement' or 'hygiene' or 'social') %}actif{% endif %}">
+                    <li class="{% if (page == 'alimentation') or (page == 'vetements') or (page == 'logement') or (page == 'hygiene') or (page == 'social') %}actif{% endif %}">
                         <h1>Problématique</h1>
                         <ul>
                             <li class="{% if page == 'alimentation' %}actif{% endif %}"><a href="{{ path('comem_newsroom_theme', {'theme': 'alimentation'}) }}">Alimentation</a></li>
@@ -38,7 +38,7 @@
                             <li class="{% if page == 'social' %}actif{% endif %}"><a href="{{ path('comem_newsroom_theme', {'theme': 'social'}) }}">Relations sociales</a></li>
                         </ul>
                     </li>
-                    <li class="{% if page == ('etudiants' or 'statistiques' or 'famille') %}actif{% endif %}">
+                    <li class="{% if (page == 'etudiants') or (page == 'statistiques') or (page == 'famille') %}actif{% endif %}">
                         <h1>Reportage</h1>
                         <ul>
                             <li class="{% if page == 'etudiants' %}actif{% endif %}"><a href="{{ path('comem_newsroom_report', {'title': 'etudiants'}) }}">Etudiants</a></li>
