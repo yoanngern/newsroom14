@@ -73,8 +73,18 @@ article, aside, footer, header, hgroup, nav, section, figure, figcaption {
 
 body {
   font-family: "gentium_basicregular", helvetica, sans-serif;
-  font-size: 16px;
-  background: white; }
+  font-size: 16px; }
+  body #background {
+    height: 100%;
+    background-repeat: repeat;
+    background-image: url("../images/lightpaperfibers.png");
+    width: 100%;
+    display: block;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: -5;
+    min-width: 960px; }
   body p,
   body td {
     font-size: 1.3em;
@@ -125,19 +135,6 @@ body {
       z-index: 100;
       min-width: 960px;
       display: block; }
-      body > article section.top #topBg {
-        height: 80%;
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: cover;
-        background-image: url("../images/craft.jpg");
-        width: 100%;
-        display: block;
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        z-index: -5;
-        min-width: 960px; }
       body > article section.top section.stats {
         font-family: "gentium_basicitalic", helvetica, sans-serif;
         font-size: 1.55em;
@@ -217,8 +214,10 @@ body {
         padding: 1em 0;
         text-align: left; }
       body > article section.bottom #help {
-        background: #652d2a;
-        padding-bottom: 20px; }
+        background-color: #c87e7a;
+        padding-bottom: 20px;
+        display: block;
+        width: 960px; }
         body > article section.bottom #help > h1 {
           font-size: 2em;
           padding: 5px 0px 5px 20px; }
@@ -226,7 +225,6 @@ body {
           display: inline-block;
           width: 300px;
           height: 150px;
-          background: green;
           margin: 10px; }
     body > article > footer {
       display: block;
@@ -248,11 +246,6 @@ section.tcol p {
   -moz-columns: 3;
   columns: 3; }
 
-.hr {
-  display: inline-block;
-  height: 4px;
-  background-color: #652d2a; }
-
 section.quote {
   text-align: center;
   width: 960px;
@@ -266,7 +259,7 @@ section.quote {
     text-align: center;
     line-height: 1.5em; }
     section.quote quote:before, section.quote quote:after {
-      border-top: 4px solid #652d2a;
+      border-top: 3px solid #652d2a;
       display: inline-block;
       height: 1px;
       content: " ";
@@ -351,7 +344,7 @@ section.portrait > footer {
 section.smalltalks {
   width: 960px;
   overflow: hidden;
-  border-bottom: 4px solid #652d2a; }
+  border-bottom: 3px solid #652d2a; }
   section.smalltalks h1 {
     font-family: "dejavu_serifcondensed", times, serif;
     font-size: 3.5em;

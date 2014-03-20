@@ -29,7 +29,7 @@ class DirectoryController extends Controller
     
     
     /*
-     *   Get JSON address
+     *   Search JSON address
      */
     public function searchAction()
     {   
@@ -47,6 +47,7 @@ class DirectoryController extends Controller
         
         return $response;
     }
+    
     
     /*
      *   Add an ad

@@ -9,7 +9,20 @@ $minHeight:600px;
 body {
     font-family: $font-text;
     font-size: 16px;
-    background: $white;
+    
+    
+    #background {
+        height: 100%;
+        background-repeat: repeat;
+        background-image: url('../images/lightpaperfibers.png');
+        width: 100%;
+        display: block;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        z-index: -5;
+        min-width: 960px;
+    }
     
     p,
     td {
@@ -93,21 +106,6 @@ body {
             min-width: 960px;
             display:block;
             
-            #topBg {
-                height: 80%;
-                background-repeat: no-repeat;
-                background-position: center center;
-                background-size: cover;
-                background-image: url('../images/craft.jpg');
-                width: 100%;
-                display: block;
-                position: absolute;
-                top: 0px;
-                left: 0px;
-                z-index: -5;
-                min-width: 960px;
-            }
-            
             section.stats {
                 font-family: $font-text-italic;
                 font-size: 1.55em;
@@ -189,6 +187,7 @@ body {
             width: $contentWidth;
             top: 80%;
             margin-top: 30px;
+            
             & > section {
                 margin-top: 3em;
             }
@@ -210,17 +209,20 @@ body {
                 text-align: left;
             }
             #help {
-                background: $red;
+                background-color: lighten( $red, 35% );
                 padding-bottom: 20px;
+                display: block;
+                width: $contentWidth;
+                
                 & > h1 {
                     font-size: 2em;
                     padding: 5px 0px 5px 20px;
                 }
+                
                 section {
                     display: inline-block;
                     width: 300px;
                     height: 150px;
-                    background: green;
                     margin: 10px;
                 }
             }

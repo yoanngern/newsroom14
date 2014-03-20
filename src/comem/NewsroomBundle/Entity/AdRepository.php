@@ -70,4 +70,5 @@ class AdRepository extends EntityRepository
         return $qb->getQuery()->getArrayResult();
     }
 
+
 }
