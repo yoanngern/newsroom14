@@ -7,12 +7,21 @@
         <link rel="icon" type="image/png" href="images/favicon.png" />
         
         {% block stylesheets %}
+            <link rel="stylesheet" href="{{ asset('css/pizza.css') }}" type="text/css" />
             <link rel="stylesheet" href="{{ asset('css/style.css') }}" type="text/css" />
         {% endblock %}
         
         {% block javascripts %}
             <script type="text/javascript" src="{{ asset('js/jquery-1.11.0.js') }}"></script>
             <script type="text/javascript" src="{{ asset('js/app.js') }}"></script>
+            <script src="{{ asset('js/dependencies.js') }}"></script>
+            <script src="{{ asset('js/pizza.js') }}"></script>
+            <script>
+                $(window).load(function() {
+                    Pizza.init();
+                    $(document).foundation();
+                });
+            </script>
         {% endblock %}
         
     </head>
