@@ -20,25 +20,23 @@
     
     <section class="bottom">
         {% block article_bottom %}{% endblock %}
-        
-        {% if ads|length %}
-            <section id="help">
-                <h1>Les aides</h1>
-                
-                {% for ad in ads %}
-                    <section>
-                        <h1>{{ ad.title }}</h1>
-                        <p>{{ ad.description }}</p>
-                        <p>{{ ad.link }}</p>
-                    </section>
-                {% endfor %}
-            </section>
-        {% endif %}
-        
-        <footer>
-            <a href="http://www.comem.ch">comem+</a>
-            <a href="{{ path('comem_newsroom_directory') }}">Annuaire</a>
-        </footer>
     </section>
+{% endblock %}
+
+{% block footer %}
     
+    {% if ads|length %}
+        <section id="help">
+            <h1>Les aides</h1>
+            
+            {% for ad in ads %}
+                <section>
+                    <h1>{{ ad.title }}</h1>
+                    <p>{{ ad.description }}</p>
+                    <p>{{ ad.link }}</p>
+                </section>
+            {% endfor %}
+        </section>
+    {% endif %}
+    {{ parent() }}
 {% endblock %}

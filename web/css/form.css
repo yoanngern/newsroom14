@@ -212,30 +212,34 @@ body {
       body > article section.bottom p {
         padding: 1em 0;
         text-align: left; }
-      body > article section.bottom #help {
-        background-color: #c87e7a;
-        padding-bottom: 20px;
-        display: block;
-        width: 960px; }
-        body > article section.bottom #help > h1 {
-          font-size: 2em;
-          padding: 5px 0px 5px 20px; }
-        body > article section.bottom #help section {
-          display: inline-block;
-          width: 300px;
-          height: 150px;
-          margin: 10px; }
-    body > article > footer {
-      display: block;
-      text-align: center;
-      border-top: 3px solid #652d2a;
-      margin-top: 50px; }
-      body > article > footer a {
-        padding: 10px;
-        color: #652d2a;
-        font-size: 1.2em;
-        font-family: "gentium_basicbold", times, serif;
-        text-decoration: none; }
+  body > footer {
+    background-color: #c87e7a;
+    padding-bottom: 20px;
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    display: block;
+    text-align: center;
+    margin-top: 50px; }
+    body > footer #help {
+      margin: 0 auto;
+      width: 960px;
+      text-align: left; }
+      body > footer #help > h1 {
+        font-size: 2em;
+        padding: 5px 0px 5px 20px; }
+      body > footer #help section {
+        display: inline-block;
+        width: 300px;
+        height: 150px;
+        margin: 10px; }
+    body > footer a {
+      padding: 10px;
+      color: #652d2a;
+      font-size: 1.2em;
+      font-family: "gentium_basicbold", times, serif;
+      text-decoration: none; }
 
 section.tcol > h1 {
   font-family: "dejavu_serifCnBdIt", times, serif;
