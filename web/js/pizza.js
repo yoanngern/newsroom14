@@ -149,17 +149,8 @@ var Pizza = {
       svg.height = height;
     }
 
-    if (pie) {
-      var view_box = '-' + settings.percent_offset + ' -' + settings.percent_offset + ' ' + 
-      (width + (settings.percent_offset * 1.5)) + ' ' + 
-      (width + (settings.percent_offset * 1.5));
-    } else {
-      var view_box = '-' + settings.percent_offset + ' -' + settings.percent_offset + ' ' + 
-      (width + (settings.percent_offset * 1.6)) + ' ' + 
-      (height + (settings.percent_offset * 1.6));
-    }
 
-    this.set_attr(svg, {width: '100%', height: '100%', viewBox: view_box});
+    this.set_attr(svg, {width: '100%', height: '100%'});
 
     return svg;
   },
