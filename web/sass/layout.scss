@@ -7,7 +7,6 @@
  body {
     font-family: $font-text;
     font-size: 16px;
-    
     #background {
         height: 100%;
         background-repeat: repeat;
@@ -20,8 +19,8 @@
         z-index: -5;
         min-width: 960px;
     }
-    
-    p, td {
+    p,
+    td {
         font-size: 1.3em;
         line-height: 1.25em;
     }
@@ -34,27 +33,24 @@
         overflow: visible;
         nav {
             width: $contentWidth;
-            height: 50px;
             margin: 0 auto;
-            background-color: #999999;
             &>ul {
                 margin: 0 auto;
                 text-align: center;
                 position: static;
+                border-top: 3px solid $red;
+                border-bottom: 3px solid $red;
+                font-size: 1em;
+                height: 2.1em;
+                line-height: 2.1em;
                 &>li {
-                    display: block;
+                    display: inline-block;
                     //padding: 10px 10px;
-                    width: 189px;
-                    color: $white;
+                    width: 11em;
+                    color: $black;
                     font-family: $font-nav;
                     text-decoration: none;
                     font-size: 1.05em;
-                    height: 50px;
-                    line-height: 50px;
-                    float: left;
-                    &.actif {
-                        color: $red;
-                    }
                     a, h1 {
                         color: $black;
                         font-family: $font-nav;
@@ -62,25 +58,27 @@
                         font-size: 1.05em;
                         display: block;
                     }
-                    &.actif a {
+                    &.actif a,
+                    &.actif h1 {
                         color: $red;
                     }
-                    &:hover > ul{
-                        display: inline;
-                        text-decoration: none;
-                        list-style: none;
-                        width: $contentWidth;
-                        background: #bfbfbf;
-                        height: 40px;
-                        clear: both;
-                        position: absolute;
-                        margin: 0 auto;
-                        li{
-                            display: inline-block;
-                        }
-                    }
-                    & > ul {
-                        display: none;
+                }
+            }
+            &>ul.prob, &>ul.report {
+                display: none;
+                text-decoration: none;
+                list-style: none;
+                width: $contentWidth;
+                height: 2em;
+                line-height: 2em;
+                font-size: 0.9em;
+                margin: 0 auto;
+                border-top: none;
+                li {
+                    display: inline-block;
+                    width: 10em;
+                    &.actif a {
+                        color: $red;
                     }
                 }
             }
@@ -89,12 +87,12 @@
     & > article {
         width: $contentWidth;
         margin: 0 auto;
-
+        position: relative;
+        top: 50px;
         section.top {
             z-index: 100;
             min-width: 960px;
-            display:block;
-            
+            display: block;
             section.stats {
                 font-family: $font-text-italic;
                 font-size: 1.55em;
@@ -161,7 +159,6 @@
         section.bottom {
             width: $contentWidth;
             margin-top: 30px;
-            
             & > section {
                 margin-top: 3em;
             }
@@ -183,16 +180,14 @@
                 text-align: left;
             }
             #help {
-                background-color: lighten( $red, 35% );
+                background-color: lighten($red, 35%);
                 padding-bottom: 20px;
                 display: block;
                 width: $contentWidth;
-                
                 & > h1 {
                     font-size: 2em;
                     padding: 5px 0px 5px 20px;
                 }
-                
                 section {
                     display: inline-block;
                     width: 300px;
