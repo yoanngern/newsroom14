@@ -52,6 +52,9 @@
                     height: 50px;
                     line-height: 50px;
                     float: left;
+                    &.actif {
+                        color: $red;
+                    }
                     a, h1 {
                         color: $black;
                         font-family: $font-nav;
@@ -59,7 +62,7 @@
                         font-size: 1.05em;
                         display: block;
                     }
-                    &.actif {
+                    &.actif a {
                         color: $red;
                     }
                     &:hover > ul{
