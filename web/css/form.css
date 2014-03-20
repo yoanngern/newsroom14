@@ -85,8 +85,7 @@ body {
     left: 0px;
     z-index: -5;
     min-width: 960px; }
-  body p,
-  body td {
+  body p, body td {
     font-size: 1.3em;
     line-height: 1.25em; }
   body > header {
@@ -97,24 +96,35 @@ body {
     margin: 0 auto;
     height: 50px;
     z-index: 100;
-    overflow: hidden; }
+    overflow: visible; }
     body > header nav {
       width: 960px;
       margin: 0 auto; }
-      body > header nav ul {
+      body > header nav > ul {
         margin: 0 auto;
         text-align: center;
         position: static; }
-        body > header nav ul li {
-          display: inline-block;
-          padding: 10px 10px; }
-          body > header nav ul li a {
+        body > header nav > ul > li {
+          display: inline-table;
+          width: 189px;
+          color: white;
+          font-family: "dejavu_sansbook", helvetica, sans-serif;
+          text-decoration: none;
+          font-size: 1.05em; }
+          body > header nav > ul > li a, body > header nav > ul > li h1 {
             color: white;
             font-family: "dejavu_sansbook", helvetica, sans-serif;
             text-decoration: none;
-            font-size: 1.05em; }
-            body > header nav ul li a.actif {
+            font-size: 1.05em;
+            display: block; }
+            body > header nav > ul > li a.actif, body > header nav > ul > li h1.actif {
               color: #1a1a1a; }
+          body > header nav > ul > li:hover > ul {
+            display: block;
+            text-decoration: none;
+            list-style: none; }
+          body > header nav > ul > li > ul {
+            display: none; }
   body > article {
     width: 960px;
     margin: 0 auto; }
