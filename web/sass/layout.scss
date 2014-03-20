@@ -253,11 +253,6 @@ section.tcol {
         @include x-columns(3);
     }
 }
-.hr {
-    display: inline-block;
-    height: 4px;
-    background-color: $red;
-}
 
 section.quote {
     text-align: center;
@@ -275,7 +270,7 @@ section.quote {
         
         &:before,
         &:after {
-            border-top: 4px solid $red;;
+            border-top: 3px solid $red;;
             display: inline-block;
             height: 1px;
             content: " ";
@@ -434,5 +429,5 @@ section.smalltalks {
     p {
         @include x-columns(3);
     }
-    border-bottom: 4px solid $red;
+    border-bottom: 3px solid $red;
 }
