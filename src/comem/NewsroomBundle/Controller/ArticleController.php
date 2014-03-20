@@ -28,4 +28,13 @@ class ArticleController extends Controller
             'page' => $theme->getRef()
         ));
     }
+    
+    
+    public function reportAction($title)
+    {
+        
+        return $this->render('comemNewsroomBundle:Report:'. $title .'.html.twig', array(
+            'page' => $title
+        ));
+    }
 }

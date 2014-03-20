@@ -30,6 +30,10 @@ comem_newsroom_directory_theme_edit:
     pattern:  /theme/edit/{theme}
     defaults: { _controller: comemNewsroomBundle:Directory:editTheme }
     
+comem_newsroom_report:
+    pattern:  /report/{title}
+    defaults: { _controller: comemNewsroomBundle:Article:report }
+    
 comem_newsroom_theme:
     pattern:  /{theme}
     defaults: { _controller: comemNewsroomBundle:Article:theme }

@@ -27,6 +27,13 @@ class Theme
      */
     private $title;
     
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="bigTitle", type="string", length=255)
+     */
+    private $bigTitle;
+    
     
     /**
      * 
@@ -119,5 +126,28 @@ class Theme
     public function getAds()
     {
         return $this->ads;
+    }
+
+    /**
+     * Set bigTitle
+     *
+     * @param string $bigTitle
+     * @return Theme
+     */
+    public function setBigTitle($bigTitle)
+    {
+        $this->bigTitle = $bigTitle;
+
+        return $this;
+    }
+
+    /**
+     * Get bigTitle
+     *
+     * @return string 
+     */
+    public function getBigTitle()
+    {
+        return $this->bigTitle;
     }
 }

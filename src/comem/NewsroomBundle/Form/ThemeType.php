@@ -17,6 +17,7 @@ class ThemeType extends AbstractType
         $builder
             ->add('ref',    'text')
             ->add('title',  'text')
+            ->add('bigTitle',  'text')
         ;
     }
     

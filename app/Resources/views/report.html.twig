@@ -11,7 +11,6 @@
         </section>
          
         <header>
-            <h1><span>{% if theme.bigTitle|length %}{{ theme.bigTitle }}{% else %}{{ theme.title }}{% endif %}</span></h1>
             {% block lead %}{% endblock %}
             
         </header>
@@ -22,20 +21,6 @@
     
     <section class="bottom">
         {% block article_bottom %}{% endblock %}
-        
-        {% if ads|length %}
-            <section id="help">
-                <h1>Les aides</h1>
-                
-                {% for ad in ads %}
-                    <section>
-                        <h1>{{ ad.title }}</h1>
-                        <p>{{ ad.description }}</p>
-                        <p>{{ ad.link }}</p>
-                    </section>
-                {% endfor %}
-            </section>
-        {% endif %}
         
         <footer>
             <a href="http://www.comem.ch">comem+</a>
