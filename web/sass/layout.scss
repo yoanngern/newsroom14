@@ -13,43 +13,55 @@
         line-height: 1.25em;
     }
     & > header {
-        background: $red;
         max-width: 1280px;
         width: 100%;
         min-width: $contentWidth;
         margin: 0 auto;
-        height: 50px;
         z-index: 100;
         overflow: visible;
         nav {
             width: $contentWidth;
+            height: 50px;
             margin: 0 auto;
+            background-color: #999999;
             &>ul {
                 margin: 0 auto;
                 text-align: center;
                 position: static;
                 &>li {
-                    display: inline-table;
+                    display: block;
                     //padding: 10px 10px;
                     width: 189px;
                     color: $white;
                     font-family: $font-nav;
                     text-decoration: none;
                     font-size: 1.05em;
+                    height: 50px;
+                    line-height: 50px;
+                    float: left;
                     a, h1 {
-                        color: $white;
+                        color: $black;
                         font-family: $font-nav;
                         text-decoration: none;
                         font-size: 1.05em;
                         display: block;
-                        &.actif {
-                            color: $black;
-                        }
+                    }
+                    &.actif {
+                        color: $red;
                     }
                     &:hover > ul{
-                        display: block;
+                        display: inline;
                         text-decoration: none;
                         list-style: none;
+                        width: $contentWidth;
+                        background: #bfbfbf;
+                        height: 40px;
+                        clear: both;
+                        position: absolute;
+                        margin: 0 auto;
+                        li{
+                            display: inline-block;
+                        }
                     }
                     & > ul {
                         display: none;
