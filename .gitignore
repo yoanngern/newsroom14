@@ -1,4 +1,8 @@
 app/config/
 app/logs/*
 app/cache/*
+<<<<<<< HEAD
 .idea/
+=======
+*.css
+>>>>>>> 6e554d04d3b2ad8f430a77a71b059ec1c0ad08c1

@@ -11,7 +11,7 @@ class ArticleController extends Controller
     public function homeAction()
     {
         return $this->render('comemNewsroomBundle:Article:home.html.twig', array(
-            'page' => 'intro'
+            'page' => 'accueil'
         ));
     }
     

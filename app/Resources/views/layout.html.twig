@@ -13,15 +13,9 @@
         
         {% block javascripts %}
             <script type="text/javascript" src="{{ asset('js/jquery-1.11.0.js') }}"></script>
-            <script type="text/javascript" src="{{ asset('js/app.js') }}"></script>
             <script src="{{ asset('js/dependencies.js') }}"></script>
             <script src="{{ asset('js/pizza.js') }}"></script>
-            <script>
-                $(window).load(function() {
-                    Pizza.init();
-                    $(document).foundation();
-                });
-            </script>
+            <script type="text/javascript" src="{{ asset('js/app.js') }}"></script>
         {% endblock %}
         
     </head>
@@ -32,28 +26,28 @@
         <header>
             <nav>
                 <ul>
-                    <li><a href="{{ path('comem_newsroom_home') }}">Accueil</a></li>
+                    <li class="{% if page == 'accueil' %}actif{% endif %}"><a href="{{ path('comem_newsroom_home') }}">Accueil</a></li>
                     
-                    <li>
+                    <li class="{% if (page == 'alimentation') or (page == 'vetements') or (page == 'logement') or (page == 'hygiene') or (page == 'social') %}actif{% endif %}">
                         <h1>Problématique</h1>
                         <ul>
-                            <li><a class="{% if page == 'alimentation' %}actif{% endif %}" href="{{ path('comem_newsroom_theme', {'theme': 'alimentation'}) }}">Alimentation</a></li>
-                            <li><a class="{% if page == 'vetements' %}actif{% endif %}" href="{{ path('comem_newsroom_theme', {'theme': 'vetements'}) }}">Habits</a></li>
-                            <li><a class="{% if page == 'logement' %}actif{% endif %}" href="{{ path('comem_newsroom_theme', {'theme': 'logement'}) }}">Logement</a></li>
-                            <li><a class="{% if page == 'hygiene' %}actif{% endif %}" href="{{ path('comem_newsroom_theme', {'theme': 'hygiene'}) }}">Hygiène</a></li>
-                            <li><a class="{% if page == 'social' %}actif{% endif %}" href="{{ path('comem_newsroom_theme', {'theme': 'social'}) }}">Relations sociales</a></li>
+                            <li class="{% if page == 'alimentation' %}actif{% endif %}"><a href="{{ path('comem_newsroom_theme', {'theme': 'alimentation'}) }}">Alimentation</a></li>
+                            <li class="{% if page == 'vetements' %}actif{% endif %}"><a href="{{ path('comem_newsroom_theme', {'theme': 'vetements'}) }}">Habits</a></li>
+                            <li class="{% if page == 'logement' %}actif{% endif %}"><a href="{{ path('comem_newsroom_theme', {'theme': 'logement'}) }}">Logement</a></li>
+                            <li class="{% if page == 'hygiene' %}actif{% endif %}"><a href="{{ path('comem_newsroom_theme', {'theme': 'hygiene'}) }}">Hygiène</a></li>
+                            <li class="{% if page == 'social' %}actif{% endif %}"><a href="{{ path('comem_newsroom_theme', {'theme': 'social'}) }}">Relations sociales</a></li>
                         </ul>
                     </li>
-                    <li>
+                    <li class="{% if (page == 'etudiants') or (page == 'statistiques') or (page == 'famille') %}actif{% endif %}">
                         <h1>Reportage</h1>
                         <ul>
-                            <li><a class="{% if page == 'etudiants' %}actif{% endif %}" href="{{ path('comem_newsroom_report', {'title': 'etudiants'}) }}">Etudiants</a></li>
-                            <li><a class="{% if page == 'statistiques' %}actif{% endif %}" href="{{ path('comem_newsroom_report', {'title': 'statistiques'}) }}">Statistiques</a></li>
-                            <li><a class="{% if page == 'famille' %}actif{% endif %}" href="{{ path('comem_newsroom_report', {'title': 'famille'}) }}">Famille</a></li>
+                            <li class="{% if page == 'etudiants' %}actif{% endif %}"><a href="{{ path('comem_newsroom_report', {'title': 'etudiants'}) }}">Etudiants</a></li>
+                            <li class="{% if page == 'statistiques' %}actif{% endif %}"><a href="{{ path('comem_newsroom_report', {'title': 'statistiques'}) }}">Statistiques</a></li>
+                            <li class="{% if page == 'famille' %}actif{% endif %}"><a href="{{ path('comem_newsroom_report', {'title': 'famille'}) }}">Famille</a></li>
                         </ul>
                     </li>
-                    <li><a href="{{ path('comem_newsroom_directory') }}">Annuaire</a></li>
-                    <li>A propos</li>
+                    <li class="{% if page == 'annuaire' %}actif{% endif %}"><a href="{{ path('comem_newsroom_directory') }}">Annuaire</a></li>
+                    <li class="{% if page == 'a-propos' %}actif{% endif %}">A propos</li>
                 </ul>
             </nav>
         </header>
