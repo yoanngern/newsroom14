@@ -23,7 +23,7 @@ class DirectoryController extends Controller
         
         return $this->render('comemNewsroomBundle:Directory:list.html.twig', array(
             'ads' => $ads,
-            'page' => 'address'
+            'page' => 'annuaire'
         ));
     }
     
@@ -80,7 +80,7 @@ class DirectoryController extends Controller
         
         return $this->render('comemNewsroomBundle:Directory:add.html.twig', array(
             'form' => $form->createView(),
-            'page' => 'address'
+            'page' => 'annuaire'
         ));
     }
     
@@ -113,7 +113,7 @@ class DirectoryController extends Controller
         return $this->render('comemNewsroomBundle:Directory:edit.html.twig', array(
             'ad' => $ad,
             'form' => $form->createView(),
-            'page' => 'page'
+            'page' => 'annuaire'
         ));
     }
     
@@ -126,7 +126,7 @@ class DirectoryController extends Controller
         
         return $this->render('comemNewsroomBundle:Directory:listTheme.html.twig', array(
             'themes' => $themes,
-            'page' => 'theme'
+            'page' => 'annuaire'
         ));
     }
     
@@ -162,7 +162,7 @@ class DirectoryController extends Controller
         
         return $this->render('comemNewsroomBundle:Directory:addTheme.html.twig', array(
             'form' => $form->createView(),
-            'page' => 'theme'
+            'page' => 'annuaire'
         ));
     }
     
@@ -195,7 +195,7 @@ class DirectoryController extends Controller
         return $this->render('comemNewsroomBundle:Directory:editTheme.html.twig', array(
             'theme' => $theme,
             'form' => $form->createView(),
-            'page' => 'theme'
+            'page' => 'annuaire'
         ));
     }
 }
