@@ -89,28 +89,7 @@
     & > article {
         width: $contentWidth;
         margin: 0 auto;
-        @media only screen and (max-height: $minHeight) {
-            &#main {
-                section.top {
-                    #topBg {
-                        height: $minHeight;
-                    }
-                    .stats {
-                        position: relative;
-                        margin-top: 30px;
-                        margin-bottom: 0px;
-                    }
-                    header {
-                        position: relative;
-                        margin-top: 0px;
-                        margin-bottom: 50px;
-                    }
-                }
-                section.bottom {
-                    top: $minHeight;
-                }
-            }
-        }
+
         section.top {
             z-index: 100;
             min-width: 960px;
@@ -121,8 +100,6 @@
                 font-size: 1.55em;
                 color: $red;
                 margin: 30px 20px 30px 0px;
-                position: relative;
-                top: 5%;
                 width: 0.5 * $contentWidth;
                 float: right;
                 text-align: right;
@@ -144,9 +121,6 @@
                 }
             }
             header {
-                margin: 100px 0 0 0;
-                position: absolute;
-                top: 12%;
                 width: $contentWidth;
                 border-bottom: 3px solid $red;
                 padding-bottom: 20px;
@@ -181,15 +155,11 @@
                 }
             }
             section {
-                position: absolute;
-                top: 60%;
                 width: $contentWidth;
             }
         }
         section.bottom {
-            position: absolute;
             width: $contentWidth;
-            top: 80%;
             margin-top: 30px;
             
             & > section {

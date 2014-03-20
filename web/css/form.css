@@ -139,19 +139,6 @@ body {
   body > article {
     width: 960px;
     margin: 0 auto; }
-    @media only screen and (max-height: 600px) {
-      body > article#main section.top #topBg {
-        height: 600px; }
-      body > article#main section.top .stats {
-        position: relative;
-        margin-top: 30px;
-        margin-bottom: 0px; }
-      body > article#main section.top header {
-        position: relative;
-        margin-top: 0px;
-        margin-bottom: 50px; }
-      body > article#main section.bottom {
-        top: 600px; } }
     body > article section.top {
       z-index: 100;
       min-width: 960px;
@@ -161,8 +148,6 @@ body {
         font-size: 1.55em;
         color: #652d2a;
         margin: 30px 20px 30px 0px;
-        position: relative;
-        top: 5%;
         width: 480px;
         float: right;
         text-align: right;
@@ -180,9 +165,6 @@ body {
           body > article section.top section.stats figure img {
             width: 100%; }
       body > article section.top header {
-        margin: 100px 0 0 0;
-        position: absolute;
-        top: 12%;
         width: 960px;
         border-bottom: 3px solid #652d2a;
         padding-bottom: 20px; }
@@ -211,13 +193,9 @@ body {
           font-family: "gentium_basicitalic", helvetica, sans-serif;
           font-size: 2em; }
       body > article section.top section {
-        position: absolute;
-        top: 60%;
         width: 960px; }
     body > article section.bottom {
-      position: absolute;
       width: 960px;
-      top: 80%;
       margin-top: 30px; }
       body > article section.bottom > section {
         margin-top: 3em; }
