@@ -4,8 +4,9 @@
 @import 'font';
 
 $contentWidth:960px;
+$minHeight:600px;
  
- body {
+body {
     font-family: $font-text;
     font-size: 16px;
     background: $white;
@@ -53,9 +54,39 @@ $contentWidth:960px;
             }
         }
     }
+
     & > article {
         width: $contentWidth;
         margin: 0 auto;
+        
+        @media only screen and (max-height:$minHeight) {
+            
+            &#main {
+                section.top {
+                    
+                    #topBg {
+                        height: $minHeight;
+                    }
+                    
+                    .stats {
+                        position: relative;
+                        margin-top: 30px;
+                        margin-bottom: 0px;
+                    }
+                    
+                    header {
+                        position: relative;
+                        margin-top: 0px;
+                        margin-bottom: 50px;
+                    }
+                }
+                
+                section.bottom {
+                    top: $minHeight;
+                }
+            }
+            
+        }
         
         section.top {
             z-index: 100;
@@ -63,7 +94,7 @@ $contentWidth:960px;
             display:block;
             
             #topBg {
-                height: 70%;
+                height: 80%;
                 background-repeat: no-repeat;
                 background-position: center center;
                 background-size: cover;
@@ -156,7 +187,7 @@ $contentWidth:960px;
         section.bottom {
             position: absolute;
             width: $contentWidth;
-            top: 70%;
+            top: 80%;
             margin-top: 30px;
             & > section {
                 margin-top: 3em;
@@ -371,17 +402,35 @@ section.portrait {
     }
 }
 section.smalltalks {
+    width: $contentWidth;
+    overflow: hidden;
+    
     h1 {
         font-family: $font-title-h1;
         font-size: 3.5em;
         color: $red;
         display: inline-block;
-        width: $contentWidth*0.31;
+        
+        span {
+            display: inline-block;
+            position: relative;
+            
+            &:after {
+                border-top: 3px solid $red;
+                display: block;
+                height: 3px;
+                content: "";
+                width: $contentWidth;
+                position: absolute;
+                top: 1.2em;
+            }
+            &:after {
+               margin-left: 10px; 
+               left: 100%;
+            }
+        }
     }
-    div.hr {
-        @extend .hr;
-        width: $contentWidth*0.68;
-    }
+    
     p {
         @include x-columns(3);
     }

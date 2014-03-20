@@ -108,12 +108,25 @@ body {
   body > article {
     width: 960px;
     margin: 0 auto; }
+    @media only screen and (max-height: 600px) {
+      body > article#main section.top #topBg {
+        height: 600px; }
+      body > article#main section.top .stats {
+        position: relative;
+        margin-top: 30px;
+        margin-bottom: 0px; }
+      body > article#main section.top header {
+        position: relative;
+        margin-top: 0px;
+        margin-bottom: 50px; }
+      body > article#main section.bottom {
+        top: 600px; } }
     body > article section.top {
       z-index: 100;
       min-width: 960px;
       display: block; }
       body > article section.top #topBg {
-        height: 70%;
+        height: 80%;
         background-repeat: no-repeat;
         background-position: center center;
         background-size: cover;
@@ -186,7 +199,7 @@ body {
     body > article section.bottom {
       position: absolute;
       width: 960px;
-      top: 70%;
+      top: 80%;
       margin-top: 30px; }
       body > article section.bottom > section {
         margin-top: 3em; }
@@ -235,7 +248,7 @@ section.tcol p {
   -moz-columns: 3;
   columns: 3; }
 
-.hr, section.smalltalks div.hr {
+.hr {
   display: inline-block;
   height: 4px;
   background-color: #652d2a; }
@@ -336,15 +349,28 @@ section.portrait > footer {
     content: "*"; }
 
 section.smalltalks {
+  width: 960px;
+  overflow: hidden;
   border-bottom: 4px solid #652d2a; }
   section.smalltalks h1 {
     font-family: "dejavu_serifcondensed", times, serif;
     font-size: 3.5em;
     color: #652d2a;
-    display: inline-block;
-    width: 297.6px; }
-  section.smalltalks div.hr {
-    width: 652.8px; }
+    display: inline-block; }
+    section.smalltalks h1 span {
+      display: inline-block;
+      position: relative; }
+      section.smalltalks h1 span:after {
+        border-top: 3px solid #652d2a;
+        display: block;
+        height: 3px;
+        content: "";
+        width: 960px;
+        position: absolute;
+        top: 1.2em; }
+      section.smalltalks h1 span:after {
+        margin-left: 10px;
+        left: 100%; }
   section.smalltalks p {
     -webkit-columns: 3;
     -moz-columns: 3;
