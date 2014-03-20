@@ -2,6 +2,10 @@ comem_newsroom_home:
     pattern:  /
     defaults: { _controller: comemNewsroomBundle:Article:home }
     
+comem_newsroom_about:
+    pattern:  /a-propos
+    defaults: { _controller: comemNewsroomBundle:Article:about }
+    
 comem_newsroom_directory:
     pattern:  /annuaire
     defaults: { _controller: comemNewsroomBundle:Directory:list }

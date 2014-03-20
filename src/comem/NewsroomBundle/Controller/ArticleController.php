@@ -15,6 +15,13 @@ class ArticleController extends Controller
         ));
     }
     
+    public function aboutAction()
+    {
+        return $this->render('comemNewsroomBundle:Article:about.html.twig', array(
+            'page' => 'a-propos'
+        ));
+    }
+    
     public function themeAction(Theme $theme)
     {
         
