@@ -2,21 +2,16 @@
 @import 'reset';
 @import 'functions';
 @import 'font';
-
-$contentWidth:960px;
-$minHeight:600px;
- 
-body {
+ $contentWidth:960px;
+ $minHeight:600px;
+ body {
     font-family: $font-text;
     font-size: 16px;
     background: $white;
-    
-    p,
-    td {
+    p, td {
         font-size: 1.3em;
         line-height: 1.25em;
     }
-    
     & > header {
         background: $red;
         max-width: 1280px;
@@ -25,74 +20,73 @@ body {
         margin: 0 auto;
         height: 50px;
         z-index: 100;
-        overflow: hidden;
-        
+        overflow: visible;
         nav {
             width: $contentWidth;
             margin: 0 auto;
-            
-            ul {
+            &>ul {
                 margin: 0 auto;
                 text-align: center;
                 position: static;
-                
-                li {
-                    display: inline-block;
-                    padding: 10px 10px;
-                    
-                    a {
+                &>li {
+                    display: inline-table;
+                    //padding: 10px 10px;
+                    width: 189px;
+                    color: $white;
+                    font-family: $font-nav;
+                    text-decoration: none;
+                    font-size: 1.05em;
+                    a, h1 {
                         color: $white;
                         font-family: $font-nav;
                         text-decoration: none;
                         font-size: 1.05em;
-                        
+                        display: block;
                         &.actif {
                             color: $black;
                         }
+                    }
+                    &:hover > ul{
+                        display: block;
+                        text-decoration: none;
+                        list-style: none;
+                    }
+                    & > ul {
+                        display: none;
                     }
                 }
             }
         }
     }
-
     & > article {
         width: $contentWidth;
         margin: 0 auto;
-        
-        @media only screen and (max-height:$minHeight) {
-            
+        @media only screen and (max-height: $minHeight) {
             &#main {
                 section.top {
-                    
                     #topBg {
                         height: $minHeight;
                     }
-                    
                     .stats {
                         position: relative;
                         margin-top: 30px;
                         margin-bottom: 0px;
                     }
-                    
                     header {
                         position: relative;
                         margin-top: 0px;
                         margin-bottom: 50px;
                     }
                 }
-                
                 section.bottom {
                     top: $minHeight;
                 }
             }
-            
         }
-        
         section.top {
             z-index: 100;
             min-width: 960px;
-            display:block;
-            
+            display: block;
             #topBg {
                 height: 80%;
                 background-repeat: no-repeat;
@@ -107,7 +101,6 @@ body {
                 z-index: -5;
                 min-width: 960px;
             }
-            
             section.stats {
                 font-family: $font-text-italic;
                 font-size: 1.55em;
@@ -119,20 +112,17 @@ body {
                 float: right;
                 text-align: right;
                 display: inline-block;
-                
                 p {
                     display: inline-block;
                     width: (0.5 * $contentWidth) - 115;
                     height: auto;
                     line-height: 1em;
                 }
-                
                 figure {
                     width: 100px;
                     height: 100px;
                     display: inline-block;
                     margin-left: 8px;
-                    
                     img {
                         width: 100%;
                     }
@@ -145,7 +135,6 @@ body {
                 width: $contentWidth;
                 border-bottom: 3px solid $red;
                 padding-bottom: 20px;
-                
                 h1 {
                     text-align: left;
                     overflow: hidden;
@@ -157,7 +146,6 @@ body {
                 span {
                     display: inline-block;
                     position: relative;
-                    
                     &:after {
                         border-top: 3px solid $red;
                         display: block;
@@ -168,11 +156,10 @@ body {
                         top: 1.2em;
                     }
                     &:after {
-                       margin-left: 10px; 
-                       left: 100%;
+                        margin-left: 10px;
+                        left: 100%;
                     }
                 }
-                
                 p {
                     font-family: $font-text-italic;
                     font-size: 2em;
@@ -225,13 +212,11 @@ body {
                 }
             }
         }
-        
         & > footer {
             display: block;
             text-align: center;
             border-top: 3px solid $red;
             margin-top: 50px;
-            
             a {
                 padding: 10px;
                 color: $red;
@@ -241,8 +226,6 @@ body {
             }
         }
     }
-    
-    
 }
 section.tcol {
     & > h1 {
@@ -253,24 +236,21 @@ section.tcol {
         @include x-columns(3);
     }
 }
-
 section.quote {
     text-align: center;
     width: $contentWidth;
     overflow: hidden;
-    
     quote {
-        display: inline-block;  
+        display: inline-block;
         position: relative;
         color: $red;
         font-size: 2em;
         margin: 0 0.5%;
         text-align: center;
         line-height: 1.5em;
-        
-        &:before,
-        &:after {
-            border-top: 3px solid $red;;
+        &:before, &:after {
+            border-top: 3px solid $red;
+            ;
             display: inline-block;
             height: 1px;
             content: " ";
@@ -278,32 +258,26 @@ section.quote {
             position: absolute;
             top: 50%;
         }
-        
         &:after {
-           left: 100%;
-           margin-left: 15px; 
+            left: 100%;
+            margin-left: 15px;
         }
-        
         &:before {
-           right: 100%;
-           margin-right: 15px; 
+            right: 100%;
+            margin-right: 15px;
         }
-        
         p {
             position: relative;
             display: inline;
-            
             span {
                 display: block;
                 text-align: center;
-                
                 &:first-of-type {
                     &:before {
                         content: "« ";
                         font-family: $font-text;
                     }
                 }
-                
                 &:last-of-type {
                     &:after {
                         content: " »";
@@ -312,18 +286,13 @@ section.quote {
                 }
             }
         }
-        
-        
     }
-    
 }
-
 section.twothird {
     &>section {
         display: inline-block;
         &.left {
             width: 68%;
-            
             img {
                 margin: 0;
                 width: 100%;
@@ -333,13 +302,11 @@ section.twothird {
         &.right {
             width: 28%;
             margin-left: 2%;
-            
             quote.small {
                 font-family: $font-text-italic;
                 font-size: 2em;
                 padding-bottom: 30px;
                 display: block;
-                
                 &:before {
                     content: "« ";
                     font-family: $font-text-italic;
@@ -399,17 +366,14 @@ section.portrait {
 section.smalltalks {
     width: $contentWidth;
     overflow: hidden;
-    
     h1 {
         font-family: $font-title-h1;
         font-size: 3.5em;
         color: $red;
         display: inline-block;
-        
         span {
             display: inline-block;
             position: relative;
-            
             &:after {
                 border-top: 3px solid $red;
                 display: block;
@@ -420,14 +384,13 @@ section.smalltalks {
                 top: 1.2em;
             }
             &:after {
-               margin-left: 10px; 
-               left: 100%;
+                margin-left: 10px;
+                left: 100%;
             }
         }
     }
-    
     p {
         @include x-columns(3);
     }
-    border-bottom: 3px solid $red;
+    border-bottom:3px solid $red;
 }
