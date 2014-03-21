@@ -5,12 +5,17 @@
  $contentWidth:960px;
  $bigWidth:1280px;
  $minHeight:600px;
+
+ //marge entre article
+ $articleMargin:15px;
+
+
+
  body {
     font-family: $font-text;
-    font-size: 16px;
+    font-size: 15px;
     margin-top:70px;
     margin-bottom:70px;
-
     #background {
         height: 100%;
         background-repeat: repeat;
@@ -27,6 +32,7 @@
     td {
         font-size: 1.3em;
         line-height: 1.25em;
+        margin-top: 10px;
     }
     & > header {
         max-width: 1280px;
@@ -67,9 +73,9 @@
                         display: block;
                     }
                     &.actif {
-                            position: relative;
+                        position: relative;
                         &:after {
-                            top: 80%;
+                            bottom: -94%;
                             left: 50%;
                             border: solid transparent;
                             content: " ";
@@ -81,6 +87,31 @@
                             border-bottom-color: #652d2a;
                             border-width: 10px;
                             margin-left: -10px;
+                        }
+                    }
+                    &:hover {
+                        position: relative;
+                        &:after, &:before {
+                            bottom: -94%;
+                            left: 50%;
+                            border: solid transparent;
+                            content: " ";
+                            height: 0;
+                            width: 0;
+                            position: absolute;
+                            pointer-events: none;
+                        }
+                        &:after {
+                            border-color: rgba(255, 255, 255, 0);
+                            border-bottom-color: #ffffff;
+                            border-width: 10px;
+                            margin-left: -10px;
+                        }
+                        &:before {
+                            border-color: rgba(101, 45, 42, 0);
+                            border-bottom-color: #652d2a;
+                            border-width: 14px;
+                            margin-left: -14px;
                         }
                     }
                     &.actif a,
@@ -104,10 +135,10 @@
                 li {
                     display: inline-block;
                     width: 10em;
-                                        &.actif {
-                            position: relative;
+                    &.actif {
+                        position: relative;
                         &:after {
-                            bottom: 80%;
+                            top: -15%;
                             left: 50%;
                             border: solid transparent;
                             content: " ";
@@ -119,6 +150,31 @@
                             border-top-color: #652d2a;
                             border-width: 10px;
                             margin-left: -10px;
+                        }
+                    }
+                    &:hover {
+                        position: relative;
+                        &:after, &:before {
+                            top: -15%;
+                            left: 50%;
+                            border: solid transparent;
+                            content: " ";
+                            height: 0;
+                            width: 0;
+                            position: absolute;
+                            pointer-events: none;
+                        }
+                        &:after {
+                            border-color: rgba(255, 255, 255, 0);
+                            border-top-color: #ffffff;
+                            border-width: 10px;
+                            margin-left: -10px;
+                        }
+                        &:before {
+                            border-color: rgba(101, 45, 42, 0);
+                            border-top-color: #652d2a;
+                            border-width: 14px;
+                            margin-left: -14px;
                         }
                     }
                     &.actif a {
@@ -170,7 +226,7 @@
             }
             header {
                 width: $contentWidth;
-                border-bottom: 3px solid $red;
+                border-bottom: 2px solid $red;
                 padding-bottom: 20px;
                 clear: both;
                 h1 {
@@ -185,9 +241,9 @@
                     display: inline-block;
                     position: relative;
                     &:after {
-                        border-top: 3px solid $red;
+                        border-top: 2px solid $red;
                         display: block;
-                        height: 3px;
+                        height: 2px;
                         content: "";
                         width: $contentWidth;
                         position: absolute;
@@ -253,9 +309,9 @@
                     display: inline-block;
                     position: relative;
                     &:after {
-                        border-top: 3px solid $red;
+                        border-top: 2px solid $red;
                         display: block;
-                        height: 3px;
+                        height: 2px;
                         content: "";
                         width: $contentWidth;
                         position: absolute;
@@ -270,15 +326,13 @@
             p {
                 @include x-columns(3);
             }
-            border-bottom:3px solid $red;
+            border-bottom:2px solid $red;
         }
-
         section.footer_copyright {
-            margin:0 auto;
+            margin: 0 auto;
             width: $bigWidth;
             text-align: right;
         }
-
         #help {
             margin: 0 auto;
             width: $contentWidth;
@@ -530,9 +584,9 @@ section.smalltalks {
             display: inline-block;
             position: relative;
             &:after {
-                border-top: 3px solid $red;
+                border-top: 2px solid $red;
                 display: block;
-                height: 3px;
+                height: 2px;
                 content: "";
                 width: $contentWidth;
                 position: absolute;
@@ -547,7 +601,7 @@ section.smalltalks {
     p {
         @include x-columns(3);
     }
-    border-bottom:3px solid $red;
+    border-bottom:2px solid $red;
 }
 #main.accueil {
     width: $bigWidth;
@@ -557,6 +611,8 @@ section.smalltalks {
         display: inline-block;
         margin: 0px;
         article.top {
+            margin-top: 10px;
+            margin-bottom:10px;
             h1 {
                 text-align: left;
                 overflow: hidden;
@@ -564,14 +620,15 @@ section.smalltalks {
                 font-family: $font-title-h1;
                 font-size: 3.5em;
                 color: $red;
+                margin-bottom:10px;
             }
             span {
                 display: inline-block;
                 position: relative;
                 &:after {
-                    border-top: 3px solid $red;
+                    border-top: 2px solid $red;
                     display: block;
-                    height: 3px;
+                    height: 2px;
                     content: "";
                     width: $contentWidth;
                     position: absolute;
@@ -588,6 +645,9 @@ section.smalltalks {
             overflow: hidden;
             display: inline-block;
             article {
+                margin-top:10px;
+                margin-bottom:10px;
+
                 h1 {
                     text-align: left;
                     overflow: hidden;
@@ -600,9 +660,9 @@ section.smalltalks {
                     display: inline-block;
                     position: relative;
                     &:after {
-                        border-top: 3px solid $red;
+                        border-top: 2px solid $red;
                         display: block;
-                        height: 3px;
+                        height: 2px;
                         content: "";
                         width: $contentWidth;
                         position: absolute;
@@ -619,6 +679,7 @@ section.smalltalks {
             }
         }
         section.right {
+            margin-top: $articleMargin;
             width: 30%;
             margin-right: 5%;
             float: right;
@@ -636,9 +697,9 @@ section.smalltalks {
                 display: inline-block;
                 position: relative;
                 &:after {
-                    border-top: 3px solid $red;
+                    border-top: 2px solid $red;
                     display: block;
-                    height: 3px;
+                    height: 2px;
                     content: "";
                     width: $contentWidth;
                     position: absolute;
@@ -712,4 +773,9 @@ section.smalltalks {
             }
         }
     }
+}
+span.em {
+    display: block;
+    margin: 0.4em 0;
+    font-family: $font-text-italic;
 }

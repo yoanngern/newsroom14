@@ -38,12 +38,13 @@ figure{
 
 .graphs{
     width:960px;
-    margin-bottom:130px;
+    margin-bottom:150px;
     display:inline-block;
 }
 
 .graphs figure{
-    width:50%;
+    width:450px;
+    margin-top:20px;
     float:left;
 }
 
@@ -66,4 +67,8 @@ svg {
 ul[data-pie-id] {
   list-style: none; }
 
-
+.detail{
+    padding-bottom:4px;
+    border-bottom:1px solid white;
+    border-top:1px solid white;
+}
