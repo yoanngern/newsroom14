@@ -22,15 +22,18 @@ $(document).ready(function() {
         $.get(search, function(data){
             var results=$("<div>");
             $.each( data, function( key, val ) {
-                var title=val.title;
+                var title=$("<h2>");
+                title.html(val.title);
                 var id=val.id;
-                var description=val.description;
-                var link=$("<a>").attr("href",val.link).html(val.link);
-                var phone=$("<p>").html(val.phone);
+                var description=$("<p>");
+                description.html(val.description);
+                var linkDetail=$("<a>").attr("href",val.link).html(val.link);
+                var link=$("<p>").append("Site: ").append(linkDetail);
+                var phone=$("<p>").html("Tel: "+val.phone);
                 var adress=val.adress;
                 var place=val.place;
                 var grade=val.grade;
-                var result=$("<div>").addClass("result").attr("data-id",id).append("<h1>"+title+"</h1>").append("<p>"+description+"</p>").append(link).append(phone);
+                var result=$("<div>").addClass("result").attr("data-id",id).append(title).append(description).append(link).append(phone);
                 results.append(result);
             });
             $("#results").empty();
