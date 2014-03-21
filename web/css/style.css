@@ -178,6 +178,8 @@ body {
           vertical-align: top; }
           body > article section.top section.stats figure img {
             width: 100%; }
+      body > article section.top .quote {
+        margin-top: 30px; }
       body > article section.top header {
         width: 960px;
         border-bottom: 3px solid #652d2a;
