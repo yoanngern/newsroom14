@@ -37,7 +37,7 @@ $(document).ready(function() {
                 var adress=val.adress;
                 var place=val.place;
                 var grade=val.grade;
-                var detail=$("<div>").attr("id",id).attr("style","display:none;");
+                var detail=$("<div>").addClass("detail").attr("style","display:none;");
                 detail.append(description).append(link).append(phone);
                 var result=$("<div>").addClass("result").attr("data-id",id).append(title).append(detail);
                 results.append(result);
