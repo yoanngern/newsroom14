@@ -66,6 +66,23 @@
                         font-size: 1.05em;
                         display: block;
                     }
+                    &.actif {
+                            position: relative;
+                        &:after {
+                            top: 80%;
+                            left: 50%;
+                            border: solid transparent;
+                            content: " ";
+                            height: 0;
+                            width: 0;
+                            position: absolute;
+                            pointer-events: none;
+                            border-color: rgba(101, 45, 42, 0);
+                            border-bottom-color: #652d2a;
+                            border-width: 10px;
+                            margin-left: -10px;
+                        }
+                    }
                     &.actif a,
                     &.actif h1 {
                         color: $red;
@@ -87,6 +104,23 @@
                 li {
                     display: inline-block;
                     width: 10em;
+                                        &.actif {
+                            position: relative;
+                        &:after {
+                            top: -15%;
+                            left: 50%;
+                            border: solid transparent;
+                            content: " ";
+                            height: 0;
+                            width: 0;
+                            position: absolute;
+                            pointer-events: none;
+                            border-color: rgba(101, 45, 42, 0);
+                            border-top-color: #652d2a;
+                            border-width: 10px;
+                            margin-left: -10px;
+                        }
+                    }
                     &.actif a {
                         color: $red;
                     }
@@ -205,7 +239,6 @@
         position: absolute;
         left: 0;
         width: 100%;
-
         section.footer_home {
             width: $bigWidth;
             overflow: hidden;
@@ -245,7 +278,6 @@
             width: $bigWidth;
             text-align: right;
         }
-
 
         #help {
             margin: 0 auto;
@@ -308,6 +340,7 @@ section.quote {
     text-align: center;
     width: $contentWidth;
     overflow: hidden;
+    margin-top: 30px;
     quote {
         display: inline-block;
         position: relative;
@@ -446,6 +479,7 @@ section.twothird {
     }
 }
 section.portrait {
+    margin-top: 30px;
     &>h1 {
         font-family: $font-title-h2;
         font-size: 2.5em;
@@ -517,6 +551,7 @@ section.smalltalks {
 }
 #main.accueil {
     width: $bigWidth;
+    margin-top: 30px;
     #content {
         width: $contentWidth;
         display: inline-block;
@@ -550,9 +585,9 @@ section.smalltalks {
             }
         }
         section.left {
-            float: left;
             width: 60%;
             overflow: hidden;
+            display: inline-block;
             article {
                 h1 {
                     text-align: left;
@@ -585,10 +620,11 @@ section.smalltalks {
             }
         }
         section.right {
-            float: right;
             width: 30%;
             margin-right: 5%;
+            float: right;
             overflow: hidden;
+            display: inline-block;
             h1 {
                 text-align: left;
                 overflow: hidden;
@@ -624,10 +660,10 @@ section.smalltalks {
     }
     #sidebar {
         width: $bigWidth - $contentWidth - 15px;
-        position: absolute;
-        right: 0px;
         background-color: lighten($red, 20%);
-        top: 50px;
+        float: right;
+        display: inline-block;
+        margin-top: 4.1em;
         .annuaire {
             margin-bottom: 10px;
             h1 {
