@@ -5,11 +5,17 @@
  $contentWidth:960px;
  $bigWidth:1280px;
  $minHeight:600px;
+
+ //marge entre article
+ $articleMargin:15px;
+
+
+
  body {
     font-family: $font-text;
-    font-size: 16px;
-    margin-top: 70px;
-    margin-bottom: 70px;
+    font-size: 15px;
+    margin-top:70px;
+    margin-bottom:70px;
     #background {
         height: 100%;
         background-repeat: repeat;
@@ -26,6 +32,7 @@
     td {
         font-size: 1.3em;
         line-height: 1.25em;
+        margin-top: 10px;
     }
     & > header {
         max-width: 1280px;
@@ -221,7 +228,7 @@
             }
             header {
                 width: $contentWidth;
-                border-bottom: 3px solid $red;
+                border-bottom: 2px solid $red;
                 padding-bottom: 20px;
                 clear: both;
                 h1 {
@@ -236,9 +243,9 @@
                     display: inline-block;
                     position: relative;
                     &:after {
-                        border-top: 3px solid $red;
+                        border-top: 2px solid $red;
                         display: block;
-                        height: 3px;
+                        height: 2px;
                         content: "";
                         width: $contentWidth;
                         position: absolute;
@@ -304,9 +311,9 @@
                     display: inline-block;
                     position: relative;
                     &:after {
-                        border-top: 3px solid $red;
+                        border-top: 2px solid $red;
                         display: block;
-                        height: 3px;
+                        height: 2px;
                         content: "";
                         width: $contentWidth;
                         position: absolute;
@@ -321,7 +328,7 @@
             p {
                 @include x-columns(3);
             }
-            border-bottom:3px solid $red;
+            border-bottom:2px solid $red;
         }
         section.footer_copyright {
             margin: 0 auto;
@@ -579,9 +586,9 @@ section.smalltalks {
             display: inline-block;
             position: relative;
             &:after {
-                border-top: 3px solid $red;
+                border-top: 2px solid $red;
                 display: block;
-                height: 3px;
+                height: 2px;
                 content: "";
                 width: $contentWidth;
                 position: absolute;
@@ -596,7 +603,7 @@ section.smalltalks {
     p {
         @include x-columns(3);
     }
-    border-bottom:3px solid $red;
+    border-bottom:2px solid $red;
 }
 #main.accueil {
     width: $bigWidth;
@@ -607,6 +614,8 @@ section.smalltalks {
         margin: 0px;
 
         article.top {
+            margin-top: 10px;
+            margin-bottom:10px;
             h1 {
                 text-align: left;
                 overflow: hidden;
@@ -614,14 +623,15 @@ section.smalltalks {
                 font-family: $font-title-h1;
                 font-size: 3.5em;
                 color: $red;
+                margin-bottom:10px;
             }
             span {
                 display: inline-block;
                 position: relative;
                 &:after {
-                    border-top: 3px solid $red;
+                    border-top: 2px solid $red;
                     display: block;
-                    height: 3px;
+                    height: 2px;
                     content: "";
                     width: $contentWidth;
                     position: absolute;
@@ -638,6 +648,9 @@ section.smalltalks {
             overflow: hidden;
             display: inline-block;
             article {
+                margin-top:10px;
+                margin-bottom:10px;
+
                 h1 {
                     text-align: left;
                     overflow: hidden;
@@ -650,9 +663,9 @@ section.smalltalks {
                     display: inline-block;
                     position: relative;
                     &:after {
-                        border-top: 3px solid $red;
+                        border-top: 2px solid $red;
                         display: block;
-                        height: 3px;
+                        height: 2px;
                         content: "";
                         width: $contentWidth;
                         position: absolute;
@@ -669,6 +682,7 @@ section.smalltalks {
             }
         }
         section.right {
+            margin-top: $articleMargin;
             width: 30%;
             margin-right: 5%;
             float: right;
@@ -686,9 +700,9 @@ section.smalltalks {
                 display: inline-block;
                 position: relative;
                 &:after {
-                    border-top: 3px solid $red;
+                    border-top: 2px solid $red;
                     display: block;
-                    height: 3px;
+                    height: 2px;
                     content: "";
                     width: $contentWidth;
                     position: absolute;
