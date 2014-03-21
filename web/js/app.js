@@ -1,5 +1,10 @@
 $(document).ready(function() {
-    search("vagin");
+    search("");
+
+    $(".result h2").on("click",function(){
+        console.log("test");
+        $(this).next("div").toggle();
+    })
 
     $('#search').keyup(function(){
         search($("#search").val());
@@ -12,7 +17,7 @@ $(document).ready(function() {
 
     function search(motclef){
         $("#results").empty();
-        if(motclef!=="vagin"){
+        if(motclef!==""){
             var search = "http://localhost/newsroom14/web/app_dev.php/annuaire.json?search="+motclef;
         }
         else{
@@ -33,7 +38,9 @@ $(document).ready(function() {
                 var adress=val.adress;
                 var place=val.place;
                 var grade=val.grade;
-                var result=$("<div>").addClass("result").attr("data-id",id).append(title).append(description).append(link).append(phone);
+                var detail=$("<div>").attr("id",id).attr("style","display:none;");
+                detail.append(description).append(link).append(phone);
+                var result=$("<div>").addClass("result").attr("data-id",id).append(title).append(detail);
                 results.append(result);
             });
             $("#results").empty();
