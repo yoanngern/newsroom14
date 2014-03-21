@@ -16,7 +16,6 @@
     font-size: 15px;
     margin-top:70px;
     margin-bottom:70px;
-
     #background {
         height: 100%;
         background-repeat: repeat;
@@ -74,9 +73,9 @@
                         display: block;
                     }
                     &.actif {
-                            position: relative;
+                        position: relative;
                         &:after {
-                            top: 80%;
+                            bottom: -94%;
                             left: 50%;
                             border: solid transparent;
                             content: " ";
@@ -88,6 +87,32 @@
                             border-bottom-color: #652d2a;
                             border-width: 10px;
                             margin-left: -10px;
+                        }
+                    }
+                    &:hover {
+                            position: relative;
+                        &:after,
+                        &:before {
+                            bottom: -94%;
+                            left: 50%;
+                            border: solid transparent;
+                            content: " ";
+                            height: 0;
+                            width: 0;
+                            position: absolute;
+                            pointer-events: none;
+                        }
+                        &:after {
+                            border-color: rgba(255, 255, 255, 0);
+                            border-bottom-color: #ffffff;
+                            border-width: 10px;
+                            margin-left: -10px;
+                        }
+                        &:before {
+                            border-color: rgba(101, 45, 42, 0);
+                            border-bottom-color: #652d2a;
+                            border-width: 14px;
+                            margin-left: -14px;
                         }
                     }
                     &.actif a,
@@ -111,8 +136,8 @@
                 li {
                     display: inline-block;
                     width: 10em;
-                                        &.actif {
-                            position: relative;
+                    &.actif {
+                        position: relative;
                         &:after {
                             top: -15%;
                             left: 50%;
@@ -126,6 +151,32 @@
                             border-top-color: #652d2a;
                             border-width: 10px;
                             margin-left: -10px;
+                        }
+                    }
+                    &:hover {
+                            position: relative;
+                        &:after,
+                        &:before {
+                            top: -15%;
+                            left: 50%;
+                            border: solid transparent;
+                            content: " ";
+                            height: 0;
+                            width: 0;
+                            position: absolute;
+                            pointer-events: none;
+                        }
+                        &:after {
+                            border-color: rgba(255, 255, 255, 0);
+                            border-top-color: #ffffff;
+                            border-width: 10px;
+                            margin-left: -10px;
+                        }
+                        &:before {
+                            border-color: rgba(101, 45, 42, 0);
+                            border-top-color: #652d2a;
+                            border-width: 14px;
+                            margin-left: -14px;
                         }
                     }
                     &.actif a {
@@ -279,13 +330,11 @@
             }
             border-bottom:2px solid $red;
         }
-
         section.footer_copyright {
-            margin:0 auto;
+            margin: 0 auto;
             width: $bigWidth;
             text-align: right;
         }
-
         #help {
             margin: 0 auto;
             width: $contentWidth;

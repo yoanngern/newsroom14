@@ -17,10 +17,10 @@ $(document).ready(function() {
     function search(motclef){
         $("#results").empty();
         if(motclef!==""){
-            var search = "http://www.precarite.ch/web/app_dev.php/annuaire.json?search="+motclef;
+            var search = "/web/app_dev.php/annuaire.json?search="+motclef;
         }
         else{
-            var search = "http://www.precarite.ch/web/app_dev.php/annuaire.json";
+            var search = "/web/app_dev.php/annuaire.json";
         }
 
         $.get(search, function(data){

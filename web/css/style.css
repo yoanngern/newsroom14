@@ -131,7 +131,7 @@ body {
           body > header nav > ul > li.actif {
             position: relative; }
             body > header nav > ul > li.actif:after {
-              top: 80%;
+              bottom: -94%;
               left: 50%;
               border: solid transparent;
               content: " ";
@@ -143,6 +143,27 @@ body {
               border-bottom-color: #652d2a;
               border-width: 10px;
               margin-left: -10px; }
+          body > header nav > ul > li:hover {
+            position: relative; }
+            body > header nav > ul > li:hover:after, body > header nav > ul > li:hover:before {
+              bottom: -94%;
+              left: 50%;
+              border: solid transparent;
+              content: " ";
+              height: 0;
+              width: 0;
+              position: absolute;
+              pointer-events: none; }
+            body > header nav > ul > li:hover:after {
+              border-color: rgba(255, 255, 255, 0);
+              border-bottom-color: #ffffff;
+              border-width: 10px;
+              margin-left: -10px; }
+            body > header nav > ul > li:hover:before {
+              border-color: rgba(101, 45, 42, 0);
+              border-bottom-color: #652d2a;
+              border-width: 14px;
+              margin-left: -14px; }
           body > header nav > ul > li.actif a, body > header nav > ul > li.actif h1 {
             color: #652d2a; }
       body > header nav > ul.prob, body > header nav > ul.report {
@@ -174,6 +195,27 @@ body {
               border-top-color: #652d2a;
               border-width: 10px;
               margin-left: -10px; }
+          body > header nav > ul.prob li:hover, body > header nav > ul.report li:hover {
+            position: relative; }
+            body > header nav > ul.prob li:hover:after, body > header nav > ul.prob li:hover:before, body > header nav > ul.report li:hover:after, body > header nav > ul.report li:hover:before {
+              top: -15%;
+              left: 50%;
+              border: solid transparent;
+              content: " ";
+              height: 0;
+              width: 0;
+              position: absolute;
+              pointer-events: none; }
+            body > header nav > ul.prob li:hover:after, body > header nav > ul.report li:hover:after {
+              border-color: rgba(255, 255, 255, 0);
+              border-top-color: #ffffff;
+              border-width: 10px;
+              margin-left: -10px; }
+            body > header nav > ul.prob li:hover:before, body > header nav > ul.report li:hover:before {
+              border-color: rgba(101, 45, 42, 0);
+              border-top-color: #652d2a;
+              border-width: 14px;
+              margin-left: -14px; }
           body > header nav > ul.prob li.actif a, body > header nav > ul.report li.actif a {
             color: #652d2a; }
   body > article {
