@@ -308,15 +308,15 @@ body {
     display: block;
     position: absolute;
     left: 0;
-    width: 100%;
-    display: block;
-    text-align: center;
-    margin-top: 50px; }
+    width: 100%; }
     body > footer section.footer_home {
       width: 1280px;
       overflow: hidden;
       margin: 0 auto;
       text-align: left;
+      display: block;
+      margin-top: 30px;
+      padding-top: 40px;
       border-bottom: 2px solid #652d2a; }
       body > footer section.footer_home h1 {
         font-family: "dejavu_serifcondensed", times, serif;
@@ -349,9 +349,25 @@ body {
       margin: 0 auto;
       width: 960px;
       text-align: left; }
-      body > footer #help > h1 {
-        font-size: 2em;
-        padding: 5px 0px 5px 20px; }
+      body > footer #help > h1 h1 {
+        font-family: "dejavu_serifcondensed", times, serif;
+        font-size: 3.5em;
+        color: #652d2a;
+        display: inline-block; }
+        body > footer #help > h1 h1 span {
+          display: inline-block;
+          position: relative; }
+          body > footer #help > h1 h1 span:after {
+            border-top: 2px solid #652d2a;
+            display: block;
+            height: 2px;
+            content: "";
+            width: 960px;
+            position: absolute;
+            top: 1.2em; }
+          body > footer #help > h1 h1 span:after {
+            margin-left: 10px;
+            left: 100%; }
       body > footer #help section {
         display: inline-block;
         width: 300px;
@@ -662,11 +678,12 @@ section.smalltalks {
           width: 100%; }
   #main.accueil #sidebar {
     width: 305px;
-    background-color: #ad4d48;
     float: right;
     display: inline-block;
     margin-top: 4.1em; }
     #main.accueil #sidebar .annuaire {
+      background-color: #ad4d48;
+      border-radius: 10px;
       margin-bottom: 10px; }
       #main.accueil #sidebar .annuaire h1 {
         text-align: center;
@@ -705,3 +722,22 @@ section.smalltalks {
           color: white; }
         #main.accueil #sidebar .annuaire .result a:hover {
           color: lightgrey; }
+  #main.accueil .quiz h1 {
+    font-family: "dejavu_serifcondensed", times, serif;
+    font-size: 3.5em;
+    color: white;
+    display: inline-block; }
+    #main.accueil .quiz h1 span {
+      display: inline-block;
+      position: relative; }
+      #main.accueil .quiz h1 span:after {
+        border-top: 2px solid white;
+        display: block;
+        height: 2px;
+        content: "";
+        width: 960px;
+        position: absolute;
+        top: 1.2em; }
+      #main.accueil .quiz h1 span:after {
+        margin-left: 10px;
+        left: 100%; }
