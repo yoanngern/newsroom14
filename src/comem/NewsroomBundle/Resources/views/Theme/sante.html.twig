@@ -1,7 +1,17 @@
 {% extends "::theme.html.twig" %}
 
 {% block stats %}
-    
+    <p>15% du budget familial est alloué à la santé</p>
+    <figure>
+        <!--<img alt="" src="{{ asset('images/stats.png') }}" />-->
+        <div class="row">
+                <ul data-pie-id="pie">
+                    <li data-value="15"></li>
+                    <li data-value="85"></li>
+                </ul>
+                <div id="pie"></div>
+        </div>
+    </figure>
 {% endblock %}
 
 {% block lead %}
@@ -9,13 +19,7 @@
 {% endblock %}
 
 {% block article_top %}
-<section class="quote">
-        <quote class="big">
-            <p>
-                <span>15% du budget familial est alloué à la santé</span>
-            </p>
-        </quote>
-    </section>
+
 {% endblock %}
 
 {% block arrow %}
@@ -35,6 +39,12 @@
 
 {% block article_bottom %}
 
+    
+
+    <section class="video">
+        <iframe id="ytplayer" type="text/html" width="960" height="540" src="http://www.youtube.com/embed/6-N6A1LXTgM?rel=0&autoplay=0&autohide=1&color=red&controls=1&iv_load_policy=3&modestbranding=1&theme=light&showinfo=0" frameborder="0"></iframe>
+    </section>
+    
     <section class="quote">
         <quote class="big">
             <p>
@@ -46,29 +56,7 @@
     </section>
 
     <section class="video">
-        <iframe id="ytplayer" type="text/html" width="960" height="540" src="http://www.youtube.com/embed/6-N6A1LXTgM?rel=0&autoplay=0&autohide=1&color=red&controls=1&iv_load_policy=3&modestbranding=1&theme=light&showinfo=0" frameborder="0"></iframe>
-        
-        <section class="tcol">
-            <p>Frais médicaux, consultations, médicaments et assurances. Rester en bonne santé a un prix. Et pourtant, de nombreux étudiants coupent dans leur budget pour limiter les dépenses liées à la santé. Existe-t-il un moyen de se fournir en produits hygiéniques et de beauté à moindre coût? Astuces "petit budget" de deux étudiantes.</p>
-        </section>
-    </section>
-
-    <section class="quote">
-        <quote class="big">
-            <p>
-                <span>ça m’arrive souvent de me doucher à l’UNIL,</span>
-                <span>en plus il y a des sèches-cheveux,</span>
-                <span>ça m’évite donc de tomber malade en hiver</span>
-            </p>
-        </quote>
-    </section>
-
-    <section class="video">
         <iframe id="ytplayer" type="text/html" width="960" height="540" src="http://www.youtube.com/embed/SxZ_sycDY6M?rel=0&autoplay=0&autohide=1&color=red&controls=1&iv_load_policy=3&modestbranding=1&theme=light&showinfo=0" frameborder="0"></iframe>
-        
-        <section class="tcol">
-            <p>Frais médicaux, consultations, médicaments et assurances. Rester en bonne santé a un prix. Et pourtant, de nombreux étudiants coupent dans leur budget pour limiter les dépenses liées à la santé. Existe-t-il un moyen de se fournir en produits hygiéniques et de beauté à moindre coût? Astuces "petit budget" de deux étudiantes.</p>
-        </section>
     </section>
 
     <section class="quote">
@@ -82,8 +70,8 @@
     </section>
 
     <section class="portrait">
-        <h1>Nathalie Conod - étudiante en dernière année d’infirmière</h1>
-        <h2>CMS (soins à domicile)</h2>
+        <h1>CMS Yvonand</h1>
+        <h2>Nathalie Conod - étudiante d’infirmière</h2>
         <img src="{{ asset('images/SoinsADomicile-3.jpg') }}" alt="Sharon West Caritas Yverdon" /> 
         <section class="question">
             <h3 class="question">Sous quelle forme la précarité se manifeste-t-elle dans le cadre de votre travail ?</h3>
@@ -145,10 +133,11 @@ Je dois être vigilante, adapter et réévaluer la situation à chaque passage. 
         </quote>
     </section>
     <section class="tcol">
-        <h1><span>Famille</span></h1>
+        <h1><span>Extrait du reportage "Au centime près"</span></h1>
         <p><span class="em">"On peut voir la santé du porte-monnaie de quelqu’un en voyant sa santé dentaire."</span> 
 Selon la mère, le fait de ne pas pouvoir se soigner en allant chez le dentiste, le médecin ou même l’oculiste, ou y aller trop peu souvent, est une forme claire de précarité. Un des grands problèmes c’est le dentiste, ils n’ont pas les moyens d’y aller souvent. De ce fait, ils espacent les visites, ce qui ne fait que repousser le problème et augmenter le prix de la prochaine visite. Selon eux, ne pas pouvoir aller chez le médecin quand ils ont en besoin est une précarité en Suisse !
 <span class="em">
 "Il faudrait un minimum de soin pour mener une vie normale, ça ne devrait pas être un luxe mais un droit humain ! Tout le monde a des problèmes de dents ou oculaires, pourquoi on n'est pas égaux avec ça ? En Suisse, c’est inadmissible."</span></p>
+    <p><a href="{{ path('comem_newsroom_report', {'title': 'famille'}) }}">Reportage en entier</a></p>
     </section>
 {% endblock %}
