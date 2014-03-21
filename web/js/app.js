@@ -1,8 +1,7 @@
 $(document).ready(function() {
     search("");
 
-    $(".result h2").on("click",function(){
-        console.log("test");
+    $(".annuaire").on("click", ".result h2",function(){
         $(this).next("div").toggle();
     })
 
