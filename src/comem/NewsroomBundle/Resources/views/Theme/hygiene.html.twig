@@ -1,17 +1,7 @@
 {% extends "::theme.html.twig" %}
 
 {% block stats %}
-    <p>«En Suisse, 30% des gens mangent moins de 5 fruits et légumes par jour!»</p>
-    <figure>
-        <!--<img alt="" src="{{ asset('images/stats.png') }}" />-->
-        <div class="row">
-                <ul data-pie-id="pie">
-                    <li data-value="32"></li>
-                    <li data-value="50"></li>
-                </ul>
-                <div id="pie"></div>
-        </div>
-    </figure>
+
 {% endblock %}
 
 {% block lead %}
@@ -20,7 +10,15 @@
 
 {% block article_top %}
 
-    
+    <section class="quote">
+        <quote class="big">
+            <p>
+                <span>En Suisse, 30% des gens mangent</span>
+                <span>moins de 5 fruits</span>
+                <span>et légumes par jour!</span>
+            </p>
+        </quote>
+    </section>
 
 {% endblock %}
 
@@ -40,6 +38,7 @@
 {% endblock %}
 
 {% block article_bottom %}
+
 
     <section class="video">
         <iframe id="ytplayer" type="text/html" width="960" height="540" src="http://www.youtube.com/embed/BDVoO0SA5KI?autoplay=0&autohide=1&color=red&controls=1&iv_load_policy=3&modestbranding=1&theme=light&showinfo=0" frameborder="0"></iframe>

@@ -8,13 +8,13 @@
             {% block stats %}{% endblock %}
         </section>
          
+        {% block article_top %}{% endblock %}
         <header>
             <h1><span>{% if theme.bigTitle|length %}{{ theme.bigTitle }}{% else %}{{ theme.title }}{% endif %}</span></h1>
             {% block lead %}{% endblock %}
             
         </header>
         
-        {% block article_top %}{% endblock %}
     
     </section>
     
