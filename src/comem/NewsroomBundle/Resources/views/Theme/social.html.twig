@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block lead %}
-    <p>J'ai entendu parler de ce mythe concernant de nombreux endroits, mais surtout à propos de l'Afrique. Une recherche rapide sur Internet produit des dizaines de gros titres et d'ouvrages, tels que « Comment les pays riches sont devenus riches et pourquoi les pays pauvres restent pauvres » ou « Pourquoi les pauvres restent pauvres ? », etc.</p>
+    <p>“Il fait beau aujourd’hui.” Un échange banal entre deux personnes. Un small-talk. Il fait pourtant tellement bon de se réunir entre amis et discuter longuement autour d’un verre, même si le budget ne permet pas plus qu’une bière au comptoir. Une vie sociale, c’est important et bien plus enrichissant que la paperasse administrative à remplir. Celle-la même qui nous qualifie de “pauvres”.</p>
 {% endblock %}
 
 {% block article_top %}
@@ -15,7 +15,7 @@
 {% endblock %}
 
 {% block article_bottom %}
-<section class="smalltalks">
+<section class="portrait">
         <h1><span>Small Talks</span></h1>
     <p>Un small talk ou “bavardage d'ascenseur” est un échange verbal entre des inconnus. Il permet de détendre, renforcer la communauté et aide à nouer des contacts. Une vidéo tournée à l’insu des acteurs a permis de démontrer l’effet small talk. </p>
     
@@ -23,24 +23,23 @@
         <iframe id="ytplayer" type="text/html" width="960" height="540" src="http://www.youtube.com/embed/qtc3L0adeqo?rel=0autoplay=0&autohide=1&color=red&controls=1&iv_load_policy=3&modestbranding=1&theme=light&showinfo=0" frameborder="0"></iframe>
     </section>    
         
-    </section>
+</section>
     
     
-    <section class="quote">
-        <quote class="big">
-            <p>
-                <span>On essaie d’avoir de la distance face à</span>
-                <span>cette précarité et d’être le plus pragmatique</span>
-                <span>possible dans le but d’aider les jeunes</span>
-                <span>à résoudre leurs difficultés</span>
-            </p>
-        </quote>
-    </section>
-
     <section class="portrait">
-        <h1>Alexandre Tadic</h1>
-        <h2>Jet Service</h2>
-        <img src="{{ asset('images/JetService-1.jpg') }}" alt="SJet Service" /> 
+        <h1>Jet Service</h1>
+        <h2>Alexandre Tadic</h2>
+        <section class="twothird">
+            <section class="left">
+                <img src="{{ asset('images/JetService-1.jpg') }}" alt="SJet Service" />  
+              
+            </section>
+            <section class="right">
+                <quote class="small">On essaie d’avoir de la distance face à cette précarité et d’être le plus pragmatique possible dans le but d’aider les jeunes à résoudre leurs difficultés</quote>
+
+                <span class="name">Alexandre Tadic</span>
+            </section>
+        </section>
         <section class="question">
             <h3 class="question">Sous quelle forme la précarité se manifeste-t-elle dans le cadre de votre travail ?</h3>
             <p class="answer">La précarité se manifeste sous différentes formes. Les jeunes qui nous rencontrent peuvent avoir des problèmes d’ordre financier, économique, social ou administratif. Par exemple, ils ne savent pas comment remplir une demande de bourse ou quels sont leurs droits au niveau des assurances sociales, etc. Il y a aussi la précarité familiale, des jeunes viennent chez nous après une rupture familiale lorsqu’ils se sont fait mettre dehors de chez eux. Cette précarité aboutit souvent à une précarité sociale et financière.</p>
@@ -94,7 +93,7 @@
     <section class="video">
         <iframe id="ytplayer" type="text/html" width="960" height="540" src="http://www.youtube.com/embed/GYidUmD6D1s?rel=0autoplay=0&autohide=1&color=red&controls=1&iv_load_policy=3&modestbranding=1&theme=light&showinfo=0" frameborder="0"></iframe>
         </section>
-                   <section class="tcol"><p>Comment éviter de se mettre à l'écart lorsque l'on dispose d'un budget "sortie" largement inférieur à celui de ses collègues? Quel est le regard que posent les amis et la famille de deux étudiantes confrontées quotidiennement à la précarité?</p></section>
+                   
                     <section class="quote">
         <quote class="big">
             <p>
@@ -106,26 +105,25 @@
     <section class="video">
         <iframe id="ytplayer" type="text/html" width="960" height="540" src="http://www.youtube.com/embed/-jfrtqCY6N0?rel=0autoplay=0&autohide=1&color=red&controls=1&iv_load_policy=3&modestbranding=1&theme=light&showinfo=0" frameborder="0"></iframe>
         </section>
-                   <section class="tcol"><p>Comment éviter de se mettre à l'écart lorsque l'on dispose d'un budget "sortie" largement inférieur à celui de ses collègues? Quel est le regard que posent les amis et la famille de deux étudiantes confrontées quotidiennement à la précarité?</p></section>
-                    
-         <section class="quote">
-        <quote class="big">
-            <p>
-                <span>Les personnes qui viennent ici</span>
-                <span>ont envie de gratter la terre,</span>
-                <span>d’être au calme et d’être écoutés.</span>
-            </p>
-        </quote>
-    </section>           
- <section class="portrait">
-        <h1>Jean-Pierre Masclet</h1>
-        <h2>Cartons et Jardins du Coeur</h2>
-        <img src="{{ asset('images/JardinsDuCoeur-1.jpg') }}" alt="SJet Service" /> 
-        <section class="question">
-            <h3 class="question">Sous quelle forme la précarité se manifeste-t-elle dans le cadre de votre travail ?</h3>
-            <p class="answer">Il y a deux entités : les cartons du coeur et les jardins du coeur. Les cartons, c’est quand les gens n’ont plus rien dans le frigo, ils ont donc la possibilité de se fournir ici en nourriture, trois fois par année.</p>
-<p class="answer">Dans les jardins : on voit la précarité dans la mesure où il y a des bénévoles qui viennent travailler. Ce sont des personnes qui ont des problèmes sociaux ou des problèmes d’addiction. Ils ont envie de gratter la terre, d’être au calme et d’être écoutés. Mais c’est du bénévolat.</p>
+                   
+                       
+    
+    <section class="portrait">
+        <h1>Cartons et Jardins du Coeur</h1>
+        <h2>Jean-Pierre Masclet</h2>
+        <section class="twothird">
+            <section class="left">
+                <img src="{{ asset('images/JardinsDuCoeur-1.jpg') }}" alt="SJet Service" />  
+              
+            </section>
+            <section class="right">
+                <quote class="small">Les personnes qui viennent ici ont envie de gratter la terre, d’être au calme et d’être écoutés.</quote>
+
+                <span class="name">Jean-Pierre Masclet</span>
+            </section>
         </section>
+    
+
         <section class="question">
             <h3 class="question">Comment la vivez/expérimentez-vous ?</h3>
             <p class="answer">Au niveau émotionnel, c’est assez fort. Il faut un peu de bouteille pour se mettre à distance et ne pas être trop atteint. Je suis responsable ici depuis dix ans, j’ai donc pu me forger un certain caractère pour que le ressenti soit moins visible. Ensuite, il faut digérer ce qu’on a vu, vécu et entendu.</p>
