@@ -1,7 +1,17 @@
 {% extends "::theme.html.twig" %}
 
 {% block stats %}
-
+    <p>Les produits alimentaires sont 32% plus chers en Suisse qu'en Union européenne.</p>
+    <figure>
+        <!--<img alt="" src="{{ asset('images/stats.png') }}" />-->
+        <div class="row">
+                <ul data-pie-id="pie">
+                    <li data-value="132"></li>
+                    <li data-value="100"></li>
+                </ul>
+                <div id="pie"></div>
+        </div>
+    </figure>
 {% endblock %}
 
 {% block lead %}
@@ -9,15 +19,7 @@
 {% endblock %}
 
 {% block article_top %}
-<section class="quote">
-        <quote class="big">
-            <p>
-                <span>La précarité n’est pas une fatalité,</span>
-                <span>il faut être patient</span>
-                <span>mais on peut s’en sortir !</span>
-            </p>
-        </quote>
-    </section>
+
 {% endblock %}
 
 {% block article_bottom %}
