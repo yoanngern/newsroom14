@@ -1,111 +1,127 @@
-{% extends "::theme.html.twig" %}
+{% extends "::theme.html.twig" %} {% block stats %}
+<p>«Le loyer représente 18% du budget mensuel!»</p>
+<figure>
+    <div class="row">
+        <ul data-pie-id="pie">
+            <li data-value="18"></li>
+            <li data-value="82"></li>
+        </ul>
+        <div id="pie"></div>
+    </div>
+</figure>
+{% endblock %} {% block lead %}
 
-{% block stats %}
-    <p>«En Suisse, 30% des gens mangent moins de 5 fruits et légumes par jour!»</p>
-    <figure>
-        <!--<img alt="" src="{{ asset('images/stats.png') }}" />-->
-        <div class="row">
-                <ul data-pie-id="pie">
-                    <li data-value="32"></li>
-                    <li data-value="50"></li>
-                </ul>
-                <div id="pie"></div>
-        </div>
-    </figure>
-{% endblock %}
+<p>Continuer à payer son crédit hypothécaire ou squatter une maison ? Les difficultés financières vont généralement de pair avec une précarité du logement. Les étudiantes rencontrées préfèrent habiter des appartements insalubres plutôt qu’alourdir leur budget serré d’un loyer trop élevé. Un choix de vie temporaire. Lorsqu’une famille se retrouve dans une situation précaire, le crédit de la maison peut paraître un fardeau, alors qu’en fait il n’en est rien. Découvrez pourquoi dans notre reportage.</p>
+{% endblock %} {% block article_top %} {% endblock %} {% block article_bottom %}
 
-{% block lead %}
-    <p>J'ai entendu parler de ce mythe concernant de nombreux endroits, mais surtout à propos de l'Afrique. Une recherche rapide sur Internet produit des dizaines de gros titres et d'ouvrages, tels que « Comment les pays riches sont devenus riches et pourquoi les pays pauvres restent pauvres » ou « Pourquoi les pauvres restent pauvres ? », etc.</p>
-{% endblock %}
 
-{% block article_top %}
+<section class="quote">
+    <quote class="big">
+        <p>
+            <span>Pourquoi acheter des nouveaux meubles, si on peut en avoir d’occasion et éviter qu’ils finissent à la poubelle ?</span>
+        </p>
+    </quote>
+</section>
 
-    
+<section class="tcol">
+    <p>Il y a 12 ans, après avoir déménagé deux fois, la famille a eu la chance de devenir propriétaire, accédant ainsi à une liberté très appréciable. Mais il n’en résulte pas forcément moins ou plus de frais que des locataires dans une même situation familiale. Être propriétaire n’est donc pas forcément synonyme de stabilité financière, ni de gouffre financier insurmontable non plus. “Des personnes vivant en ville qui ont le même salaire, ou même plus que nous, pourraient arriver à une même situation. Eux auront plutôt 2000.- de loyer contre 900.- pour nous en étant propriétaire, mais nous avons des frais liés à la maison en plus. Finalement, on arriverait au même, c’est juste que l’argent va ailleurs.” Les frais liés à la maison sont principalement le loyer, qui comprend le remboursement du crédit d’environ 400.-, et les charges (électricité et eau) de 500.-, plus tous les frais variables liés à l’entretien et aux réparations de la maison, ainsi que les diverses assurances ménage, chose/bâtiment et impôts fonciers. Au niveau de l’aménagement intérieur, ils n’ont que très rarement acheté du neuf. Les meubles sont en grande partie de première main. À l’époque, ils faisaient beaucoup de troc dans les villages, que ce soit pour les jouets, les habits ou les meubles. Les choses matérielles ne sont pas une priorité pour eux. Il y a des choses beaucoup plus importantes, comme la famille.
+    </p>
+</section>
+</section>
 
-{% endblock %}
+<section class="quote">
+    <quote class="big">
+        <p>
+            <span>Le seul meuble que j’ai acheté c’est un IKEA à 70% de rabais, tout le reste c’est de la récupération ou des objets que l’on m’a donnés.</span>
+        </p>
+        <span>Nadine, étudiante</span>
+    </quote>
+</section>
 
-{% block article_bottom %}
 
-    <section class="video">
-        <iframe id="ytplayer" type="text/html" width="960" height="540" src="http://www.youtube.com/embed/BDVoO0SA5KI?autoplay=0&autohide=1&color=red&controls=1&iv_load_policy=3&modestbranding=1&theme=light&showinfo=0" frameborder="0"></iframe>
+<section class="video">
+        <iframe id="ytplayer" type="text/html" width="960" height="540" src="http://www.youtube.com/embed/ZNqhjsqLR2A?rel=0&autoplay=0&autohide=1&color=red&controls=1&iv_load_policy=3&modestbranding=1&theme=light&showinfo=0" frameborder="0"></iframe>
         
-        <section class="tcol">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        </section>
-    </section>
-    
-    <section class="quote">
-        <quote class="big">
-            <p>
-                <span>En Suisse, 30% des gens mangent</span>
-                <span>moins de 5 fruits</span>
-                <span>et légumes par jour!</span>
-            </p>
-        </quote>
-    </section>
-    
-    <section class="twothird">
-        <section class="left">
-            <img alt="" src="{{ asset('images/047.jpg') }}" />
-        </section>
-        <section class="right">
-            <quote class="small">La vie avance, qu’importe de quoi sera fait demain.</quote>
-            <p>Nunc augue tellus, egestas quis nulla a, viverra sagittis metus. Vestibulum pellentesque magna nec dolor condimentum malesuada. In vel orci rutrum nibh vehicula convallis. In hac habitasse platea dictumst. Proin sed lorem eu arcu bibendum ultricies non a magna. Aliquam in est eros.</p>
-            <span class="name">Jean-Paul Delarue</span>
-        </section>
-    </section>
-    
-    <section class="tcol">
-        <h1>Pourquoi est-ce ainsi?</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    </section>
-    
-    <section class="quote">
-        <quote class="big">
-            <p>
-                <span>Une citation pertinente qui choque!</span>
-            </p>
-        </quote>
     </section>
 
-    <section class="portrait">
-        <h1>Sharon West</h2>
-        <h2>Boutique Caritas Yverdon</h2>
-        <img src="{{ asset('images/BoutiqueCaritas-2.jpg') }}" alt="Sharon West Caritas Yverdon" /> 
+<section class="quote">
+    <quote class="big">
+        <p>
+            <span>Cette manière alternative de vivre, c’est aussi dans l’idée de produire moins, réutiliser et éviter le gaspillage.</span>
+        </p>
+        <span>Céline, étudiante</span>
+    </quote>
+</section>
+
+
+<section class="video">
+        <iframe id="ytplayer" type="text/html" width="960" height="540" src="http://www.youtube.com/embed/oQ9xJHL4eXY?rel=0&autoplay=0&autohide=1&color=red&controls=1&iv_load_policy=3&modestbranding=1&theme=light&showinfo=0" frameborder="0"></iframe>
+        
+    </section>
+
+
+<section class="portrait">
+    <h1>Damien Zorzi</h2>
+        <h2>Office du logement</h2>
+        <section class="twothird">
+            <section class="left">
+                <img alt="" src="{{ asset('images/OfficeDuLogement-1.jpg') }}" />
+              
+            </section>
+            <section class="right">
+                <quote class="small">Les logements subventionnés, l’aide sociale et toutes ces mesures maintiennent la paix sociale.</quote>
+
+                <span class="name">Damien Zorzi, Préposé à l’Office du logement</span>
+            </section>
+        </section>
         <section class="question">
             <h3 class="question">Sous quelle forme la précarité se manifeste-t-elle dans le cadre de votre travail ?</h3>
-            <p class="answer">Il y a beaucoup de personnes dans la précarité qui viennent à la boutique. Il y a des gens suisses, portugais, polonais, des personnes âgées, des étudiants, c’est pour tout le monde. Elle est très fréquentée et énormément par les étrangers.</p>
+            <p class="answer">L’office du logement est très confronté à la précarité. Les difficultés financières vont de pair avec les difficultés de logement. La précarité se manifeste donc tous les jours. Il y a plusieurs catégories de population. Tout en bas, il y a les gens sous addictions, alcoolisés, drogués. Ces personnes-là ne se fondent pas dans le moule du marché immobilier. Je m’occupe plutôt de la catégorie au-dessus, les gens qui ont de petits métiers et qui sont très mal payés. Ma fonction sous-entend que je suis responsable des logements subventionnés à Yverdon. Je travaille avec les gérances qui, elles, travaillent avec les propriétaires. Je suis donc confronté régulièrement et cycliquement à la précarité. Mais personne n’est à l’abri, tout le monde peut avoir un coup dur, un accident, un divorce, une maladie et ça peut amener à la précarité. Nous sommes tous concernés.
+            </p>
         </section>
         <section class="question">
             <h3 class="question">Comment la vivez/expérimentez-vous ?</h3>
-            <p class="answer">Normalement, c’est un plaisir d’aider les gens, mais quelques fois c’est difficile. Par exemple, quand il y a des gens qui vivent dans la rue et qui demandent des habits gratuits. Mais normalement c’est pas un problème, j’aime beaucoup.</p>
+            <p class="answer">Au travail, je fais preuve d’empathie. Je ne suis pas assistant social mais je donne des coups de main supplémentaires afin de trouver des pistes pour améliorer la situation quand c’est encore possible. Mais en sortant du travail l’affaire est classée. C’est la seule manière de faire si on veut avoir une vie à côté. Il faut se protéger et faire la part des choses. C’est aussi une question de formation.</p>
         </section>
-        <footer>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</footer>
-    <table>
-        <tbody>
-        <tr>
-            <td colspan="2">CARITAS La Boutique</td>
-        </tr>
-        <tr>
-            <td>Rue Maison-Rouge 11 </td>
-            <td>Lundi 13h30 - 18h</td>
-        </tr>
-        <tr>
-            <td>1400 Yverdon</td>
-            <td>Mardi à vendredi 9h-12 et 13h30-18h</td>
-        </tr>
-        <tr>
-            <td>Tél. 024 426 34 61</td>
-            <td>Samedi 9h-12h</td>
-        </tr>
-        </tbody>
-    </table>   
-    </section>
-    <section class="smalltalks">
-        <h1><span>Small Talks</span></h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Re magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.</p>
-    </section>
-    <section class="video">
-        <iframe id="ytplayer" type="text/html" width="960" height="540" src="http://www.youtube.com/embed/BDVoO0SA5KI?autoplay=0&autohide=1&color=red&controls=1&iv_load_policy=3&modestbranding=1&theme=light&showinfo=0" frameborder="0"></iframe>
+
+        <section class="question">
+            <h3 class="question">Quels sont les problèmes auxquels vous êtes confrontés quotidiennement ?</h3>
+            <p class="answer">Des détresses de tous types. Vous êtes obligés d’avoir des difficultés financières pour pouvoir bénéficier d’un logement subventionné. Mais les problèmes d’argent sont souvent liés à des détresses sociales. À mon avis, vous ne pouvez pas être un homme heureux si vous êtes à l’aide sociale. C’est très dur de vivre avec 1000 francs par mois. On a peu de marge de manoeuvre. Aussi, plus on attend, plus c’est dur de repartir. C’est peut-être un manque d’ambition ou de l’apathie. Moi, en tout cas, je ne serais pas heureux dans une situation comme celle-là. Les logements subventionnés, l’aide sociale et toutes ces mesures maintiennent la paix sociale.
+
+            </p>
         </section>
+
+
+        <section class="question">
+            <h3 class="question">Quels conseils donnez-vous à quelqu’un ayant de la peine à trouver un logement?</h3>
+            <p class="answer">Cela dépend vraiment de la situation de la personne. J’essaie de me mettre à la place des autres et d’imaginer ce que je ferais. Il y a aussi l’éducation qui entre en ligne de compte. Dans notre société, on veut tout avoir tout de suite. Il faut apprendre à économiser. La première facture à payer est celle du loyer. C’est la seule chose qui n’est pas négociable.
+
+            </p>
+        </section>
+
+        <table>
+            <tbody>
+                <tr>
+                    <td colspan="2">Office du logement</td>
+                </tr>
+                <tr>
+                    <td>Rue de Neuchâtel 2</td>
+                    <td>Tél. 024 423 69 40</td>
+                </tr>
+                <tr>
+                    <td>1400 Yverdon-les-Bains</td>
+                    <td>8h-11h30 et 14h-16h</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                 <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
 {% endblock %}

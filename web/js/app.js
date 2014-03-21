@@ -17,10 +17,10 @@ $(document).ready(function() {
     function search(motclef){
         $("#results").empty();
         if(motclef!==""){
-            var search = "http://www.precarite.ch/web/app_dev.php/annuaire.json?search="+motclef;
+            var search = "/web/app_dev.php/annuaire.json?search="+motclef;
         }
         else{
-            var search = "http://www.precarite.ch/web/app_dev.php/annuaire.json";
+            var search = "/web/app_dev.php/annuaire.json";
         }
 
         $.get(search, function(data){
@@ -38,7 +38,11 @@ $(document).ready(function() {
                 var place=val.place;
                 var grade=val.grade;
                 var detail=$("<div>").addClass("detail").attr("style","display:none;");
-                detail.append(description).append(link).append(phone);
+                if(link.length>0) detail.append(link)
+                if(description.length>0) detail.append(description)
+                if(phone.length>0) detail.append(phone)
+                if(link.length>0) detail.append(link)
+                if(adress.length>0) detail.append(adress)
                 var result=$("<div>").addClass("result").attr("data-id",id).append(title).append(detail);
                 results.append(result);
             });
