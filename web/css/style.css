@@ -1,4 +1,4 @@
-@charset "CP850";
+@charset "UTF-8";
 /* RESET */
 html, body, div, ul, ol, li, dl, dt, dd, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, fieldset, input, abbr, article, aside, command, details, figcaption, figure, footer, header, hgroup, mark, meter, nav, output, progress, section, summary, time {
   margin: 0;
@@ -127,6 +127,21 @@ body {
             text-decoration: none;
             font-size: 1.05em;
             display: block; }
+          body > header nav > ul > li.actif {
+            position: relative; }
+            body > header nav > ul > li.actif:after {
+              top: 80%;
+              left: 50%;
+              border: solid transparent;
+              content: " ";
+              height: 0;
+              width: 0;
+              position: absolute;
+              pointer-events: none;
+              border-color: rgba(101, 45, 42, 0);
+              border-bottom-color: #652d2a;
+              border-width: 10px;
+              margin-left: -10px; }
           body > header nav > ul > li.actif a, body > header nav > ul > li.actif h1 {
             color: #652d2a; }
       body > header nav > ul.prob, body > header nav > ul.report {
@@ -143,6 +158,21 @@ body {
         body > header nav > ul.prob li, body > header nav > ul.report li {
           display: inline-block;
           width: 10em; }
+          body > header nav > ul.prob li.actif, body > header nav > ul.report li.actif {
+            position: relative; }
+            body > header nav > ul.prob li.actif:after, body > header nav > ul.report li.actif:after {
+              top: -15%;
+              left: 50%;
+              border: solid transparent;
+              content: " ";
+              height: 0;
+              width: 0;
+              position: absolute;
+              pointer-events: none;
+              border-color: rgba(101, 45, 42, 0);
+              border-top-color: #652d2a;
+              border-width: 10px;
+              margin-left: -10px; }
           body > header nav > ul.prob li.actif a, body > header nav > ul.report li.actif a {
             color: #652d2a; }
   body > article {
@@ -178,6 +208,8 @@ body {
           vertical-align: top; }
           body > article section.top section.stats figure img {
             width: 100%; }
+      body > article section.top .quote {
+        margin-top: 30px; }
       body > article section.top header {
         width: 960px;
         border-bottom: 3px solid #652d2a;
@@ -317,7 +349,8 @@ section.tcol p {
 section.quote {
   text-align: center;
   width: 960px;
-  overflow: hidden; }
+  overflow: hidden;
+  margin-top: 30px; }
   section.quote quote {
     display: inline-block;
     position: relative;
@@ -431,34 +464,36 @@ section.twothird > section {
         -o-border-radius: 3px;
         border-radius: 3px; }
 
-section.portrait > h1 {
-  font-family: "dejavu_serifCnBdIt", times, serif;
-  font-size: 2.5em; }
-section.portrait > h2 {
-  font-size: 2.4em;
-  margin-top: -15px;
-  margin-bottom: 15px; }
-section.portrait > img {
-  width: 100%; }
-section.portrait > section.question {
-  margin-top: 50px; }
-  section.portrait > section.question h3 {
-    color: #652d2a;
-    font-family: "gentium_basicbold", times, serif;
-    font-size: 1.5em; }
-  section.portrait > section.question p {
-    font-family: "gentium_basicitalic", helvetica, sans-serif;
-    font-size: 1.5em;
-    padding: 0; }
-section.portrait > table {
-  margin-top: 30px;
-  width: 60%; }
-section.portrait > footer {
-  margin-top: 30px;
-  font-size: 1.3em;
-  line-height: 1.25em; }
-  section.portrait > footer:before {
-    content: "*"; }
+section.portrait {
+  margin-top: 30px; }
+  section.portrait > h1 {
+    font-family: "dejavu_serifCnBdIt", times, serif;
+    font-size: 2.5em; }
+  section.portrait > h2 {
+    font-size: 2.4em;
+    margin-top: -15px;
+    margin-bottom: 15px; }
+  section.portrait > img {
+    width: 100%; }
+  section.portrait > section.question {
+    margin-top: 50px; }
+    section.portrait > section.question h3 {
+      color: #652d2a;
+      font-family: "gentium_basicbold", times, serif;
+      font-size: 1.5em; }
+    section.portrait > section.question p {
+      font-family: "gentium_basicitalic", helvetica, sans-serif;
+      font-size: 1.5em;
+      padding: 0; }
+  section.portrait > table {
+    margin-top: 30px;
+    width: 60%; }
+  section.portrait > footer {
+    margin-top: 30px;
+    font-size: 1.3em;
+    line-height: 1.25em; }
+    section.portrait > footer:before {
+      content: "*"; }
 
 section.smalltalks {
   width: 960px;
@@ -489,7 +524,8 @@ section.smalltalks {
     columns: 3; }
 
 #main.accueil {
-  width: 1280px; }
+  width: 1280px;
+  margin-top: 30px; }
   #main.accueil #content {
     width: 960px;
     display: inline-block;
@@ -516,9 +552,9 @@ section.smalltalks {
         margin-left: 10px;
         left: 100%; }
     #main.accueil #content section.left {
-      float: left;
       width: 60%;
-      overflow: hidden; }
+      overflow: hidden;
+      display: inline-block; }
       #main.accueil #content section.left article h1 {
         text-align: left;
         overflow: hidden;
@@ -543,10 +579,11 @@ section.smalltalks {
       #main.accueil #content section.left article img {
         width: 100%; }
     #main.accueil #content section.right {
-      float: right;
       width: 30%;
       margin-right: 5%;
-      overflow: hidden; }
+      float: right;
+      overflow: hidden;
+      display: inline-block; }
       #main.accueil #content section.right h1 {
         text-align: left;
         overflow: hidden;
@@ -574,10 +611,10 @@ section.smalltalks {
           width: 100%; }
   #main.accueil #sidebar {
     width: 305px;
-    position: absolute;
-    right: 0px;
     background-color: #ad4d48;
-    top: 50px; }
+    float: right;
+    display: inline-block;
+    margin-top: 4.1em; }
     #main.accueil #sidebar .annuaire {
       margin-bottom: 10px; }
       #main.accueil #sidebar .annuaire h1 {
