@@ -3,8 +3,15 @@
 {% block content_repository %}
 
     <h1><span>Adresses</span></h1>
-    
+    <section class="quote">
+        <quote class="big">
+            <p>
+                <span>Vaud</span>
+            </p>
+        </quote>
+    </section>
     {% for ad in ads %}
+        {% if ad.place == 'vd' %}
         <article>
             <h1>{{ ad.title }}</h1>
             <p>{{ ad.description }}</p>
@@ -17,8 +24,106 @@
                 {% endfor %}
             </p>
         </article>
-    {% else %}
-        <p>Il n'y a pas d'articles dans le guide.</p>
+            {% endif %}
     {% endfor %}
+
+    <section class="quote">
+        <quote class="big">
+            <p>
+                <span>Fribourg</span>
+            </p>
+        </quote>
+    </section>
+        {% for ad in ads %}
+            {% if ad.place == 'fr' %}
+                <article>
+                    <h1>{{ ad.title }}</h1>
+                    <p>{{ ad.description }}</p>
+                    <p>{{ ad.link }}</p>
+                    <p>{{ ad.address }}</p>
+                    <p>{{ ad.phone }}</p>
+                    <p class="theme">
+                        {% for theme in ad.themes %}
+                            <span>{{ theme.title }}</span>
+                        {% endfor %}
+                    </p>
+                </article>
+            {% endif %}
+        {% endfor %}
+
+    <section class="quote">
+        <quote class="big">
+            <p>
+                <span>Genève</span>
+            </p>
+        </quote>
+    </section>
+            {% for ad in ads %}
+                {% if ad.place == 'ge' %}
+                    <article>
+                        <h1>{{ ad.title }}</h1>
+                        <p>{{ ad.description }}</p>
+                        <p>{{ ad.link }}</p>
+                        <p>{{ ad.address }}</p>
+                        <p>{{ ad.phone }}</p>
+                        <p class="theme">
+                            {% for theme in ad.themes %}
+                                <span>{{ theme.title }}</span>
+                            {% endfor %}
+                        </p>
+                    </article>
+                {% endif %}
+            {% endfor %}
+
+
+    <section class="quote">
+        <quote class="big">
+            <p>
+                <span>Valais</span>
+            </p>
+        </quote>
+    </section>
+                {% for ad in ads %}
+                    {% if ad.place == 'vs' %}
+                        <article>
+                            <h1>{{ ad.title }}</h1>
+                            <p>{{ ad.description }}</p>
+                            <p>{{ ad.link }}</p>
+                            <p>{{ ad.address }}</p>
+                            <p>{{ ad.phone }}</p>
+                            <p class="theme">
+                                {% for theme in ad.themes %}
+                                    <span>{{ theme.title }}</span>
+                                {% endfor %}
+                            </p>
+                        </article>
+                    {% endif %}
+                {% endfor %}
+
+    <section class="quote">
+        <quote class="big">
+            <p>
+                <span>Jura</span>
+            </p>
+        </quote>
+    </section>
+                    {% for ad in ads %}
+                        {% if ad.place == 'ju' %}
+                            <article>
+                                <h1>{{ ad.title }}</h1>
+                                <p>{{ ad.description }}</p>
+                                <p>{{ ad.link }}</p>
+                                <p>{{ ad.address }}</p>
+                                <p>{{ ad.phone }}</p>
+                                <p class="theme">
+                                    {% for theme in ad.themes %}
+                                        <span>{{ theme.title }}</span>
+                                    {% endfor %}
+                                </p>
+                            </article>
+                        {% endif %}
+                    {% endfor %}
+
+
 
 {% endblock %}
