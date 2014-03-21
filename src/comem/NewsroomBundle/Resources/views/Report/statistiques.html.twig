@@ -1,6 +1,6 @@
 {% extends "::report.html.twig" %} {% block lead %}
 <h1>
-    <span>Y'A DES PAUVRES EN SUISSE ?</span>
+    <span>La précarité en Suisse</span>
 </h1>
 <p>Qu'est-ce que la précarité ? Qui sont les personnes en situation de précarité financière en Suisse ? De quelles aides bénéficient-elles ? Cette rubrique répond à quelques questions fondamentales sur la précarité en Suisse, selon les données de l'Office Fédéral de la Statistique (OFS).</p>
 {% endblock %} 
@@ -35,8 +35,13 @@
 
 <section class="tcol">
     <h1>De quelles aides les personnes peuvent-elles bénéficier ?</h1>
+</section>
     <p>Le système de la protection sociale en Suisse repose sur plusieurs assurances sociales telles que l’AVS, l’AI ou l’aide sociale. Ce système entièrement financé par la Confédération, les cantons et les communes a coûté 155 milliards de francs en 2012. En 2007, ce montant s’élevait à 132,4 milliards. 92,7% de cette somme sont directement attribués aux prestations sociales.</p>
+
+    <section class="tcol">
     <h1>Dépenses totales en 2007</h1>
+</section>
+    
     <section class="graph">
         <figure>
             <div class="row">
@@ -52,11 +57,14 @@
     
     <p>Le montant global de la protection sociale est réparti en différentes catégories : vieillesse, maladie/soins de santé, invalidité, survie, famille/enfant(s), chômage, exclusion sociale et logement. Les deux plus grandes catégories sont la vieillesse et la maladie/soins de santé. Entre 1990 et 2007, leurs parts ont peu varié, contrairement au montant global des prestations sociales qui lui est 2,3 fois plus important.</p>
 
+
+<section class="tcol">
     <h1>Prestations sociales par fonction, en pourcent des prestations sociales totale</h1>
+</section>
+    
     <section class="graphs">
         <figure>
             <div class="row">
-                <p>1990:58 033 millions de francs</p>
                 <ul data-pie-id="pie2">
                     <li data-value="46">Vieillesse</li>
                     <li data-value="28">Maladie/soins de santé</li>
@@ -65,26 +73,28 @@
                     <li data-value="6">Famille/Enfants</li>
                     <li data-value="1">Chômage</li>
                     <li data-value="2">Exclusion sociale</li>
-                    <!--<li data-value="1">Logement</li>-->
+                    <li data-value="1">Logement</li>
                 </ul>
                 <div id="pie2"></div>
+                <h2>1990:58 033 millions de francs</h2>
             </div>
         </figure>
 
         <figure>
             <div class="row">
-                <p>2007: 132 364 millions de francs</p>
+               
                 <ul data-pie-id="pie3">
-                    <li data-value="46.4">Vieillesse</li>
-                    <li data-value="28.4">Maladie/soins de santé</li>
-                    <li data-value="9.7">Invalidité</li>
-                    <li data-value="5.6">Survie</li>
-                    <li data-value="6.3">Famille/Enfants</li>
-                    <li data-value="0.8">Chômage</li>
-                    <li data-value="2.3">Exclusion sociale</li>
-                    <li data-value="0.7">Logement</li>
+                    <li data-value="46">Vieillesse</li>
+                    <li data-value="27">Maladie/soins de santé</li>
+                    <li data-value="12">Invalidité</li>
+                    <li data-value="4">Survie</li>
+                    <li data-value="5">Famille/Enfants</li>
+                    <li data-value="3">Chômage</li>
+                    <li data-value="3">Exclusion sociale</li>
+                    <li data-value="1">Logement</li>
                 </ul>
                 <div id="pie3"></div>
+                <h2>2007: 132 364 millions de francs</h2>
             </div>
         </figure>
     </section>
@@ -94,59 +104,83 @@
 
 <section class="tcol">
     <h1>Comment ces organisations sans but lucratif sont-elles financées ?</h1>
+    </section>
     <p>En 2010, les organisations sans but lucratif ont récolté près de 3 milliards de francs suisses. Les sources de ce financement sont diverses, toutefois 42% proviennent des contributions étatiques (Confédération, Cantons, Communes).</p>
 
 
-    <section class="graphs">
-        <figure>
-            <div class="row">
-                <ul data-pie-id="pie1">
-                    <li data-value="32">Test d'un texte beaucoup trop long</li>
-                    <li data-value="50">Test d'un texte beaucoup trop long</li>
-                    <li data-value="32">Test d'un texte beaucoup trop long</li>
-                    <li data-value="50">Test d'un texte beaucoup trop long</li>
-                </ul>
-                <div id="pie1"></div>
-            </div>
-        </figure>
+<section class="tcol">
+    <h1>Sources de financement des OSBL par type, en 2010</h1>
+    </section>
 
+   <section class="graph">
         <figure>
             <div class="row">
-                <ul data-pie-id="pie2">
-                    <li data-value="32">Test d'un texte beaucoup trop long</li>
-                    <li data-value="50">Test d'un texte beaucoup trop long</li>
-                    <li data-value="32">Test d'un texte beaucoup trop long</li>
-                    <li data-value="50">Test d'un texte beaucoup trop long</li>
+                <ul data-pie-id="pie4">
+                    <li data-value="27">Dons, donations, legs</li>
+                    <li data-value="5">Cotisations des membres</li>
+                    <li data-value="27">Autres recettes</li>
+                    <li data-value="15">Contributions de la Confédération</li>
+                    <li data-value="20">Contributions des cantons</li>
+                    <li data-value="7">Contrtibutions des communes</li>
                 </ul>
-                <div id="pie2"></div>
+                <div id="pie4"></div>
+                <h2>Le totale correspond à environ 3 milliards de francs</h2>
             </div>
         </figure>
     </section>
-
-    <section class="graph">
-        <figure>
-            <div class="row">
-                <ul data-pie-id="pie3">
-                    <li data-value="92.9">Prestations sociales</li>
-                    <li data-value="5.3">Dépenses de fonctionnement</li>
-                    <li data-value="1.8">Autres dépenses</li>
-                </ul>
-                <div id="pie3"></div>
-            </div>
-        </figure>
-    </section>
-    <!--graphique "source de financement des oslb en 2010-->
-</section>
 
 <section class="tcol">
     <h1>Comment les fonds sont-ils attribués par les OSBL ?</h1>
+    </section>
     <p>Seul 1,2 milliard de francs est pris en compte dans les dépenses dites de prestations sociales et de gestion interne. 1,8 milliard est attribué à d’autres fonctions.</p>
 
-    <!--graphique "répartition des depense des oslb par categorie en 2010"-->
+
+<section class="tcol">
+    <h1>Répartiotion des dépenses des OSBL par catégorie, en 2010</h1>
+    </section>
+    
+   <section class="graph">
+        <figure>
+            <div class="row">
+                <ul data-pie-id="pie5">
+                    <li data-value="57">Prestations sociale</li>
+                    <li data-value="11">Charges de personnel générale</li>
+                    <li data-value="4">Autres charges de personnel</li>
+                    <li data-value="23">Charges d'exploitation</li>
+                    <li data-value="5">Autres charges</li>
+                </ul>
+                <div id="pie5"></div>
+                <h2>Le totale correspond à 1,2 milliards de francs</h2>
+            </div>
+        </figure>
+    </section>
 
     <p>57% des fonds sont attribués aux prestations sociales. Quelles sont ces prestations et comment les fonds sont-ils répartis?</p>
 
-    <!--graphique "prestations sociales des oslb par fonctions en 2010"-->
+
+<section class="tcol">
+    <h1>Prestations sociales des OSBL par fonctions, en 2010</h1>
+    </section>
+   
+   <section class="graph">
+        <figure>
+            <div class="row">
+                <ul data-pie-id="pie6">
+                    <li data-value="15">Vieillesse</li>
+                    <li data-value="21">Maladie/soins de santé</li>
+                    <li data-value="25">Invalidité</li>
+                    <li data-value="1">Survie</li>
+                    <li data-value="10">Famille/Enfants</li>
+                    <li data-value="5">Chômage</li>
+                    <li data-value="6">Exclusion sociale</li>
+                    <li data-value="17">Logement</li>
+                </ul>
+                <div id="pie6"></div>
+                <h2>Le totale correspond à 665 millions de francs</h2>
+            </div>
+        </figure>
+    </section>
+</section>
 
     <p>De 1997 à 2010, les dépenses des organisations sans but lucratif ont évolué. L’Office Fédéral de la Statistique (OFS) compare les années 1997, 2004 et 2010.</p>
 </section>
@@ -163,4 +197,47 @@
         <h2>La Confédération définit la pauvreté comme étant la précarité financière de la manière suivante :</h2>
         <p class="answer">“D’une manière générale, la pauvreté peut être définie comme une insuffisance de ressources (matérielles, culturelles et sociales) telle que les personnes sont exclues du niveau de vie minimal reconnu comme acceptable dans le pays où elles vivent. On définit généralement la pauvreté en termes monétaires.”</p>
     </section>
+
+
+<!--
+
+ <section class="graphs">
+        <figure>
+            <div class="row">
+                <ul data-pie-id="pie1">
+                    <li data-value="32">Test d'un texte beaucoup trop long</li>
+                    <li data-value="50">Test d'un texte beaucoup trop long</li>
+                    <li data-value="32">Test d'un texte beaucoup trop long</li>
+                    <li data-value="50">Test d'un texte beaucoup trop long</li>
+                </ul>
+                <div id="pie1"></div>
+            </div>
+        </figure>
+
+        <figure>
+            <div class="row">
+                <ul data-pie-id="pie2">
+                    <li data-value="32">Test d'un texte beaucoup trop long</li>
+                    <li data-value="50">Test d'un texte beaucoup trop long</li>
+                    <li data-value="32">Test d'un texte beaucoup trop long</li>
+                    <li data-value="50">Test d'un texte beaucoup trop long</li>
+                </ul>
+                <div id="pie2"></div>
+            </div>
+        </figure>
+    </section>
+
+    <section class="graph">
+        <figure>
+            <div class="row">
+                <ul data-pie-id="pie3">
+                    <li data-value="92.9">Prestations sociales</li>
+                    <li data-value="5.3">Dépenses de fonctionnement</li>
+                    <li data-value="1.8">Autres dépenses</li>
+                </ul>
+                <div id="pie3"></div>
+            </div>
+        </figure>
+    </section>-->
+
 {% endblock %}
