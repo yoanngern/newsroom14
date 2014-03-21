@@ -424,7 +424,7 @@ section.quote {
   overflow: hidden;
   margin-top: 30px;
   margin-bottom: 30px; }
-  section.quote .quote {
+  section.quote quote {
     display: inline-block;
     position: relative;
     color: #652d2a;
@@ -432,7 +432,7 @@ section.quote {
     margin: 0 0.5%;
     text-align: center;
     line-height: 1.5em; }
-    section.quote .quote:before, section.quote .quote:after {
+    section.quote quote:before, section.quote quote:after {
       border-top: 3px solid #652d2a;
       display: inline-block;
       height: 1px;
@@ -440,22 +440,22 @@ section.quote {
       width: 960px;
       position: absolute;
       top: 50%; }
-    section.quote .quote:after {
+    section.quote quote:after {
       left: 100%;
       margin-left: 15px; }
-    section.quote .quote:before {
+    section.quote quote:before {
       right: 100%;
       margin-right: 15px; }
-    section.quote .quote p {
+    section.quote quote p {
       position: relative;
       display: inline; }
-      section.quote .quote p span {
+      section.quote quote p span {
         display: block;
         text-align: center; }
-        section.quote .quote p span:first-of-type:before {
+        section.quote quote p span:first-of-type:before {
           content: "« ";
           font-family: "gentium_basicregular", helvetica, sans-serif; }
-        section.quote .quote p span:last-of-type:after {
+        section.quote quote p span:last-of-type:after {
           content: " »";
           font-family: "gentium_basicregular", helvetica, sans-serif; }
 
