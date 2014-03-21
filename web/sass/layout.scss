@@ -319,6 +319,69 @@ section.twothird {
         }
     }
 }
+
+#main.annuaire {
+    
+    overflow: hidden;
+    padding-bottom: 40px;
+    
+    & > h1 {
+        font-size: 3em;
+        font-family: $font-title-h1;
+        color: $red;
+        padding: 5px;
+        
+        span {
+            display: inline-block;
+            position: relative;
+            
+            &:after {
+                border-top: 3px solid $red;
+                display: block;
+                height: 3px;
+                content: "";
+                width: $contentWidth;
+                position: absolute;
+                top: 1.2em;
+            }
+            &:after {
+               margin-left: 10px; 
+               left: 100%;
+            }
+        }
+    }
+    
+    article {
+        margin: 20px;
+        display: block;
+        border: 1px solid $red;
+        color: $black;
+        text-decoration: none;
+        padding: 10px;
+        @include border-radius(3px);
+        
+        h1 {
+            padding: 5px;
+            font-size: 1.3em;
+            font-family: $font-title-h3;
+            color: $red;
+        }
+        
+        p {
+            padding: 0 0 0 5px !important;
+            
+            &.theme {
+                span {
+                    display: inline-block;
+                    padding: 1px 5px;
+                    border: 1px solid $red;
+                    @include border-radius(3px);
+                }
+            }
+        }
+    }
+}
+
 section.portrait {
     &>h1 {
         font-family: $font-title-h2;

@@ -21,6 +21,20 @@ class DirectoryController extends Controller
         
         $ads = $em->getRepository('comemNewsroomBundle:Ad')->findAllOrder();
         
+        return $this->render('comemNewsroomBundle:Admin:list.html.twig', array(
+            'ads' => $ads,
+            'page' => 'annuaire'
+        ));
+    }
+    
+    
+    public function listPublicAction()
+    {
+        
+        $em = $this->getDoctrine()->getManager();
+        
+        $ads = $em->getRepository('comemNewsroomBundle:Ad')->findAllOrder();
+        
         return $this->render('comemNewsroomBundle:Directory:list.html.twig', array(
             'ads' => $ads,
             'page' => 'annuaire'
@@ -78,7 +92,7 @@ class DirectoryController extends Controller
             }
         }
         
-        return $this->render('comemNewsroomBundle:Directory:add.html.twig', array(
+        return $this->render('comemNewsroomBundle:Admin:add.html.twig', array(
             'form' => $form->createView(),
             'page' => 'annuaire'
         ));
@@ -110,7 +124,7 @@ class DirectoryController extends Controller
             }
         }
         
-        return $this->render('comemNewsroomBundle:Directory:edit.html.twig', array(
+        return $this->render('comemNewsroomBundle:Admin:edit.html.twig', array(
             'ad' => $ad,
             'form' => $form->createView(),
             'page' => 'annuaire'
@@ -124,7 +138,7 @@ class DirectoryController extends Controller
         
         $themes = $em->getRepository('comemNewsroomBundle:Theme')->findAll();
         
-        return $this->render('comemNewsroomBundle:Directory:listTheme.html.twig', array(
+        return $this->render('comemNewsroomBundle:Admin:listTheme.html.twig', array(
             'themes' => $themes,
             'page' => 'annuaire'
         ));
@@ -160,7 +174,7 @@ class DirectoryController extends Controller
             }
         }
         
-        return $this->render('comemNewsroomBundle:Directory:addTheme.html.twig', array(
+        return $this->render('comemNewsroomBundle:Admin:addTheme.html.twig', array(
             'form' => $form->createView(),
             'page' => 'annuaire'
         ));
@@ -192,7 +206,7 @@ class DirectoryController extends Controller
             }
         }
         
-        return $this->render('comemNewsroomBundle:Directory:editTheme.html.twig', array(
+        return $this->render('comemNewsroomBundle:Admin:editTheme.html.twig', array(
             'theme' => $theme,
             'form' => $form->createView(),
             'page' => 'annuaire'

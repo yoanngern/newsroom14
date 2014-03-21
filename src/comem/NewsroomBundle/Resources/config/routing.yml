@@ -5,9 +5,13 @@ comem_newsroom_home:
 comem_newsroom_about:
     pattern:  /a-propos
     defaults: { _controller: comemNewsroomBundle:Article:about }
+
+comem_newsroom_directory_public:
+    pattern:  /annuaire
+    defaults: { _controller: comemNewsroomBundle:Directory:listPublic }
     
 comem_newsroom_directory:
-    pattern:  /annuaire
+    pattern:  /admin/annuaire
     defaults: { _controller: comemNewsroomBundle:Directory:list }
     
 comem_newsroom_directory_json:
@@ -15,11 +19,11 @@ comem_newsroom_directory_json:
     defaults: { _controller: comemNewsroomBundle:Directory:search }
     
 comem_newsroom_directory_add:
-    pattern:  /annuaire/add
+    pattern:  /admin/annuaire/add
     defaults: { _controller: comemNewsroomBundle:Directory:add }
     
 comem_newsroom_directory_edit:
-    pattern:  /annuaire/edit/{ad}
+    pattern:  /admin/annuaire/edit/{ad}
     defaults: { _controller: comemNewsroomBundle:Directory:edit }
     
 comem_newsroom_directory_theme:
@@ -27,11 +31,11 @@ comem_newsroom_directory_theme:
     defaults: { _controller: comemNewsroomBundle:Directory:listTheme }
     
 comem_newsroom_directory_theme_add:
-    pattern:  /theme/add
+    pattern:  /admin/theme/add
     defaults: { _controller: comemNewsroomBundle:Directory:addTheme }
     
 comem_newsroom_directory_theme_edit:
-    pattern:  /theme/edit/{theme}
+    pattern:  /admin/theme/edit/{theme}
     defaults: { _controller: comemNewsroomBundle:Directory:editTheme }
     
 comem_newsroom_report:
