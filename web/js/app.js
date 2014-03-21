@@ -2,7 +2,6 @@ $(document).ready(function() {
     search("");
 
     $(".annuaire").on("click", ".result h2",function(){
-        console.log("test");
         $(this).next("div").toggle();
     })
 
