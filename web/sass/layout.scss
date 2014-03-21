@@ -83,9 +83,8 @@
                         }
                     }
                     &:hover {
-                            position: relative;
-                        &:after,
-                        &:before {
+                        position: relative;
+                        &:after, &:before {
                             bottom: -94%;
                             left: 50%;
                             border: solid transparent;
@@ -147,9 +146,8 @@
                         }
                     }
                     &:hover {
-                            position: relative;
-                        &:after,
-                        &:before {
+                        position: relative;
+                        &:after, &:before {
                             top: -15%;
                             left: 50%;
                             border: solid transparent;
@@ -605,7 +603,6 @@ section.smalltalks {
         width: $contentWidth;
         display: inline-block;
         margin: 0px;
-
         article.top {
             h1 {
                 text-align: left;
@@ -762,4 +759,9 @@ section.smalltalks {
             }
         }
     }
+}
+span.em {
+    display: block;
+    margin: 0.4em 0;
+    font-family: $font-text-italic;
 }
