@@ -33,15 +33,17 @@
         margin: 0 auto;
         z-index: 100;
         overflow: visible;
+        img.logo {
+            display: block;
+            margin: 0 auto;
+        }
         nav {
             width: $contentWidth;
-            margin: 0 auto;
+            margin: 30px auto 0;
             &>ul {
                 margin: 0 auto;
                 text-align: center;
                 position: static;
-                border-top: 3px solid $red;
-                border-bottom: 3px solid $red;
                 font-size: 1em;
                 height: 2.1em;
                 line-height: 2.1em;
@@ -66,7 +68,8 @@
                     }
                 }
             }
-            &>ul.prob, &>ul.report {
+            &>ul.prob,
+            &>ul.report {
                 display: none;
                 text-decoration: none;
                 list-style: none;
@@ -99,22 +102,26 @@
                 font-family: $font-text-italic;
                 font-size: 1.55em;
                 color: $red;
-                margin: 30px 20px 30px 0px;
                 width: 0.5 * $contentWidth;
                 float: right;
                 text-align: right;
                 display: inline-block;
+                position: relative;
+                bottom: -2em;
                 p {
                     display: inline-block;
                     width: (0.5 * $contentWidth) - 115;
                     height: auto;
                     line-height: 1em;
+                    margin-top: 0;
                 }
                 figure {
                     width: 100px;
                     height: 100px;
                     display: inline-block;
                     margin-left: 8px;
+                    margin-bottom: 0;
+                    vertical-align: top;
                     img {
                         width: 100%;
                     }
@@ -124,6 +131,7 @@
                 width: $contentWidth;
                 border-bottom: 3px solid $red;
                 padding-bottom: 20px;
+                clear: both;
                 h1 {
                     text-align: left;
                     overflow: hidden;
@@ -183,25 +191,21 @@
             }
         }
     }
-    
     & > footer {
-        background-color: lighten( $red, 35% );
+        background-color: lighten($red, 35%);
         padding-bottom: 20px;
         display: block;
         position: absolute;
         left: 0;
         width: 100%;
-            
         #help {
             margin: 0 auto;
             width: $contentWidth;
             text-align: left;
-            
             & > h1 {
                 font-size: 2em;
                 padding: 5px 0px 5px 20px;
             }
-            
             section {
                 display: inline-block;
                 width: 300px;
@@ -209,10 +213,9 @@
                 margin: 10px;
             }
         }
-        
-        display: block;
-        text-align: center;
-        margin-top: 50px;
+        display:block;
+        text-align:center;
+        margin-top:50px;
         a {
             padding: 10px;
             color: $red;
@@ -222,18 +225,17 @@
         }
     }
 }
-
 .arrow {
     position: fixed;
     display: inline-block;
     top: 35%;
-    &.next{
+    &.next {
         right: 0;
     }
     &.previous {
         left: 0;
     }
-    &>a{
+    &>a {
         display: inline-block;
         text-decoration: none;
         &>span {
@@ -244,8 +246,6 @@
         }
     }
 }
-
-
 section.tcol {
     & > h1 {
         font-family: $font-title-h2;
@@ -343,22 +343,17 @@ section.twothird {
         }
     }
 }
-
 #main.annuaire {
-    
     overflow: hidden;
     padding-bottom: 40px;
-    
     & > h1 {
         font-size: 3em;
         font-family: $font-title-h1;
         color: $red;
         padding: 5px;
-        
         span {
             display: inline-block;
             position: relative;
-            
             &:after {
                 border-top: 3px solid $red;
                 display: block;
@@ -369,12 +364,11 @@ section.twothird {
                 top: 1.2em;
             }
             &:after {
-               margin-left: 10px; 
-               left: 100%;
+                margin-left: 10px;
+                left: 100%;
             }
         }
     }
-    
     article {
         margin: 20px;
         display: block;
@@ -383,17 +377,14 @@ section.twothird {
         text-decoration: none;
         padding: 10px;
         @include border-radius(3px);
-        
         h1 {
             padding: 5px;
             font-size: 1.3em;
             font-family: $font-title-h3;
             color: $red;
         }
-        
         p {
             padding: 0 0 0 5px !important;
-            
             &.theme {
                 span {
                     display: inline-block;
@@ -405,7 +396,6 @@ section.twothird {
         }
     }
 }
-
 section.portrait {
     &>h1 {
         font-family: $font-title-h2;
@@ -476,18 +466,13 @@ section.smalltalks {
     }
     border-bottom:3px solid $red;
 }
-
-
 #main.accueil {
     width: $bigWidth;
-    
     #content {
         width: $contentWidth;
         display: inline-block;
         margin: 0px;
-        
         article.top {
-            
             h1 {
                 text-align: left;
                 overflow: hidden;
@@ -514,12 +499,10 @@ section.smalltalks {
                 }
             }
         }
-        
         section.left {
             float: left;
             width: 60%;
             overflow: hidden;
-            
             article {
                 h1 {
                     text-align: left;
@@ -546,20 +529,16 @@ section.smalltalks {
                         left: 100%;
                     }
                 }
-                
                 img {
                     width: 100%;
-                }   
+                }
             }
         }
-        
-        
         section.right {
             float: right;
             width: 30%;
             margin-right: 5%;
             overflow: hidden;
-            
             h1 {
                 text-align: left;
                 overflow: hidden;
@@ -568,7 +547,6 @@ section.smalltalks {
                 font-size: 3.5em;
                 color: $red;
             }
-            
             span {
                 display: inline-block;
                 position: relative;
@@ -586,24 +564,67 @@ section.smalltalks {
                     left: 100%;
                 }
             }
-            
             article {
                 margin-bottom: 50px;
-                
-                
-                
                 img {
                     width: 100%;
                 }
             }
         }
     }
-    
     #sidebar {
         width: $bigWidth - $contentWidth - 15px;
         position: absolute;
         right: 0px;
-        background-color: lighten( $red, 20% );
+        background-color: lighten($red, 20%);
         top: 50px;
+        .annuaire {
+            margin-bottom: 10px;
+            h1 {
+                text-align: center;
+                color: $white;
+                font-family: $font-title-h1;
+                text-decoration: none;
+                font-weight: bold;
+                font-size: 2em;
+                display: block;
+            }
+            input {
+                width: 90%;
+                border-radius: 5px;
+                margin-bottom: 10px;
+                height: 25px;
+                margin-left: 4%;
+            }
+            .headAnnuaire {
+                border-bottom: 2px solid $white;
+                padding-left: 5px;
+                padding-right: 5px;
+            }
+            #results {
+                padding-left: 15px;
+                padding-right: 15px;
+                margin-right: 5px;
+                overflow: auto;
+                height: 500px;
+                margin-top: 10px;
+            }
+            .result {
+                padding-left: 5px;
+                margin-bottom: 10px;
+                h2 {
+                    color: white;
+                    font-weight: bold;
+                    font-size: 1.3em;
+                    cursor: pointer;
+                }
+                a {
+                    color: $white;
+                }
+                a:hover {
+                    color: lightgrey;
+                }
+            }
+        }
     }
 }
