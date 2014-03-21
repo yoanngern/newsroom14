@@ -783,3 +783,10 @@ span.em {
     margin: 0.4em 0;
     font-family: $font-text-italic;
 }
+header.about {
+    &>h2 {
+        font-family: $font-title-h2;
+        font-size: 2em;
+        margin-top: 20px;
+    }
+}
