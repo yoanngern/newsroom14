@@ -1,4 +1,4 @@
-@charset "CP850";
+@charset "UTF-8";
 /* RESET */
 html, body, div, ul, ol, li, dl, dt, dd, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, fieldset, input, abbr, article, aside, command, details, figcaption, figure, footer, header, hgroup, mark, meter, nav, output, progress, section, summary, time {
   margin: 0;
@@ -131,7 +131,7 @@ body {
           body > header nav > ul > li.actif {
             position: relative; }
             body > header nav > ul > li.actif:after {
-              bottom: -94%;
+              top: 80%;
               left: 50%;
               border: solid transparent;
               content: " ";
@@ -146,7 +146,7 @@ body {
           body > header nav > ul > li:hover {
             position: relative; }
             body > header nav > ul > li:hover:after, body > header nav > ul > li:hover:before {
-              bottom: -94%;
+              bottom: -95%;
               left: 50%;
               border: solid transparent;
               content: " ";
@@ -225,7 +225,7 @@ body {
       z-index: 100;
       min-width: 960px;
       display: block;
-      margin-top: 30px; }
+      margin-top: 50px; }
       body > article section.top section.stats {
         font-family: "gentium_basicitalic", helvetica, sans-serif;
         font-size: 1.55em;
@@ -236,23 +236,26 @@ body {
         display: inline-block;
         position: relative;
         bottom: -0.5em; }
-        body > article section.top section.stats p {
+        body > article section.top section.stats > p {
           display: inline-block;
           width: 365px;
           height: auto;
           line-height: 1em;
           margin-top: 0; }
-        body > article section.top section.stats figure {
+        body > article section.top section.stats > figure {
           width: 100px;
           height: 100px;
           display: inline-block;
           margin-left: 8px;
           margin-bottom: 0;
           vertical-align: top; }
-          body > article section.top section.stats figure img {
+          body > article section.top section.stats > figure img {
             width: 100%; }
-      body > article section.top .quote {
-        margin-top: 30px; }
+      body > article section.top section.quote {
+        margin: 50px 0; }
+      body > article section.top section.video {
+        margin: 30px 0;
+        clear: both; }
       body > article section.top header {
         width: 960px;
         border-bottom: 2px solid #652d2a;
@@ -388,6 +391,9 @@ section.tcol p {
   -webkit-columns: 3;
   -moz-columns: 3;
   columns: 3; }
+  section.tcol p span {
+    padding-bottom: 20px;
+    display: block; }
 
 section.quote {
   text-align: center;
@@ -710,3 +716,8 @@ span.em {
   display: block;
   margin: 0.4em 0;
   font-family: "gentium_basicitalic", helvetica, sans-serif; }
+
+header.about > h2 {
+  font-family: "dejavu_serifCnBdIt", times, serif;
+  font-size: 2em;
+  margin-top: 20px; }
