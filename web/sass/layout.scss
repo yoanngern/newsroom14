@@ -2,13 +2,14 @@
 @import 'reset';
 @import 'functions';
 @import 'font';
+@import 'homepage';
+
  $contentWidth:960px;
  $bigWidth:1280px;
  $minHeight:600px;
 
  //marge entre article
  $articleMargin:15px;
-
 
 
  body {
@@ -645,7 +646,7 @@ section.smalltalks {
                 overflow: hidden;
                 width: $contentWidth;
                 font-family: $font-title-h1;
-                font-size: 3.5em;
+                font-size: 2.5em;
                 color: $red;
                 margin-bottom:10px;
             }
@@ -680,7 +681,7 @@ section.smalltalks {
                     overflow: hidden;
                     width: $contentWidth;
                     font-family: $font-title-h1;
-                    font-size: 3.5em;
+                    font-size: 2.5em;
                     color: $red;
                 }
                 span {
@@ -694,6 +695,7 @@ section.smalltalks {
                         width: $contentWidth;
                         position: absolute;
                         top: 1.2em;
+                        width: 200px;
                     }
                     &:after {
                         margin-left: 10px;
@@ -717,8 +719,9 @@ section.smalltalks {
                 overflow: hidden;
                 width: $contentWidth;
                 font-family: $font-title-h1;
-                font-size: 3.5em;
+                font-size: 2.5em;
                 color: $red;
+                line-height: 1em;
             }
             span {
                 display: inline-block;
@@ -842,4 +845,5 @@ header.about {
         margin-top: 20px;
 
     }
+}
 }
