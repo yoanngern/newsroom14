@@ -20,6 +20,7 @@
 
 figure{
     max-height: 450px;
+    max-width:450px;
 }
 
 .row li{
@@ -32,18 +33,19 @@ figure{
 }
 
 .graph figure{
-    width:50%;
+    width:450px;
     margin:auto;
 }
 
 .graphs{
     width:960px;
-    margin-bottom:130px;
+    margin-bottom:160px;
     display:inline-block;
 }
 
 .graphs figure{
-    width:50%;
+    width:450px;
+    margin-top:20px;
     float:left;
 }
 

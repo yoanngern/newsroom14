@@ -314,9 +314,12 @@ body {
       overflow: hidden;
       margin: 0 auto;
       text-align: left;
+<<<<<<< HEAD
       display: block;
       margin-top: 30px;
       padding-top: 40px;
+=======
+>>>>>>> 397b39c549882be6de101c7626b2cc686b61043e
       border-bottom: 2px solid #652d2a; }
       body > footer section.footer_home h1 {
         font-family: "dejavu_serifcondensed", times, serif;
@@ -741,6 +744,11 @@ section.smalltalks {
       #main.accueil .quiz h1 span:after {
         margin-left: 10px;
         left: 100%; }
+
+span.em {
+  display: block;
+  margin: 0.4em 0;
+  font-family: "gentium_basicitalic", helvetica, sans-serif; }
 
 #main {
   overflow: hidden;

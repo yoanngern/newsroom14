@@ -34,11 +34,20 @@ $(document).ready(function() {
                 var linkDetail=$("<a>").attr("href",val.link).html(val.link);
                 var link=$("<p>").append("Site: ").append(linkDetail);
                 var phone=$("<p>").html("Tel: "+val.phone);
-                var adress=val.adress;
+                var adress=val.address;
                 var place=val.place;
                 var grade=val.grade;
                 var detail=$("<div>").addClass("detail").attr("style","display:none;");
-                detail.append(description).append(link).append(phone);
+                if(adress!==undefined){
+                    if(adress.length>1){
+                        detail.append("<p>"+adress+"</p>");
+                    }
+                }
+                if(link.text().length>100) detail.append(link);
+                if(description.length>1) detail.append(description);
+                if(phone.text().length>10) detail.append(phone);
+
+
                 var result=$("<div>").addClass("result").attr("data-id",id).append(title).append(detail);
                 results.append(result);
             });
