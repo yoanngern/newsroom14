@@ -320,6 +320,57 @@ section.twothird > section {
       padding-top: 30px;
       display: block; }
 
+#main.annuaire {
+  overflow: hidden;
+  padding-bottom: 40px; }
+  #main.annuaire > h1 {
+    font-size: 3em;
+    font-family: "dejavu_serifcondensed", times, serif;
+    color: #652d2a;
+    padding: 5px; }
+    #main.annuaire > h1 span {
+      display: inline-block;
+      position: relative; }
+      #main.annuaire > h1 span:after {
+        border-top: 3px solid #652d2a;
+        display: block;
+        height: 3px;
+        content: "";
+        width: 960px;
+        position: absolute;
+        top: 1.2em; }
+      #main.annuaire > h1 span:after {
+        margin-left: 10px;
+        left: 100%; }
+  #main.annuaire article {
+    margin: 20px;
+    display: block;
+    border: 1px solid #652d2a;
+    color: #1a1a1a;
+    text-decoration: none;
+    padding: 10px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px; }
+    #main.annuaire article h1 {
+      padding: 5px;
+      font-size: 1.3em;
+      font-family: "gentium_basicbold", times, serif;
+      color: #652d2a; }
+    #main.annuaire article p {
+      padding: 0 0 0 5px !important; }
+      #main.annuaire article p.theme span {
+        display: inline-block;
+        padding: 1px 5px;
+        border: 1px solid #652d2a;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        -ms-border-radius: 3px;
+        -o-border-radius: 3px;
+        border-radius: 3px; }
+
 section.portrait > h1 {
   font-family: "dejavu_serifCnBdIt", times, serif;
   font-size: 2.5em; }
