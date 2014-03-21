@@ -63,6 +63,23 @@
                         font-size: 1.05em;
                         display: block;
                     }
+                    &.actif {
+                            position: relative;
+                        &:after {
+                            top: 80%;
+                            left: 50%;
+                            border: solid transparent;
+                            content: " ";
+                            height: 0;
+                            width: 0;
+                            position: absolute;
+                            pointer-events: none;
+                            border-color: rgba(101, 45, 42, 0);
+                            border-bottom-color: #652d2a;
+                            border-width: 10px;
+                            margin-left: -10px;
+                        }
+                    }
                     &.actif a,
                     &.actif h1 {
                         color: $red;
@@ -84,6 +101,23 @@
                 li {
                     display: inline-block;
                     width: 10em;
+                                        &.actif {
+                            position: relative;
+                        &:after {
+                            bottom: 80%;
+                            left: 50%;
+                            border: solid transparent;
+                            content: " ";
+                            height: 0;
+                            width: 0;
+                            position: absolute;
+                            pointer-events: none;
+                            border-color: rgba(101, 45, 42, 0);
+                            border-top-color: #652d2a;
+                            border-width: 10px;
+                            margin-left: -10px;
+                        }
+                    }
                     &.actif a {
                         color: $red;
                     }
@@ -202,7 +236,6 @@
         position: absolute;
         left: 0;
         width: 100%;
-
         section.footer_home {
             width: $contentWidth;
             overflow: hidden;
@@ -236,7 +269,6 @@
             }
             border-bottom:3px solid $red;
         }
-
         #help {
             margin: 0 auto;
             width: $contentWidth;
@@ -298,6 +330,7 @@ section.quote {
     text-align: center;
     width: $contentWidth;
     overflow: hidden;
+    margin-top: 30px;
     quote {
         display: inline-block;
         position: relative;
@@ -436,6 +469,7 @@ section.twothird {
     }
 }
 section.portrait {
+    margin-top: 30px;
     &>h1 {
         font-family: $font-title-h2;
         font-size: 2.5em;
