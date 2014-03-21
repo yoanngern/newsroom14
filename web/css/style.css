@@ -73,7 +73,7 @@ article, aside, footer, header, hgroup, nav, section, figure, figcaption {
 
 body {
   font-family: "gentium_basicregular", helvetica, sans-serif;
-  font-size: 16px;
+  font-size: 15px;
   margin-top: 70px;
   margin-bottom: 70px; }
   body #background {
@@ -90,7 +90,8 @@ body {
   body p,
   body td {
     font-size: 1.3em;
-    line-height: 1.25em; }
+    line-height: 1.25em;
+    margin-top: 10px; }
   body > header {
     max-width: 1280px;
     width: 100%;
@@ -127,6 +128,21 @@ body {
             text-decoration: none;
             font-size: 1.05em;
             display: block; }
+          body > header nav > ul > li.actif {
+            position: relative; }
+            body > header nav > ul > li.actif:after {
+              top: 80%;
+              left: 50%;
+              border: solid transparent;
+              content: " ";
+              height: 0;
+              width: 0;
+              position: absolute;
+              pointer-events: none;
+              border-color: rgba(101, 45, 42, 0);
+              border-bottom-color: #652d2a;
+              border-width: 10px;
+              margin-left: -10px; }
           body > header nav > ul > li.actif a, body > header nav > ul > li.actif h1 {
             color: #652d2a; }
       body > header nav > ul.prob, body > header nav > ul.report {
@@ -143,6 +159,21 @@ body {
         body > header nav > ul.prob li, body > header nav > ul.report li {
           display: inline-block;
           width: 10em; }
+          body > header nav > ul.prob li.actif, body > header nav > ul.report li.actif {
+            position: relative; }
+            body > header nav > ul.prob li.actif:after, body > header nav > ul.report li.actif:after {
+              top: -15%;
+              left: 50%;
+              border: solid transparent;
+              content: " ";
+              height: 0;
+              width: 0;
+              position: absolute;
+              pointer-events: none;
+              border-color: rgba(101, 45, 42, 0);
+              border-top-color: #652d2a;
+              border-width: 10px;
+              margin-left: -10px; }
           body > header nav > ul.prob li.actif a, body > header nav > ul.report li.actif a {
             color: #652d2a; }
   body > article {
@@ -182,7 +213,7 @@ body {
         margin-top: 30px; }
       body > article section.top header {
         width: 960px;
-        border-bottom: 3px solid #652d2a;
+        border-bottom: 2px solid #652d2a;
         padding-bottom: 20px;
         clear: both; }
         body > article section.top header h1 {
@@ -196,9 +227,9 @@ body {
           display: inline-block;
           position: relative; }
           body > article section.top header span:after {
-            border-top: 3px solid #652d2a;
+            border-top: 2px solid #652d2a;
             display: block;
-            height: 3px;
+            height: 2px;
             content: "";
             width: 960px;
             position: absolute;
@@ -244,7 +275,7 @@ body {
       overflow: hidden;
       margin: 0 auto;
       text-align: left;
-      border-bottom: 3px solid #652d2a; }
+      border-bottom: 2px solid #652d2a; }
       body > footer section.footer_home h1 {
         font-family: "dejavu_serifcondensed", times, serif;
         font-size: 3.5em;
@@ -254,9 +285,9 @@ body {
           display: inline-block;
           position: relative; }
           body > footer section.footer_home h1 span:after {
-            border-top: 3px solid #652d2a;
+            border-top: 2px solid #652d2a;
             display: block;
-            height: 3px;
+            height: 2px;
             content: "";
             width: 960px;
             position: absolute;
@@ -319,7 +350,8 @@ section.tcol p {
 section.quote {
   text-align: center;
   width: 960px;
-  overflow: hidden; }
+  overflow: hidden;
+  margin-top: 30px; }
   section.quote quote {
     display: inline-block;
     position: relative;
@@ -433,39 +465,41 @@ section.twothird > section {
         -o-border-radius: 3px;
         border-radius: 3px; }
 
-section.portrait > h1 {
-  font-family: "dejavu_serifCnBdIt", times, serif;
-  font-size: 2.5em; }
-section.portrait > h2 {
-  font-size: 2.4em;
-  margin-top: -15px;
-  margin-bottom: 15px; }
-section.portrait > img {
-  width: 100%; }
-section.portrait > section.question {
-  margin-top: 50px; }
-  section.portrait > section.question h3 {
-    color: #652d2a;
-    font-family: "gentium_basicbold", times, serif;
-    font-size: 1.5em; }
-  section.portrait > section.question p {
-    font-family: "gentium_basicitalic", helvetica, sans-serif;
-    font-size: 1.5em;
-    padding: 0; }
-section.portrait > table {
-  margin-top: 30px;
-  width: 60%; }
-section.portrait > footer {
-  margin-top: 30px;
-  font-size: 1.3em;
-  line-height: 1.25em; }
-  section.portrait > footer:before {
-    content: "*"; }
+section.portrait {
+  margin-top: 30px; }
+  section.portrait > h1 {
+    font-family: "dejavu_serifCnBdIt", times, serif;
+    font-size: 2.5em; }
+  section.portrait > h2 {
+    font-size: 2.4em;
+    margin-top: -15px;
+    margin-bottom: 15px; }
+  section.portrait > img {
+    width: 100%; }
+  section.portrait > section.question {
+    margin-top: 50px; }
+    section.portrait > section.question h3 {
+      color: #652d2a;
+      font-family: "gentium_basicbold", times, serif;
+      font-size: 1.5em; }
+    section.portrait > section.question p {
+      font-family: "gentium_basicitalic", helvetica, sans-serif;
+      font-size: 1.5em;
+      padding: 0; }
+  section.portrait > table {
+    margin-top: 30px;
+    width: 60%; }
+  section.portrait > footer {
+    margin-top: 30px;
+    font-size: 1.3em;
+    line-height: 1.25em; }
+    section.portrait > footer:before {
+      content: "*"; }
 
 section.smalltalks {
   width: 960px;
   overflow: hidden;
-  border-bottom: 3px solid #652d2a; }
+  border-bottom: 2px solid #652d2a; }
   section.smalltalks h1 {
     font-family: "dejavu_serifcondensed", times, serif;
     font-size: 3.5em;
@@ -475,9 +509,9 @@ section.smalltalks {
       display: inline-block;
       position: relative; }
       section.smalltalks h1 span:after {
-        border-top: 3px solid #652d2a;
+        border-top: 2px solid #652d2a;
         display: block;
-        height: 3px;
+        height: 2px;
         content: "";
         width: 960px;
         position: absolute;
@@ -491,64 +525,74 @@ section.smalltalks {
     columns: 3; }
 
 #main.accueil {
-  width: 1280px; }
+  width: 1280px;
+  margin-top: 30px; }
   #main.accueil #content {
     width: 960px;
     display: inline-block;
     margin: 0px; }
-    #main.accueil #content article.top h1 {
-      text-align: left;
-      overflow: hidden;
-      width: 960px;
-      font-family: "dejavu_serifcondensed", times, serif;
-      font-size: 3.5em;
-      color: #652d2a; }
-    #main.accueil #content article.top span {
-      display: inline-block;
-      position: relative; }
-      #main.accueil #content article.top span:after {
-        border-top: 3px solid #652d2a;
-        display: block;
-        height: 3px;
-        content: "";
-        width: 960px;
-        position: absolute;
-        top: 1.2em; }
-      #main.accueil #content article.top span:after {
-        margin-left: 10px;
-        left: 100%; }
-    #main.accueil #content section.left {
-      float: left;
-      width: 60%;
-      overflow: hidden; }
-      #main.accueil #content section.left article h1 {
+    #main.accueil #content article.top {
+      margin-top: 10px;
+      margin-bottom: 10px; }
+      #main.accueil #content article.top h1 {
         text-align: left;
         overflow: hidden;
         width: 960px;
         font-family: "dejavu_serifcondensed", times, serif;
         font-size: 3.5em;
-        color: #652d2a; }
-      #main.accueil #content section.left article span {
+        color: #652d2a;
+        margin-bottom: 10px; }
+      #main.accueil #content article.top span {
         display: inline-block;
         position: relative; }
-        #main.accueil #content section.left article span:after {
-          border-top: 3px solid #652d2a;
+        #main.accueil #content article.top span:after {
+          border-top: 2px solid #652d2a;
           display: block;
-          height: 3px;
+          height: 2px;
           content: "";
           width: 960px;
           position: absolute;
           top: 1.2em; }
-        #main.accueil #content section.left article span:after {
+        #main.accueil #content article.top span:after {
           margin-left: 10px;
           left: 100%; }
-      #main.accueil #content section.left article img {
-        width: 100%; }
+    #main.accueil #content section.left {
+      width: 60%;
+      overflow: hidden;
+      display: inline-block; }
+      #main.accueil #content section.left article {
+        margin-top: 10px;
+        margin-bottom: 10px; }
+        #main.accueil #content section.left article h1 {
+          text-align: left;
+          overflow: hidden;
+          width: 960px;
+          font-family: "dejavu_serifcondensed", times, serif;
+          font-size: 3.5em;
+          color: #652d2a; }
+        #main.accueil #content section.left article span {
+          display: inline-block;
+          position: relative; }
+          #main.accueil #content section.left article span:after {
+            border-top: 2px solid #652d2a;
+            display: block;
+            height: 2px;
+            content: "";
+            width: 960px;
+            position: absolute;
+            top: 1.2em; }
+          #main.accueil #content section.left article span:after {
+            margin-left: 10px;
+            left: 100%; }
+        #main.accueil #content section.left article img {
+          width: 100%; }
     #main.accueil #content section.right {
-      float: right;
+      margin-top: 15px;
       width: 30%;
       margin-right: 5%;
-      overflow: hidden; }
+      float: right;
+      overflow: hidden;
+      display: inline-block; }
       #main.accueil #content section.right h1 {
         text-align: left;
         overflow: hidden;
@@ -560,9 +604,9 @@ section.smalltalks {
         display: inline-block;
         position: relative; }
         #main.accueil #content section.right span:after {
-          border-top: 3px solid #652d2a;
+          border-top: 2px solid #652d2a;
           display: block;
-          height: 3px;
+          height: 2px;
           content: "";
           width: 960px;
           position: absolute;
@@ -576,10 +620,10 @@ section.smalltalks {
           width: 100%; }
   #main.accueil #sidebar {
     width: 305px;
-    position: absolute;
-    right: 0px;
     background-color: #ad4d48;
-    top: 50px; }
+    float: right;
+    display: inline-block;
+    margin-top: 4.1em; }
     #main.accueil #sidebar .annuaire {
       margin-bottom: 10px; }
       #main.accueil #sidebar .annuaire h1 {
