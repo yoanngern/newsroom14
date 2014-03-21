@@ -705,3 +705,8 @@ section.smalltalks {
           color: white; }
         #main.accueil #sidebar .annuaire .result a:hover {
           color: lightgrey; }
+
+span.em {
+  display: block;
+  margin: 0.4em 0;
+  font-family: "gentium_basicitalic", helvetica, sans-serif; }
