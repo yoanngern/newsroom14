@@ -35,7 +35,7 @@
         overflow: visible;
         img.logo {
             display: block;
-            margin: 0 auto;
+            margin: 10px auto 0;
         }
         nav {
             width: $contentWidth;
@@ -46,10 +46,11 @@
                 position: static;
                 font-size: 1em;
                 height: 2.1em;
-                line-height: 2.1em;
+                line-height: 1.1em;
+                border-bottom: 3px solid $red;
+                text-transform: uppercase;
                 &>li {
                     display: inline-block;
-                    //padding: 10px 10px;
                     width: 11em;
                     color: $black;
                     font-family: $font-nav;
@@ -70,6 +71,7 @@
             }
             &>ul.prob,
             &>ul.report {
+                text-transform: none;
                 display: none;
                 text-decoration: none;
                 list-style: none;
@@ -77,8 +79,8 @@
                 height: 2em;
                 line-height: 2em;
                 font-size: 0.9em;
-                margin: 0 auto;
-                border-top: none;
+                margin: 5px auto 0;
+                border: none;
                 li {
                     display: inline-block;
                     width: 10em;
@@ -93,7 +95,7 @@
         width: $contentWidth;
         margin: 0 auto;
         position: relative;
-        top: 50px;
+        top: 60px;
         section.top {
             z-index: 100;
             min-width: 960px;

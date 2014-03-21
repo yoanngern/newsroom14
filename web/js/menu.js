@@ -26,7 +26,7 @@ $(function () {
         $('ul.report').show()
     })
 
-    $('ul.prob, ul.report').mouseleave(function () {
+    /*$('ul.prob, ul.report').mouseleave(function () {
         if ($('li.prob').hasClass('actif')) {
             $('ul.report').hide()
             $('ul.prob').show()
@@ -40,6 +40,6 @@ $(function () {
             $('ul.prob').hide()
         }
     })
-
+*/
 
 })
