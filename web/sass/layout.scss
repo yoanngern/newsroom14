@@ -200,6 +200,39 @@
         position: absolute;
         left: 0;
         width: 100%;
+
+        section.footer_home {
+            width: $contentWidth;
+            overflow: hidden;
+            h1 {
+                font-family: $font-title-h1;
+                font-size: 3.5em;
+                color: $red;
+                display: inline-block;
+                span {
+                    display: inline-block;
+                    position: relative;
+                    &:after {
+                        border-top: 3px solid $red;
+                        display: block;
+                        height: 3px;
+                        content: "";
+                        width: $contentWidth;
+                        position: absolute;
+                        top: 1.2em;
+                    }
+                    &:after {
+                        margin-left: 10px;
+                        left: 100%;
+                    }
+                }
+            }
+            p {
+                @include x-columns(3);
+            }
+            border-bottom:3px solid $red;
+        }
+
         #help {
             margin: 0 auto;
             width: $contentWidth;
