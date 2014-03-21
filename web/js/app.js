@@ -17,10 +17,10 @@ $(document).ready(function() {
     function search(motclef){
         $("#results").empty();
         if(motclef!==""){
-            var search = "/newsroom14/web/app_dev.php/annuaire.json?search="+motclef;
+            var search = "/web/app_dev.php/annuaire.json?search="+motclef;
         }
         else{
-            var search = "/newsroom14/web/app_dev.php/annuaire.json";
+            var search = "/web/app_dev.php/annuaire.json";
         }
 
         $.get(search, function(data){
