@@ -1,27 +1,21 @@
 {% extends "::theme.html.twig" %}
 
 {% block stats %}
-    <p>«En Suisse, 30% des gens mangent moins de 5 fruits et légumes par jour!»</p>
-    <figure>
-        <!--<img alt="" src="{{ asset('images/stats.png') }}" />-->
-        <div class="row">
-                <ul data-pie-id="pie">
-                    <li data-value="32"></li>
-                    <li data-value="50"></li>
-                </ul>
-                <div id="pie"></div>
-        </div>
-    </figure>
+    
 {% endblock %}
 
 {% block lead %}
-    <p>J'ai entendu parler de ce mythe concernant de nombreux endroits, mais surtout à propos de l'Afrique. Une recherche rapide sur Internet produit des dizaines de gros titres et d'ouvrages, tels que « Comment les pays riches sont devenus riches et pourquoi les pays pauvres restent pauvres » ou « Pourquoi les pauvres restent pauvres ? », etc.</p>
+    <p>Ne se rendre chez le dentiste qu’en cas d’urgence, repousser les contrôles chez l’ophtalmologue et ignorer les grippes, tel est le plan d’épargne santé d’une famille. Les étudiantes ont elles aussi leurs plans B : utiliser les douches universitaires et faire l’impasse sur les produits de beauté. Mais lorsqu’on vieillit, c’est toute autre chose qui nous attend. Heureusement, les CMS (centres médico-sociaux) prodiguent des soins aux plus faibles et aux défavorisés.</p>
 {% endblock %}
 
 {% block article_top %}
-
-    
-
+<section class="quote">
+        <quote class="big">
+            <p>
+                <span>15% du budget familial est alloué à la santé</span>
+            </p>
+        </quote>
+    </section>
 {% endblock %}
 
 {% block arrow %}
@@ -41,86 +35,120 @@
 
 {% block article_bottom %}
 
-    <section class="video">
-        <iframe id="ytplayer" type="text/html" width="960" height="540" src="http://www.youtube.com/embed/BDVoO0SA5KI?autoplay=0&autohide=1&color=red&controls=1&iv_load_policy=3&modestbranding=1&theme=light&showinfo=0" frameborder="0"></iframe>
-        
-        <section class="tcol">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        </section>
-    </section>
-    
     <section class="quote">
         <quote class="big">
             <p>
-                <span>En Suisse, 30% des gens mangent</span>
-                <span>moins de 5 fruits</span>
-                <span>et légumes par jour!</span>
+                <span>Je ne vais pas chez le médecin, car  </span>
+                <span>je ne pourrais de toute façon pas</span>
+                <span>me payer les médicaments dont j’ai besoin</span>
             </p>
         </quote>
     </section>
-    
-    <section class="twothird">
-        <section class="left">
-            <img alt="" src="{{ asset('images/047.jpg') }}" />
-        </section>
-        <section class="right">
-            <quote class="small">La vie avance, qu’importe de quoi sera fait demain.</quote>
-            <p>Nunc augue tellus, egestas quis nulla a, viverra sagittis metus. Vestibulum pellentesque magna nec dolor condimentum malesuada. In vel orci rutrum nibh vehicula convallis. In hac habitasse platea dictumst. Proin sed lorem eu arcu bibendum ultricies non a magna. Aliquam in est eros.</p>
-            <span class="name">Jean-Paul Delarue</span>
+
+    <section class="video">
+        <iframe id="ytplayer" type="text/html" width="960" height="540" src="http://www.youtube.com/embed/6-N6A1LXTgM?rel=0&autoplay=0&autohide=1&color=red&controls=1&iv_load_policy=3&modestbranding=1&theme=light&showinfo=0" frameborder="0"></iframe>
+        
+        <section class="tcol">
+            <p>Frais médicaux, consultations, médicaments et assurances. Rester en bonne santé a un prix. Et pourtant, de nombreux étudiants coupent dans leur budget pour limiter les dépenses liées à la santé. Existe-t-il un moyen de se fournir en produits hygiéniques et de beauté à moindre coût? Astuces "petit budget" de deux étudiantes.</p>
         </section>
     </section>
-    
-    <section class="tcol">
-        <h1>Pourquoi est-ce ainsi?</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    </section>
-    
+
     <section class="quote">
         <quote class="big">
             <p>
-                <span>Une citation pertinente qui choque!</span>
+                <span>ça m’arrive souvent de me doucher à l’UNIL,</span>
+                <span>en plus il y a des sèches-cheveux,</span>
+                <span>ça m’évite donc de tomber malade en hiver</span>
+            </p>
+        </quote>
+    </section>
+
+    <section class="video">
+        <iframe id="ytplayer" type="text/html" width="960" height="540" src="http://www.youtube.com/embed/SxZ_sycDY6M?rel=0&autoplay=0&autohide=1&color=red&controls=1&iv_load_policy=3&modestbranding=1&theme=light&showinfo=0" frameborder="0"></iframe>
+        
+        <section class="tcol">
+            <p>Frais médicaux, consultations, médicaments et assurances. Rester en bonne santé a un prix. Et pourtant, de nombreux étudiants coupent dans leur budget pour limiter les dépenses liées à la santé. Existe-t-il un moyen de se fournir en produits hygiéniques et de beauté à moindre coût? Astuces "petit budget" de deux étudiantes.</p>
+        </section>
+    </section>
+
+    <section class="quote">
+        <quote class="big">
+            <p>
+                <span>Il faut prévenir les risques, adapter l’environnement</span>
+                <span>du patient et chercher des alternatives pour</span>
+                <span>que les gens puissent rester chez eux</span>
             </p>
         </quote>
     </section>
 
     <section class="portrait">
-        <h1>Sharon West</h1>
-        <h2>Boutique Caritas Yverdon</h2>
-        <img src="{{ asset('images/BoutiqueCaritas-2.jpg') }}" alt="Sharon West Caritas Yverdon" /> 
+        <h1>Nathalie Conod - étudiante en dernière année d’infirmière</h1>
+        <h2>CMS (soins à domicile)</h2>
+        <img src="{{ asset('images/SoinsADomicile-3.jpg') }}" alt="Sharon West Caritas Yverdon" /> 
         <section class="question">
-            <h3 class="question">Sous quelle forme la précarité se manifeste-t-elle dans le cadre de votre travail ?</h3>
-            <p class="answer">Il y a beaucoup de personnes dans la précarité qui viennent à la boutique. Il y a des gens suisses, portugais, polonais, des personnes âgées, des étudiants, c’est pour tout le monde. Elle est très fréquentée et énormément par les étrangers.</p>
+            <h3 class="question">Sous quelle forme la précarité se manifeste-t-elle dans le cadre de votre travail ?</h3>
+            <p class="answer">Aux soins à domicile, on est amené à travailler avec différents genres de précarité : au niveau physique, c’est-à-dire de la mobilisation; cognitif, qui peut mettre en danger nos patients à domicile; de la santé; au niveau de leur autonomie dans leur vie quotidienne ou même au niveau financier. La plupart de nos clients sont des personnes âgées.</p>
         </section>
         <section class="question">
-            <h3 class="question">Comment la vivez/expérimentez-vous ?</h3>
-            <p class="answer">Normalement, c’est un plaisir d’aider les gens, mais quelques fois c’est difficile. Par exemple, quand il y a des gens qui vivent dans la rue et qui demandent des habits gratuits. Mais normalement c’est pas un problème, j’aime beaucoup.</p>
+            <h3 class="question">Comment la vivez/expérimentez-vous ?</h3>
+            <p class="answer">Je suis plus amenée à faire face à des précarités physiques, somatiques ou médicales. Mon rôle est de l’évaluer dans le but de maintenir mes clients à domicile, éviter une hospitalisation ou un placement.</p>
+            <p class="answer">
+Au CMS, on travaille énormément en équipes interdisciplinaires (assistante sociale, aide au ménage, ergothérapeute, physiothérapeute, assistante en soins). Il y a différentes spécialisations qui permettent de pouvoir s’appuyer sur d’autres personnes.</p>
+            <p class="answer">
+Le but pour moi est de cerner de quel genre de précarité il s’agit et sur quels corps de métiers je peux m’appuyer, si ce n’est pas de mon ressort, ainsi que d’amener les outils préventifs.</p>
         </section>
-        <footer>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</footer>
+        <section class="question">
+            <h3 class="question">Quels sont les problèmes auxquels vous êtes confrontés quotidiennement ?</h3>
+            <p class="answer">Le principal problème est celui des gens dont la sécurité est mise en danger ou à rude épreuve, les risques de chute, les oublis, le feu (oublier d’éteindre les plaques), ne pas réussir à appeler à l’aide, les pathologies cardiaques*, etc.</p>
+            <p class="answer">
+On est aussi confronté à une question d’éthique : dans quelle mesure tolère-t-on ou accepte-on la prise de risques? On peut prendre le risque de partir un soir et que, le lendemain, la personne soit tombée. Même si je fais bien mon travail, le risque zéro n’existe pas.</p>
+            <p class="answer">
+Notre premier partenaire est l’entourage du patient. Il faut aussi qu’il puisse assurer le relais. Si le client est dans une situation de crise ou d’isolement familial, cela va poser problème.</p>
+        </section>
+        <footer>Le CMS n’est pas un service d’urgence et nous ne sommes pas chez les clients en permanence, il faut appeler le 144 si une vie est vraiment mise en danger.</footer>
+        <section class="question">
+            <h3 class="question">Quels conseils donnez-vous à quelqu’un dans une situation de précarité médicale ?</h3>
+            <p class="answer">En tant qu’infirmière, mon rôle est d’avoir une vision globale de la situation. Il faut prévenir les risques, adapter l’environnement du patient. Et je vais surtout chercher des alternatives pour que les gens puissent rester chez eux.</p>
+            <p class="answer">
+On va, par exemple, pouvoir proposer des solutions avec l’aide des collègues ergothérapeutes, trouver des moyens auxiliaires, comme des cannes, des “rollators”, pour éviter les chutes. Il y a aussi des “sécutels” qui permettent d’amener de la sécurité aux personnes lorsqu’elles sont au sol, afin de pouvoir appeler à l’aide.</p>
+        </section>
+        <section class="question">
+            <h3 class="question">Comment la précarité influence-t-elle votre façon de travailler ?</h3>
+            <p class="answer">Il faut toujours que je sois attentive au client, à son environnement et à son entourage. Je dois être en collaboration continue avec les intervenants et le médecin traitant du client.
+Je dois être vigilante, adapter et réévaluer la situation à chaque passage. Quand on tombe dans une situation trop précaire, que la prise de danger est trop élevée, on doit prendre un positionnement professionnel, il arrive qu’on s’oppose à l’avis des clients et de leur entourage. On peut même être amenés à se positionner aux yeux de la Justice de paix et cela peut déboucher sur une privation de liberté quand la mise en danger du client et d’autrui est trop grande</p>
+        </section>
     <table>
         <tbody>
         <tr>
-            <td colspan="2">CARITAS La Boutique</td>
+            <td colspan="2">CMS Yvonand</td>
         </tr>
         <tr>
-            <td>Rue Maison-Rouge 11 </td>
-            <td>Lundi 13h30 - 18h</td>
+            <td>Route de Rovray 21</td>
+            <td>Lundi - vendredi 8h-12h et 14h-17h</td>
         </tr>
         <tr>
-            <td>1400 Yverdon</td>
-            <td>Mardi à vendredi 9h-12 et 13h30-18h</td>
+            <td>1462 Yvonand</td>
         </tr>
         <tr>
-            <td>Tél. 024 426 34 61</td>
-            <td>Samedi 9h-12h</td>
+            <td>Tél. 058 450 30 30</td>
         </tr>
         </tbody>
     </table>   
     </section>
-    <section class="smalltalks">
-        <h1><span>Small Talks</span></h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Re magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.</p>
+    <section class="quote">
+        <quote class="big">
+            <p>
+                <span>Ne pas pouvoir aller chez le</span>
+                <span>dentiste ou l’oculiste,</span>
+                <span>c’est une précarité en Suisse !</span>
+            </p>
+        </quote>
     </section>
-    <section class="video">
-        <iframe id="ytplayer" type="text/html" width="960" height="540" src="http://www.youtube.com/embed/BDVoO0SA5KI?autoplay=0&autohide=1&color=red&controls=1&iv_load_policy=3&modestbranding=1&theme=light&showinfo=0" frameborder="0"></iframe>
-        </section>
+    <section class="tcol">
+        <h1><span>Famille</span></h1>
+        <p><span class="em">“On peut voir la santé du porte-monnaie de quelqu’un en voyant sa santé dentaire.”</span> 
+Selon la mère, le fait de ne pas pouvoir se soigner en allant chez le dentiste, le médecin ou même l’oculiste, ou y aller trop peu souvent, est une forme claire de précarité. Un des grands problèmes c’est le dentiste, ils n’ont pas les moyens d’y aller souvent. De ce fait, ils espacent les visites, ce qui ne fait que repousser le problème et augmenter le prix de la prochaine visite. Selon eux, ne pas pouvoir aller chez le médecin quand ils ont en besoin est une précarité en Suisse !
+<span class="em">
+“Il faudrait un minimum de soin pour mener une vie normale, ça ne devrait pas être un luxe mais un droit humain ! Tout le monde a des problèmes de dents ou oculaires, pourquoi on n'est pas égaux avec ça ? En Suisse, c’est inadmissible.”</span></p>
+    </section>
 {% endblock %}
