@@ -423,7 +423,8 @@ section.quote {
     overflow: hidden;
     margin-top: 30px;
     margin-bottom: 30px;
-    quote {
+
+    .quote {
         display: inline-block;
         position: relative;
         color: $red;
@@ -713,6 +714,7 @@ section.smalltalks {
             float: right;
             overflow: hidden;
             display: inline-block;
+
             h1 {
                 text-align: left;
                 overflow: hidden;
@@ -724,6 +726,9 @@ section.smalltalks {
             span {
                 display: inline-block;
                 position: relative;
+                font-size: 3.5em;
+                color:green;
+
                 &:after {
                     border-top: 2px solid $red;
                     display: block;
@@ -746,6 +751,7 @@ section.smalltalks {
             }
         }
     }
+
     #sidebar {
         width: $bigWidth - $contentWidth - 15px;
         float: right;
