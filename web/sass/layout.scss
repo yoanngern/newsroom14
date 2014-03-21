@@ -8,6 +8,9 @@
  body {
     font-family: $font-text;
     font-size: 16px;
+    margin-top:70px;
+    margin-bottom:70px;
+
     #background {
         height: 100%;
         background-repeat: repeat;
@@ -201,7 +204,7 @@
         width: 100%;
 
         section.footer_home {
-            width: $contentWidth;
+            width: $bigWidth;
             overflow: hidden;
             margin: 0 auto;
             text-align: left;
@@ -233,6 +236,13 @@
             }
             border-bottom:3px solid $red;
         }
+
+        section.footer_copyright {
+            margin:0 auto;
+            width: $bigWidth;
+            text-align: right;
+        }
+
 
         #help {
             margin: 0 auto;

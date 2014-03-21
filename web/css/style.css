@@ -73,7 +73,9 @@ article, aside, footer, header, hgroup, nav, section, figure, figcaption {
 
 body {
   font-family: "gentium_basicregular", helvetica, sans-serif;
-  font-size: 16px; }
+  font-size: 16px;
+  margin-top: 70px;
+  margin-bottom: 70px; }
   body #background {
     height: 100%;
     background-repeat: repeat;
@@ -236,7 +238,7 @@ body {
     text-align: center;
     margin-top: 50px; }
     body > footer section.footer_home {
-      width: 960px;
+      width: 1280px;
       overflow: hidden;
       margin: 0 auto;
       text-align: left;
@@ -264,6 +266,10 @@ body {
         -webkit-columns: 3;
         -moz-columns: 3;
         columns: 3; }
+    body > footer section.footer_copyright {
+      margin: 0 auto;
+      width: 1280px;
+      text-align: right; }
     body > footer #help {
       margin: 0 auto;
       width: 960px;
