@@ -415,6 +415,11 @@ section.tcol {
     }
     p {
         @include x-columns(3);
+        
+        span {
+            padding-bottom: 20px;
+            display: block;
+        }
     }
 }
 section.quote {
