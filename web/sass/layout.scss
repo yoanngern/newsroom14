@@ -203,6 +203,8 @@
         section.footer_home {
             width: $contentWidth;
             overflow: hidden;
+            margin: 0 auto;
+            text-align: left;
             h1 {
                 font-family: $font-title-h1;
                 font-size: 3.5em;
