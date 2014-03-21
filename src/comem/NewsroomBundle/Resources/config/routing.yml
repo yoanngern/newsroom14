@@ -27,7 +27,7 @@ comem_newsroom_directory_edit:
     defaults: { _controller: comemNewsroomBundle:Directory:edit }
     
 comem_newsroom_directory_theme:
-    pattern:  /theme
+    pattern:  /admin/theme
     defaults: { _controller: comemNewsroomBundle:Directory:listTheme }
     
 comem_newsroom_directory_theme_add:
