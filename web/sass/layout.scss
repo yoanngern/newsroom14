@@ -507,6 +507,7 @@ section.smalltalks {
 }
 #main.accueil {
     width: $bigWidth;
+    margin-top: 30px;
     #content {
         width: $contentWidth;
         display: inline-block;
@@ -539,9 +540,9 @@ section.smalltalks {
             }
         }
         section.left {
-            float: left;
             width: 60%;
             overflow: hidden;
+            display: inline-block;
             article {
                 h1 {
                     text-align: left;
@@ -574,10 +575,11 @@ section.smalltalks {
             }
         }
         section.right {
-            float: right;
             width: 30%;
             margin-right: 5%;
+            float: right;
             overflow: hidden;
+            display: inline-block;
             h1 {
                 text-align: left;
                 overflow: hidden;
@@ -613,10 +615,10 @@ section.smalltalks {
     }
     #sidebar {
         width: $bigWidth - $contentWidth - 15px;
-        position: absolute;
-        right: 0px;
         background-color: lighten($red, 20%);
-        top: 50px;
+        float: right;
+        display: inline-block;
+        margin-top: 4.1em;
         .annuaire {
             margin-bottom: 10px;
             h1 {
