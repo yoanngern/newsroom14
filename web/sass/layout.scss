@@ -222,6 +222,30 @@
         }
     }
 }
+
+.arrow {
+    position: fixed;
+    display: inline-block;
+    top: 35%;
+    &.next{
+        right: 0;
+    }
+    &.previous {
+        left: 0;
+    }
+    &>a{
+        display: inline-block;
+        text-decoration: none;
+        &>span {
+            vertical-align: top;
+            line-height: 1em;
+            color: $red;
+            font-family: $font-nav;
+        }
+    }
+}
+
+
 section.tcol {
     & > h1 {
         font-family: $font-title-h2;

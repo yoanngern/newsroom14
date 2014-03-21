@@ -24,6 +24,21 @@
 
 {% endblock %}
 
+{% block arrow %}
+    <section class="arrow next">
+        <a href="">
+            <span>Lorem</span>
+            <img src="{{ asset('images/next.png') }}" alt="Next"/>
+        </a>
+    </section>
+    <section class="arrow previous">
+        <a href="">
+            <img src="{{ asset('images/previous.png') }}" alt="Previous"/>
+            <span>Ipsum</span>
+        </a>
+    </section>
+{% endblock %}
+
 {% block article_bottom %}
 
     <section class="video">
