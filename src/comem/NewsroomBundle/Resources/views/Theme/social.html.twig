@@ -1,17 +1,7 @@
 {% extends "::theme.html.twig" %}
 
 {% block stats %}
-    <p>«En Suisse, 30% des gens mangent moins de 5 fruits et légumes par jour!»</p>
-    <figure>
-        <!--<img alt="" src="{{ asset('images/stats.png') }}" />-->
-        <div class="row">
-                <ul data-pie-id="pie">
-                    <li data-value="32"></li>
-                    <li data-value="50"></li>
-                </ul>
-                <div id="pie"></div>
-        </div>
-    </figure>
+    
 {% endblock %}
 
 {% block lead %}
@@ -25,87 +15,159 @@
 {% endblock %}
 
 {% block article_bottom %}
-
+<section class="smalltalks">
+        <h1><span>Small Talks</span></h1>
+    <p>Un small talk ou “bavardage d'ascenseur” est un échange verbal entre des inconnus. Il permet de détendre, renforcer la communauté et aide à nouer des contacts. Une vidéo tournée à l’insu des acteurs a permis de démontrer l’effet small talk. </p>
+    
     <section class="video">
-        <iframe id="ytplayer" type="text/html" width="960" height="540" src="http://www.youtube.com/embed/BDVoO0SA5KI?autoplay=0&autohide=1&color=red&controls=1&iv_load_policy=3&modestbranding=1&theme=light&showinfo=0" frameborder="0"></iframe>
+        <iframe id="ytplayer" type="text/html" width="960" height="540" src="http://www.youtube.com/embed/qtc3L0adeqo?rel=0autoplay=0&autohide=1&color=red&controls=1&iv_load_policy=3&modestbranding=1&theme=light&showinfo=0" frameborder="0"></iframe>
+    </section>    
         
-        <section class="tcol">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        </section>
     </section>
+    
     
     <section class="quote">
         <quote class="big">
             <p>
-                <span>En Suisse, 30% des gens mangent</span>
-                <span>moins de 5 fruits</span>
-                <span>et légumes par jour!</span>
-            </p>
-        </quote>
-    </section>
-    
-    <section class="twothird">
-        <section class="left">
-            <img alt="" src="{{ asset('images/047.jpg') }}" />
-        </section>
-        <section class="right">
-            <quote class="small">La vie avance, qu’importe de quoi sera fait demain.</quote>
-            <p>Nunc augue tellus, egestas quis nulla a, viverra sagittis metus. Vestibulum pellentesque magna nec dolor condimentum malesuada. In vel orci rutrum nibh vehicula convallis. In hac habitasse platea dictumst. Proin sed lorem eu arcu bibendum ultricies non a magna. Aliquam in est eros.</p>
-            <span class="name">Jean-Paul Delarue</span>
-        </section>
-    </section>
-    
-    <section class="tcol">
-        <h1>Pourquoi est-ce ainsi?</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    </section>
-    
-    <section class="quote">
-        <quote class="big">
-            <p>
-                <span>Une citation pertinente qui choque!</span>
+                <span>On essaie d’avoir de la distance face à</span>
+                <span>cette précarité et d’être le plus pragmatique</span>
+                <span>possible dans le but d’aider les jeunes</span>
+                <span>à résoudre leurs difficultés</span>
             </p>
         </quote>
     </section>
 
     <section class="portrait">
-        <h1>Sharon West</h2>
-        <h2>Boutique Caritas Yverdon</h2>
-        <img src="{{ asset('images/BoutiqueCaritas-2.jpg') }}" alt="Sharon West Caritas Yverdon" /> 
+        <h1>Alexandre Tadic</h1>
+        <h2>Jet Service</h2>
+        <img src="{{ asset('images/JetService-1.jpg') }}" alt="SJet Service" /> 
         <section class="question">
             <h3 class="question">Sous quelle forme la précarité se manifeste-t-elle dans le cadre de votre travail ?</h3>
-            <p class="answer">Il y a beaucoup de personnes dans la précarité qui viennent à la boutique. Il y a des gens suisses, portugais, polonais, des personnes âgées, des étudiants, c’est pour tout le monde. Elle est très fréquentée et énormément par les étrangers.</p>
+            <p class="answer">La précarité se manifeste sous différentes formes. Les jeunes qui nous rencontrent peuvent avoir des problèmes d’ordre financier, économique, social ou administratif. Par exemple, ils ne savent pas comment remplir une demande de bourse ou quels sont leurs droits au niveau des assurances sociales, etc. Il y a aussi la précarité familiale, des jeunes viennent chez nous après une rupture familiale lorsqu’ils se sont fait mettre dehors de chez eux. Cette précarité aboutit souvent à une précarité sociale et financière.</p>
         </section>
         <section class="question">
             <h3 class="question">Comment la vivez/expérimentez-vous ?</h3>
-            <p class="answer">Normalement, c’est un plaisir d’aider les gens, mais quelques fois c’est difficile. Par exemple, quand il y a des gens qui vivent dans la rue et qui demandent des habits gratuits. Mais normalement c’est pas un problème, j’aime beaucoup.</p>
+            <p class="answer">Concrètement, dans nos consultations nous recevons les jeunes qui nous décrivent leurs problèmes, leur situation et on les reçoit selon la sensibilité qu’on a. On est tous différents à ce niveau. On essaie de garder de la distance face à ces situations qui peuvent être très dures et pénibles. Il faut trouver un équilibre entre distance et empathie pour trouver des solutions.</p>
         </section>
-        <footer>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</footer>
+                <section class="question">
+            <h3 class="question">Quels sont les problèmes auxquels vous êtes confrontés quotidiennement ?</h3>
+            <p class="answer">Quotidiennement, il peut y avoir différentes situations. Principalement, ce sont des étudiants qui ont des difficultés financières telles qu’elles mettent en danger la réussite de leur formation. C’est vraiment lié à des difficultés économiques. Il y a aussi des problèmes avec la justice, ou de contrats. Nous sommes souvent confrontés à des situations compliquées dues au fait que les jeunes nous contactent en tout dernier recours. Il est donc parfois presque trop tard pour les aider de manière optimale.</p></section>
+                <section class="question">
+            <h3 class="question">Quels conseils donnez-vous à quelqu’un dans la précarité ?</h3>
+            <p class="answer">Dans un premier temps, on fait un bilan de situation. Puis on élabore un budget pour savoir ce qu’il en est aujourd’hui, ce qu’ils doivent payer tous les mois. On travaille sur ce budget, on fait des recherches d’aide pour payer les frais et des démarches juridiques.</p></section>
+                    <section class="question">
+            <h3 class="question">Comment la précarité influence-t-elle votre façon de travailler ?</h3>
+            <p class="answer">On essaie d’avoir de la distance face à cette précarité et d’être le plus pragmatique possible pour ne pas tomber dans l’émotionnel, justement dans le but d’aider le jeune à résoudre ses difficultés. On essaie de faire du travail concret et de trouver des solutions. Au début, c’est vrai que c’est difficile, mais au fil des ans, on acquiert cette capacité de distance pour trouver des solutions et accompagner la personne au mieux.</p>
+                    
+        </section>
+    
     <table>
         <tbody>
         <tr>
-            <td colspan="2">CARITAS La Boutique</td>
+            <td colspan="2">Jet Service</td>
         </tr>
         <tr>
-            <td>Rue Maison-Rouge 11 </td>
-            <td>Lundi 13h30 - 18h</td>
+            <td>Avenue de Rumine 2</td>
+            <td>Mercredi 12h-13h30</td>
         </tr>
         <tr>
-            <td>1400 Yverdon</td>
-            <td>Mardi à vendredi 9h-12 et 13h30-18h</td>
+            <td>1005 Lausanne</td>
+            <td>HEIG-VD, Salle F01A</td>
         </tr>
         <tr>
-            <td>Tél. 024 426 34 61</td>
-            <td>Samedi 9h-12h</td>
+            <td>Tél. 021 560 60 30</td>
+            <td>Route de Cheseaux, 1400 Yverdon</td>
         </tr>
         </tbody>
     </table>   
     </section>
-    <section class="smalltalks">
-        <h1><span>Small Talks</span></h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Re magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.</p>
+<section class="quote">
+        <quote class="big">
+            <p>
+                <span>Ma famille est au courant que ce</span>
+                <span>n’est pas facile pour moi, mais</span>
+                <span>elle ne connaît pas les différentes</span>
+                <span>stratégies que j'ai mises en place</span>
+            </p>
+        </quote>
     </section>
     <section class="video">
-        <iframe id="ytplayer" type="text/html" width="960" height="540" src="http://www.youtube.com/embed/BDVoO0SA5KI?autoplay=0&autohide=1&color=red&controls=1&iv_load_policy=3&modestbranding=1&theme=light&showinfo=0" frameborder="0"></iframe>
+        <iframe id="ytplayer" type="text/html" width="960" height="540" src="http://www.youtube.com/embed/GYidUmD6D1s?rel=0autoplay=0&autohide=1&color=red&controls=1&iv_load_policy=3&modestbranding=1&theme=light&showinfo=0" frameborder="0"></iframe>
         </section>
+                   <section class="tcol"><p>Comment éviter de se mettre à l'écart lorsque l'on dispose d'un budget "sortie" largement inférieur à celui de ses collègues? Quel est le regard que posent les amis et la famille de deux étudiantes confrontées quotidiennement à la précarité?</p></section>
+                    <section class="quote">
+        <quote class="big">
+            <p>
+                <span>Une relation sociale ne dépend</span>
+                <span> pas forcément de l'argent.</span>
+            </p>
+        </quote>
+    </section>
+    <section class="video">
+        <iframe id="ytplayer" type="text/html" width="960" height="540" src="http://www.youtube.com/embed/-jfrtqCY6N0?rel=0autoplay=0&autohide=1&color=red&controls=1&iv_load_policy=3&modestbranding=1&theme=light&showinfo=0" frameborder="0"></iframe>
+        </section>
+                   <section class="tcol"><p>Comment éviter de se mettre à l'écart lorsque l'on dispose d'un budget "sortie" largement inférieur à celui de ses collègues? Quel est le regard que posent les amis et la famille de deux étudiantes confrontées quotidiennement à la précarité?</p></section>
+                    
+         <section class="quote">
+        <quote class="big">
+            <p>
+                <span>Les personnes qui viennent ici</span>
+                <span>ont envie de gratter la terre,</span>
+                <span>d’être au calme et d’être écoutés.</span>
+            </p>
+        </quote>
+    </section>           
+ <section class="portrait">
+        <h1>Jean-Pierre Masclet</h1>
+        <h2>Cartons et Jardins du Coeur</h2>
+        <img src="{{ asset('images/JardinsDuCoeur-1.jpg') }}" alt="SJet Service" /> 
+        <section class="question">
+            <h3 class="question">Sous quelle forme la précarité se manifeste-t-elle dans le cadre de votre travail ?</h3>
+            <p class="answer">Il y a deux entités : les cartons du coeur et les jardins du coeur. Les cartons, c’est quand les gens n’ont plus rien dans le frigo, ils ont donc la possibilité de se fournir ici en nourriture, trois fois par année.</p>
+<p class="answer">Dans les jardins : on voit la précarité dans la mesure où il y a des bénévoles qui viennent travailler. Ce sont des personnes qui ont des problèmes sociaux ou des problèmes d’addiction. Ils ont envie de gratter la terre, d’être au calme et d’être écoutés. Mais c’est du bénévolat.</p>
+        </section>
+        <section class="question">
+            <h3 class="question">Comment la vivez/expérimentez-vous ?</h3>
+            <p class="answer">Au niveau émotionnel, c’est assez fort. Il faut un peu de bouteille pour se mettre à distance et ne pas être trop atteint. Je suis responsable ici depuis dix ans, j’ai donc pu me forger un certain caractère pour que le ressenti soit moins visible. Ensuite, il faut digérer ce qu’on a vu, vécu et entendu.</p>
+<p class="answer">Je n’ai aucune formation sociale, c’est du bénévolat. Maintenant, je travaille avec un groupe de trente bénévoles ici.</p>
+        </section>
+                <section class="question">
+            <h3 class="question">Quels sont les problèmes auxquels vous êtes confrontés quotidiennement ?</h3>
+            <p class="answer">Je ne peux pas tous les énumérer. Rencontrer des personnes qui n’ont plus rien à manger, voir les yeux d’une maman avec ses deux enfants autour d’elle, c’est assez dur. On est toujours confrontés à des gens dans la précarité. Émotionnellement, il y a des moments tristes, mais aussi des moments de joie.</p></section>
+                <section class="question">
+            <h3 class="question">Quels conseils donnez-vous à quelqu’un dans la précarité ?</h3>
+            <p class="answer">On se garde bien de donner des conseils. Les gens viennent ici pour avoir quelque chose à manger. Donc la relation n’est pas toujours facile. On ne peut que diriger les gens vers d’autres associations pour qu’ils puissent avancer. Mais on est surtout ici pour écouter. </p>
+
+<p class="answer">La plupart des gens qui viennent ici sont très marqués. Venir quémander de la nourriture est très difficile pour eux, donc c’est à nous de bien les accueillir, chaque personne qu’on rencontre est un cas différent. 
+</p>
+    </section>
+         <table>
+        <tbody>
+        <tr>
+            <td colspan="2">Cartons et Jardins du Coeur</td>
+        </tr>
+        <tr>
+            <td>Av. des Sports 42</td>
+            <td>Permanence lundi, mercredi et vendredi</td>
+        </tr>
+        <tr>
+            <td>1400 Yverdon-les-Bains</td>
+            <td>de 16h à 18h</td>
+        </tr>
+        <tr>
+            <td>Tél. 024 425 70 66</td>
+            
+        </tr>
+        </tbody>
+    </table>
+</section>
+                    
+            <section class="quote">
+        <quote class="big">
+            <p>
+                <span>L’amitié c’est précieux,</span>
+                <span>y a pas que l’argent dans la vie.</span>
+            </p>
+        </quote>
+    </section> 
 {% endblock %}
