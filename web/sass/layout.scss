@@ -304,6 +304,10 @@
             overflow: hidden;
             margin: 0 auto;
             text-align: left;
+            display:block;
+            margin-top:30px;
+            padding-top: 40px;
+
             h1 {
                 font-family: $font-title-h1;
                 font-size: 3.5em;
@@ -342,8 +346,29 @@
             width: $contentWidth;
             text-align: left;
             & > h1 {
-                font-size: 2em;
-                padding: 5px 0px 5px 20px;
+                           h1 {
+                font-family: $font-title-h1;
+                font-size: 3.5em;
+                color: $red;
+                display: inline-block;
+                span {
+                    display: inline-block;
+                    position: relative;
+                    &:after {
+                        border-top: 2px solid $red;
+                        display: block;
+                        height: 2px;
+                        content: "";
+                        width: $contentWidth;
+                        position: absolute;
+                        top: 1.2em;
+                    }
+                    &:after {
+                        margin-left: 10px;
+                        left: 100%;
+                    }
+                }
+            }
             }
             section {
                 display: inline-block;
@@ -352,9 +377,7 @@
                 margin: 10px;
             }
         }
-        display:block;
-        text-align:center;
-        margin-top:50px;
+        
         a {
             padding: 10px;
             color: $red;
@@ -404,6 +427,7 @@ section.quote {
     width: $contentWidth;
     overflow: hidden;
     margin-top: 30px;
+    margin-bottom: 30px;
     quote {
         display: inline-block;
         position: relative;
@@ -729,11 +753,13 @@ section.smalltalks {
     }
     #sidebar {
         width: $bigWidth - $contentWidth - 15px;
-        background-color: lighten($red, 20%);
         float: right;
         display: inline-block;
         margin-top: 4.1em;
+
         .annuaire {
+            background-color: lighten($red, 20%);
+            border-radius:10px;
             margin-bottom: 10px;
             h1 {
                 text-align: center;
@@ -782,6 +808,33 @@ section.smalltalks {
             }
         }
     }
+
+
+    .quiz{
+         h1 {
+                font-family: $font-title-h1;
+                font-size: 3.5em;
+                color: $white;
+                display: inline-block;
+                span {
+                    display: inline-block;
+                    position: relative;
+                    &:after {
+                        border-top: 2px solid $white;
+                        display: block;
+                        height: 2px;
+                        content: "";
+                        width: $contentWidth;
+                        position: absolute;
+                        top: 1.2em;
+                    }
+                    &:after {
+                        margin-left: 10px;
+                        left: 100%;
+                    }
+                }
+            }
+
 }
 span.em {
     display: block;
@@ -793,5 +846,6 @@ header.about {
         font-family: $font-title-h2;
         font-size: 2em;
         margin-top: 20px;
+
     }
 }
