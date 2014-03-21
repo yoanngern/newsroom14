@@ -1,4 +1,4 @@
-@charset "UTF-8";
+@charset "CP850";
 /* RESET */
 html, body, div, ul, ol, li, dl, dt, dd, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, fieldset, input, abbr, article, aside, command, details, figcaption, figure, footer, header, hgroup, mark, meter, nav, output, progress, section, summary, time {
   margin: 0;
@@ -677,8 +677,8 @@ section.smalltalks {
       #main.accueil #content section.right span {
         display: inline-block;
         position: relative;
-        font-size: 3.5em;
-        color: green; }
+        color: #652d2a;
+        margin-bottom: 5px; }
         #main.accueil #content section.right span:after {
           border-top: 2px solid #652d2a;
           display: block;
