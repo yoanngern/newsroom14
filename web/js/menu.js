@@ -14,7 +14,6 @@ $(function () {
 
     $('li').mouseenter(function () {
         if (!$(this).parent().hasClass('prob') && !$(this).parent().hasClass('report')) {
-
             if (!$(this).hasClass('prob')) {
                 $('ul.report').hide()
                 $('ul.prob').hide()
@@ -27,6 +26,20 @@ $(function () {
         $('ul.report').show()
     })
 
+    $('ul.prob, ul.report').mouseleave(function () {
+        if ($('li.prob').hasClass('actif')) {
+            $('ul.report').hide()
+            $('ul.prob').show()
+        } else {
+            $('ul.report').hide()
+        }
+        if ($('li.report').hasClass('actif')) {
+            $('ul.prob').hide()
+            $('ul.report').show()
+        } else {
+            $('ul.prob').hide()
+        }
+    })
 
 
 })
