@@ -8,6 +8,9 @@
  body {
     font-family: $font-text;
     font-size: 16px;
+    margin-top:70px;
+    margin-bottom:70px;
+
     #background {
         height: 100%;
         background-repeat: repeat;
@@ -237,7 +240,7 @@
         left: 0;
         width: 100%;
         section.footer_home {
-            width: $contentWidth;
+            width: $bigWidth;
             overflow: hidden;
             margin: 0 auto;
             text-align: left;
@@ -269,6 +272,17 @@
             }
             border-bottom:3px solid $red;
         }
+<<<<<<< HEAD
+=======
+
+        section.footer_copyright {
+            margin:0 auto;
+            width: $bigWidth;
+            text-align: right;
+        }
+
+
+>>>>>>> 1670ee1edbe21368c910760c3d3a1d9ccecf2908
         #help {
             margin: 0 auto;
             width: $contentWidth;

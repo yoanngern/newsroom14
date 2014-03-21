@@ -30,11 +30,11 @@
                 <ul>
                     <li class="{% if page == 'accueil' %}actif{% endif %}"><a href="{{ path('comem_newsroom_home') }}">Accueil</a></li>
                     
-                    <li class="prob {% if (page == 'alimentation') or (page == 'vetements') or (page == 'logement') or (page == 'hygiene') or (page == 'social') %}actif{% endif %}">
-                        <h1>Problématique</h1>
+                    <li class="prob {% if (page == 'alimentation') or (page == 'vetements') or (page == 'logement') or (page == 'sante') or (page == 'social') %}actif{% endif %}">
+                        <h1>Problématiques</h1>
                     </li>
                     <li class="report {% if (page == 'etudiants') or (page == 'statistiques') or (page == 'famille') %}actif{% endif %}">
-                        <h1>Reportage</h1>
+                        <h1>Reportages</h1>
                     </li>
                     <li class="{% if page == 'annuaire' %}actif{% endif %}"><a href="{{ path('comem_newsroom_directory_public') }}">Annuaire</a></li>
                     <li class="{% if page == 'a-propos' %}actif{% endif %}"><a href="{{ path('comem_newsroom_about') }}">A propos</a></li>
@@ -42,7 +42,7 @@
                 
                         <ul class="prob">
                             <li class="{% if page == 'alimentation' %}actif{% endif %}"><a href="{{ path('comem_newsroom_theme', {'theme': 'alimentation'}) }}">Alimentation</a></li>
-                            <li class="{% if page == 'vetements' %}actif{% endif %}"><a href="{{ path('comem_newsroom_theme', {'theme': 'vetements'}) }}">Habits</a></li>
+                            <li class="{% if page == 'vetements' %}actif{% endif %}"><a href="{{ path('comem_newsroom_theme', {'theme': 'vetements'}) }}">Vêtements</a></li>
                             <li class="{% if page == 'logement' %}actif{% endif %}"><a href="{{ path('comem_newsroom_theme', {'theme': 'logement'}) }}">Logement</a></li>
                             <li class="{% if page == 'sante' %}actif{% endif %}"><a href="{{ path('comem_newsroom_theme', {'theme': 'sante'}) }}">Santé</a></li>
                             <li class="{% if page == 'social' %}actif{% endif %}"><a href="{{ path('comem_newsroom_theme', {'theme': 'social'}) }}">Relations sociales</a></li>
@@ -67,8 +67,8 @@
         
         <footer>
             {% block footer %}
-            <section class="footer_main">
-                <a href="http://www.comem.ch">comem+</a>
+            <section class="footer_copyright">
+                <span>HEIG-VD © 2014</span><a href="http://www.comem.ch">comem+</a>
             </section>
             {% endblock %}
         </footer>
