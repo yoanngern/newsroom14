@@ -416,6 +416,11 @@ section.tcol {
     }
     p {
         @include x-columns(3);
+        
+        span {
+            padding-bottom: 20px;
+            display: block;
+        }
     }
 }
 section.quote {
@@ -423,7 +428,9 @@ section.quote {
     width: $contentWidth;
     overflow: hidden;
     margin-top: 30px;
-    quote {
+    margin-bottom: 30px;
+
+    .quote {
         display: inline-block;
         position: relative;
         color: $red;
@@ -714,6 +721,7 @@ section.smalltalks {
             float: right;
             overflow: hidden;
             display: inline-block;
+
             h1 {
                 text-align: left;
                 overflow: hidden;
@@ -726,6 +734,9 @@ section.smalltalks {
             span {
                 display: inline-block;
                 position: relative;
+                font-size: 3.5em;
+                color:green;
+
                 &:after {
                     border-top: 2px solid $red;
                     display: block;
@@ -748,6 +759,7 @@ section.smalltalks {
             }
         }
     }
+
     #sidebar {
         width: $bigWidth - $contentWidth - 15px;
         float: right;
