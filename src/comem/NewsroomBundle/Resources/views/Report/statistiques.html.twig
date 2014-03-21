@@ -1,13 +1,9 @@
 {% extends "::report.html.twig" %}
 
-{% block stats %}
-    <p>«En Suisse, 30% des gens mangent moins de 5 fruits et légumes par jour!»</p>
-    <figure><img alt="" src="{{ asset('images/stats.png') }}" /></figure>
-{% endblock %}
 
 {% block lead %}
-    <h1><span>Statistiques</span></h1>
-    <p>J'ai entendu parler de ce mythe concernant de nombreux endroits, mais surtout à propos de l'Afrique. Une recherche rapide sur Internet produit des dizaines de gros titres et d'ouvrages, tels que « Comment les pays riches sont devenus riches et pourquoi les pays pauvres restent pauvres » ou « Pourquoi les pauvres restent pauvres ? », etc.</p>
+    <h1><span>Y'A COMBIEN DE PAUVRES EN SUISSE ?</span></h1>
+    <p>Qu'est-ce que la précarité ? Qui sont les personnes en situation de précarité financière en Suisse ? De quelles aides bénéficient-elles ? Cette rubrique répond à quelques questions fondamentales sur la précarité en Suisse, selon les données de l'Office Fédéral de la Statistique (OFS).</p>
 {% endblock %}
 
 {% block article_top %}
@@ -18,39 +14,48 @@
 
 {% block article_bottom %}
 
-    <section class="video">
-        <iframe id="ytplayer" type="text/html" width="960" height="540" src="http://www.youtube.com/embed/BDVoO0SA5KI?autoplay=0&autohide=1&color=red&controls=1&iv_load_policy=3&modestbranding=1&theme=light&showinfo=0" frameborder="0"></iframe>
-        
-        <section class="tcol">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        </section>
-    </section>
-    
     <section class="quote">
         <quote class="big">
             <p>
-                <span>En Suisse, 30% des gens mangent</span>
-                <span>moins de 5 fruits</span>
-                <span>et légumes par jour!</span>
+                <span>En Suisse, 7,6% des personnes</span>
+                <span>vivent en-dessous du seuil de pauvreté</span>
+                
             </p>
         </quote>
     </section>
-    
-    <section class="twothird">
-        <section class="left">
-            <img alt="" src="{{ asset('images/047.jpg') }}" />
-        </section>
-        <section class="right">
-            <quote class="small">La vie avance, qu’importe de quoi sera fait demain.</quote>
-            <p>Nunc augue tellus, egestas quis nulla a, viverra sagittis metus. Vestibulum pellentesque magna nec dolor condimentum malesuada. In vel orci rutrum nibh vehicula convallis. In hac habitasse platea dictumst. Proin sed lorem eu arcu bibendum ultricies non a magna. Aliquam in est eros.</p>
-            <span class="name">Jean-Paul Delarue</span>
-        </section>
-    </section>
-    
+        
     <section class="tcol">
-        <h1>Pourquoi est-ce ainsi?</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <h1>À quel moment sommes-nous dans la précarité ?</h1>
+        <p>D’après la Confédération, sont considérées comme pauvres les personnes qui n’ont pas les moyens financiers d’acquérir les biens et services nécessaires à une vie sociale intégrée.
+La Confédération a établi des valeurs nationales moyennes qui déterminent le revenu minimum vital, pour différents types de ménages. En 2011, ces valeurs étaient les suivantes :</p>
+        </section>
+        <section class="portrait">
+        <img src="{{ asset('images/Seuilsdepauvreté.JPG') }}" alt="Seuils de pauvreté des différents ménages" /> 
+            <p class="answer">Le forfait pour l’entretien comprend les dépenses courantes (alimentation, habillement, soins corporels, déplacements, loisirs, etc.) ainsi que les frais d’assurance.</p>
+        </section>
+        
+    
+
+<section class="tcol">
+        <h1>En Suisse, quelles sont les personnes en situation de précarité financière ?</h1>
+        <p>En 2011, 7,6% de la population se trouvaient en situation de précarité financière. Un des grands clichés concernant la pauvreté est qu’elle ne concerne que les étrangers résident en Suisse. Certes, 9,7% d’entre eux sont concernés, mais 7% de Suisses sont également dans cette situation. La précarité touche toutes les catégories : classes d’âge, sexes, nationalités, niveaux de formation, types de ménage, mais pas dans les mêmes proportions. Si l’on considère la classe d’âge, on voit que 5% des 25-49 ans sont touchés, soit 3 fois moins que les 65 ans et plus, qui sont 16,1% à être au-dessous du seuil de pauvreté. Les femmes (8,6%) sont également plus touchées que les hommes (6,7%). Différents facteurs peuvent générer la précarité. Le niveau de formation en est un. En 2011, 13,7% des personnes de 18 ans ou plus n’ayant fait que l’école obligatoire étaient en situation précaire, alors que 6,9% des personnes qui ont atteint le degré secondaire et seulement 5% qui ont étudié à l’Université ou en Haute École sont touchés. Le type de ménage est un facteur important. 25,7% des personnes seules âgées de 65 ans ou plus sont en situation précaire alors que la proportion des personnes seules de moins de 65 ans est de 11,4%. Les parents seuls avec enfant(s) sont 21,9% à ne pas pouvoir joindre les deux bouts.</p>
     </section>
+
+<section class="tcol">
+        <h1>De quelles aides les personnes peuvent-elles bénéficier ?</h1>
+        <p>Le système de la protection sociale en Suisse repose sur plusieurs assurances sociales telles que l’AVS, l’AI ou l’aide sociale. Ce système entièrement financé par la Confédération, les cantons et les communes a coûté 155 milliards de francs en 2012. En 2007, ce montant s’élevait à 132,4 milliards. 92,7% de cette somme sont directement attribués aux prestations sociales.</p>
+        
+    </section>
+
+<figure>
+        <div class="row">
+                <ul data-pie-id="pie">
+                    <li data-value="32"></li>
+                    <li data-value="50"></li>
+                </ul>
+                <div id="pie"></div>
+        </div>
+    </figure>
     
     <section class="quote">
         <quote class="big">
