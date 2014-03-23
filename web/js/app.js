@@ -17,10 +17,10 @@ $(document).ready(function() {
     function search(motclef){
         $("#results").empty();
         if(motclef!==""){
-            var search = "/web/app_dev.php/annuaire.json?search="+motclef;
+            var search = "/web/annuaire.json?search="+motclef;
         }
         else{
-            var search = "/web/app_dev.php/annuaire.json";
+            var search = "/web/annuaire.json";
         }
 
         $.get(search, function(data){
@@ -29,23 +29,19 @@ $(document).ready(function() {
                 var title=$("<h2>");
                 title.html(val.title);
                 var id=val.id;
-                var description=$("<p>");
-                description.html(val.description);
+                var description=$("<p>").html(val.description);
                 var linkDetail=$("<a>").attr("href",val.link).html(val.link);
                 var link=$("<p>").append("Site: ").append(linkDetail);
                 var phone=$("<p>").html("Tel: "+val.phone);
-                var adress=val.address;
+                var adress=$("<p>").html(val.address);
                 var place=val.place;
                 var grade=val.grade;
                 var detail=$("<div>").addClass("detail").attr("style","display:none;");
-                if(adress!==undefined){
-                    if(adress.length>1){
-                        detail.append("<p>"+adress+"</p>");
-                    }
-                }
-                if(link.text().length>100) detail.append(link);
-                if(description.length>1) detail.append(description);
-                if(phone.text().length>10) detail.append(phone);
+
+                if(description.text().length>10) detail.append(description);
+                if(link.text().length>40) detail.append(link);
+                if(adress.text().length>10)detail.append(adress);
+                if(phone.text().length>15) detail.append(phone);
 
 
                 var result=$("<div>").addClass("result").attr("data-id",id).append(title).append(detail);
