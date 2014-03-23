@@ -28,14 +28,15 @@
     {% if ads|length %}
         <section id="help">
             <h1><span>Les aides<span></h1>
-            
-            {% for ad in ads %}
-                <section>
-                    <h1>{{ ad.title }}</h1>
-                    <p>{{ ad.description }}</p>
-                    <a href="{{ ad.link }}">visiter le site</a>
-                </section>
-            {% endfor %}
+            <section id="annuaireTheme">
+                {% for ad in ads %}
+                    <section>
+                        <h1>{{ ad.title }}</h1>
+                        <p>{{ ad.description }}</p>
+                        <a href="{{ ad.link }}" target="_blank">Visiter le site</a>
+                    </section>
+                {% endfor %}
+            </section>
         </section>
     {% endif %}
     {{ parent() }}

@@ -7,7 +7,7 @@
  $contentWidth:960px;
  $bigWidth:1280px;
  $minHeight:600px;
- $line:1px;
+ $line:2px;
  $bigLine:2px;
  $quoteLine:2px;
 
@@ -57,38 +57,48 @@ body {
 // Navigation
 /**********************************************************/
 
+
+    //Hack pour que "problématiques" soit aligné tip top
+    .top_nav{ 
+            .prob{
+              position:relative;
+              left:-18px;
+
+            }
+    }
+        
         nav {
 
             width: $contentWidth;
             margin: 30px auto 0;
 
+
             &>ul {
 
                 margin: 0 auto;
-                margin-right:80px;
-                margin-left:80px;
+                margin-right:70px;
+                margin-left:70px;
                 text-align: center;
                 position: static;
                 font-size: 1em;
                 height: 2.1em;
                 line-height: 1.1em;
                 border-bottom: 3px solid $red;
+                font-family: $font-nav-top;
                 text-transform: uppercase;
-                
-                .top_nav{
-                    font-weight:bold;           
-                }
+                cursor: pointer;
+
 
                 &>li {
                     display: inline-block;
                     width: 10em;
                     color: $black;
-                    font-family: $font-nav;
+                    //font-family: $font-nav-bottom;
                     //text-decoration: none;
                     font-size: 1.05em;
                     a, h1 {
                         color: $black;
-                        font-family: $font-nav;
+                        //font-family: $font-nav-bottom;
                         text-decoration: none;
                         font-size: 1.05em;
                         display: block;
@@ -162,6 +172,7 @@ body {
                 font-size: 0.9em;
                 margin: 5px auto 0;
                 border: none;
+                font-family: $font-nav-bottom;
                 li {
                     display: inline-block;
                     width: 10em;
@@ -332,6 +343,21 @@ body {
                 padding: 1em 0;
                 text-align: left;
             }
+
+            a{
+                padding: 10px;
+                color: $red;
+                font-size: 1.2em;
+                font-family: $font-title-h3;
+                text-decoration: none;
+            }
+
+            a:hover{
+                text-decoration: underline;
+            }
+
+
+
         }
     }
     & > footer {
@@ -441,12 +467,13 @@ body {
     /*modif fred*/
 
       #help {
-
+            margin-top: 35px;
             margin: 0 auto;
             width: $contentWidth;
             text-align: left;
 
             h1 {
+
                 font-family: $font-title-h1;
                 font-size: 3.5em;
                 color: $white;
@@ -474,46 +501,49 @@ body {
                 }*/
             }
 
+            #annuaireTheme{
 
-            section{
-                    display: inline-block;
-                    width: 30%;
-                    margin: 20px auto;
-                    margin-right:3%;
-                    border-bottom: $bigLine solid $white;
+                @include x-columns(3);  
 
-                    h1 {
-                        font-weight:bold;
-                        font-family: "gentium_basicbold";
-                        font-size:1.3em;
-                        color: $black;
+
+                section{
                         display: inline-block;
+                        //width: 30%;
+                        margin: 20px auto;
+                        margin-right:3%;
+                        padding-bottom:20px;
+                        border-bottom: $bigLine solid $white;
+                        vertical-align: top;
+                        
+
+                        h1 {
+                            font-weight:bold;
+                            font-family: "gentium_basicbold";
+                            font-size:1.4em;
+                            color: $black;
+                            display: inline-block;
+                        }
+
+                        p{
+                            margin: 10px auto;
+                        }
+
+                        a {
+                            padding: 10px;
+                            padding-left:0;
+                            color: $red;
+                            font-size: 1.3em;
+                            font-family: $font-title-h3;
+                            text-decoration: none;
+                         }    
                     }
 
-                    p{
-
-                    }
-
-                    a {
-                        padding: 10px;
-                        padding-left:0;
-                        color: $red;
-                        font-size: 1.3em;
-                        font-family: $font-title-h3;
-                        text-decoration: none;
-                     }    
-                }
             }
-
-
-    /* enf of modif fred*/
-
-
-
-
-
+        }
     }
 } //end of body?
+
+
 
 
 .arrow {
@@ -533,7 +563,7 @@ body {
             vertical-align: top;
             line-height: 1em;
             color: $red;
-            font-family: $font-nav;
+            font-family: $font-nav-top;
         }
     }
 }
@@ -645,6 +675,8 @@ section.twothird {
 #main.annuaire {
     overflow: hidden;
     padding-bottom: 40px;
+    margin-top: 50px;
+
     & > h1 {
         font-size: 3em;
         font-family: $font-title-h1;
@@ -654,9 +686,9 @@ section.twothird {
             display: inline-block;
             position: relative;
             &:after {
-                border-top: $line solid $red;
+                border-top: $bigLine solid $red;
                 display: block;
-                height: $line;
+                height: $bigLine;
                 content: "";
                 width: $contentWidth;
                 position: absolute;
@@ -727,7 +759,7 @@ section.portrait {
         width: 60%;
     }
     &>footer {
-        margin-top: 30px;
+        margin-top: 60px;
         font-size: 1.3em;
         line-height: 1.25em;
         &:before {

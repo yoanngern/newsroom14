@@ -110,31 +110,32 @@ body {
     body > header img.logo {
       display: block;
       margin: 10px auto 0; }
+    body > header .top_nav .prob {
+      position: relative;
+      left: -18px; }
     body > header nav {
       width: 960px;
       margin: 30px auto 0; }
       body > header nav > ul {
         margin: 0 auto;
-        margin-right: 80px;
-        margin-left: 80px;
+        margin-right: 70px;
+        margin-left: 70px;
         text-align: center;
         position: static;
         font-size: 1em;
         height: 2.1em;
         line-height: 1.1em;
         border-bottom: 3px solid #652d2a;
-        text-transform: uppercase; }
-        body > header nav > ul .top_nav {
-          font-weight: bold; }
+        font-family: "dejavu_sansbold", helvetica, sans-serif;
+        text-transform: uppercase;
+        cursor: pointer; }
         body > header nav > ul > li {
           display: inline-block;
           width: 10em;
           color: #1a1a1a;
-          font-family: "dejavu_sansbook", helvetica, sans-serif;
           font-size: 1.05em; }
           body > header nav > ul > li a, body > header nav > ul > li h1 {
             color: #1a1a1a;
-            font-family: "dejavu_sansbook", helvetica, sans-serif;
             text-decoration: none;
             font-size: 1.05em;
             display: block; }
@@ -187,7 +188,8 @@ body {
         line-height: 2em;
         font-size: 0.9em;
         margin: 5px auto 0;
-        border: none; }
+        border: none;
+        font-family: "dejavu_sansbook", helvetica, sans-serif; }
         body > header nav > ul.prob li, body > header nav > ul.report li {
           display: inline-block;
           width: 10em; }
@@ -287,7 +289,7 @@ body {
           body > article section.top header span:after {
             border-top: 2px solid #652d2a;
             display: block;
-            height: 1px;
+            height: 2px;
             content: "";
             width: 960px;
             position: absolute;
@@ -318,6 +320,14 @@ body {
       body > article section.bottom p {
         padding: 1em 0;
         text-align: left; }
+      body > article section.bottom a {
+        padding: 10px;
+        color: #652d2a;
+        font-size: 1.2em;
+        font-family: "gentium_basicbold", times, serif;
+        text-decoration: none; }
+      body > article section.bottom a:hover {
+        text-decoration: underline; }
   body > footer {
     background-color: #c87e7a;
     padding-bottom: 20px;
@@ -379,8 +389,7 @@ body {
         }
     
 */
-    /*modif fred*/
-    /* enf of modif fred*/ }
+    /*modif fred*/ }
     body > footer section.footer_home {
       width: 1280px;
       overflow: hidden;
@@ -389,7 +398,7 @@ body {
       display: block;
       margin-top: 30px;
       padding-top: 40px;
-      border-bottom: 1px solid #652d2a; }
+      border-bottom: 2px solid #652d2a; }
       body > footer section.footer_home h1 {
         font-family: "dejavu_serifcondensed", times, serif;
         font-size: 3.5em;
@@ -399,9 +408,9 @@ body {
           display: inline-block;
           position: relative; }
           body > footer section.footer_home h1 span:after {
-            border-top: 1px solid #652d2a;
+            border-top: 2px solid #652d2a;
             display: block;
-            height: 1px;
+            height: 2px;
             content: "";
             width: 960px;
             position: absolute;
@@ -418,6 +427,7 @@ body {
       width: 1280px;
       text-align: right; }
     body > footer #help {
+      margin-top: 35px;
       margin: 0 auto;
       width: 960px;
       text-align: left; }
@@ -446,25 +456,32 @@ body {
                             left: 100%;
                         }
                 }*/ }
-      body > footer #help section {
-        display: inline-block;
-        width: 30%;
-        margin: 20px auto;
-        margin-right: 3%;
-        border-bottom: 2px solid white; }
-        body > footer #help section h1 {
-          font-weight: bold;
-          font-family: "gentium_basicbold";
-          font-size: 1.3em;
-          color: #1a1a1a;
-          display: inline-block; }
-        body > footer #help section a {
-          padding: 10px;
-          padding-left: 0;
-          color: #652d2a;
-          font-size: 1.3em;
-          font-family: "gentium_basicbold", times, serif;
-          text-decoration: none; }
+      body > footer #help #annuaireTheme {
+        -webkit-columns: 3;
+        -moz-columns: 3;
+        columns: 3; }
+        body > footer #help #annuaireTheme section {
+          display: inline-block;
+          margin: 20px auto;
+          margin-right: 3%;
+          padding-bottom: 20px;
+          border-bottom: 2px solid white;
+          vertical-align: top; }
+          body > footer #help #annuaireTheme section h1 {
+            font-weight: bold;
+            font-family: "gentium_basicbold";
+            font-size: 1.4em;
+            color: #1a1a1a;
+            display: inline-block; }
+          body > footer #help #annuaireTheme section p {
+            margin: 10px auto; }
+          body > footer #help #annuaireTheme section a {
+            padding: 10px;
+            padding-left: 0;
+            color: #652d2a;
+            font-size: 1.3em;
+            font-family: "gentium_basicbold", times, serif;
+            text-decoration: none; }
 
 .arrow {
   position: fixed;
@@ -481,7 +498,7 @@ body {
       vertical-align: top;
       line-height: 1em;
       color: #652d2a;
-      font-family: "dejavu_sansbook", helvetica, sans-serif; }
+      font-family: "dejavu_sansbold", helvetica, sans-serif; }
 
 section.tcol > h1 {
   font-family: "dejavu_serifCnBdIt", times, serif;
@@ -564,7 +581,8 @@ section.twothird > section {
 
 #main.annuaire {
   overflow: hidden;
-  padding-bottom: 40px; }
+  padding-bottom: 40px;
+  margin-top: 50px; }
   #main.annuaire > h1 {
     font-size: 3em;
     font-family: "dejavu_serifcondensed", times, serif;
@@ -574,9 +592,9 @@ section.twothird > section {
       display: inline-block;
       position: relative; }
       #main.annuaire > h1 span:after {
-        border-top: 1px solid #652d2a;
+        border-top: 2px solid #652d2a;
         display: block;
-        height: 1px;
+        height: 2px;
         content: "";
         width: 960px;
         position: absolute;
@@ -638,7 +656,7 @@ section.portrait {
     margin-top: 30px;
     width: 60%; }
   section.portrait > footer {
-    margin-top: 30px;
+    margin-top: 60px;
     font-size: 1.3em;
     line-height: 1.25em; }
     section.portrait > footer:before {
@@ -657,9 +675,9 @@ section.smalltalks {
       display: inline-block;
       position: relative; }
       section.smalltalks h1 span:after {
-        border-top: 1px solid #652d2a;
+        border-top: 2px solid #652d2a;
         display: block;
-        height: 1px;
+        height: 2px;
         content: "";
         width: 960px;
         position: absolute;
@@ -695,9 +713,9 @@ section.smalltalks {
         display: inline-block;
         position: relative; }
         #main.accueil #content article.top span:after {
-          border-top: 1px solid #652d2a;
+          border-top: 2px solid #652d2a;
           display: block;
-          height: 1px;
+          height: 2px;
           content: "";
           width: 960px;
           position: absolute;
@@ -723,9 +741,9 @@ section.smalltalks {
           display: inline-block;
           position: relative; }
           #main.accueil #content section.left article span:after {
-            border-top: 1px solid #652d2a;
+            border-top: 2px solid #652d2a;
             display: block;
-            height: 1px;
+            height: 2px;
             content: "";
             width: 960px;
             position: absolute;
@@ -757,9 +775,9 @@ section.smalltalks {
         color: #652d2a;
         margin-bottom: 5px; }
         #main.accueil #content section.right span:after {
-          border-top: 1px solid #652d2a;
+          border-top: 2px solid #652d2a;
           display: block;
-          height: 1px;
+          height: 2px;
           content: "";
           width: 960px;
           position: absolute;
@@ -831,9 +849,9 @@ section.smalltalks {
       display: inline-block;
       position: relative; }
       #main.accueil .quiz h1 span:after {
-        border-top: 1px solid white;
+        border-top: 2px solid white;
         display: block;
-        height: 1px;
+        height: 2px;
         content: "";
         width: 960px;
         position: absolute;
