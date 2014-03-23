@@ -76,7 +76,20 @@ article, aside, footer, header, hgroup, nav, section, figure, figcaption {
   text-decoration: none; }
 
 .article-title-small {
-  font-size: 2em; }
+  font-size: 2em;
+  line-height: 1.3em; }
+
+.article-title {
+  line-height: 1.3em; }
+
+.footer-one {
+  float: left;
+  width: 20%; }
+
+.footer-two {
+  float: left; }
+  .footer-two li {
+    list-style: none; }
 
 body {
   font-family: "gentium_basicregular", helvetica, sans-serif;
@@ -850,6 +863,9 @@ section.smalltalks {
     font-family: "dejavu_serifCnBdIt", times, serif;
     font-size: 2em;
     margin-top: 20px; }
+
+a {
+  color: #652d2a; }
 
 #main {
   overflow: hidden;

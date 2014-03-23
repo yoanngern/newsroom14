@@ -54,6 +54,7 @@ body {
             margin: 10px auto 0;
         }
 
+
 // Navigation
 /**********************************************************/
 
@@ -112,7 +113,7 @@ body {
                     }
                     &:hover {
                         position: relative;
-                        cursor: pointer;
+                        cursor: pointer ;
                         
                         &:after, &:before {
                             //bottom: -95%;
@@ -1015,4 +1016,8 @@ header.about {
 
     }
 }
+}
+
+a {
+    color: $red;
 }
