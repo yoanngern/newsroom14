@@ -54,6 +54,7 @@ body {
             margin: 10px auto 0;
         }
 
+
 // Navigation
 /**********************************************************/
 
@@ -122,10 +123,11 @@ body {
                     }
                     &:hover {
                         position: relative;
+                        cursor: pointer ;
                         
                         &:after, &:before {
                             //bottom: -95%;
-                            bottom:-97%;
+                            bottom:-113%;
                             left: 50%;
                             border: solid transparent;
                             content: " ";
@@ -179,7 +181,7 @@ body {
                     &.actif {
                         position: relative;
                         &:after {
-                            top: -15%;
+                            top: -25%;
                             left: 50%;
                             border: solid transparent;
                             content: " ";
@@ -197,7 +199,7 @@ body {
                         position: relative;
                         &:after, &:before {
                             font-weight:bold;
-                            top: -15%;
+                            top: -32%;
                             left: 50%;
                             border: solid transparent;
                             content: " ";
@@ -1046,4 +1048,18 @@ header.about {
 
     }
 }
+}
+
+a {
+    color: $red;
+}
+
+h2 {
+    font-size: 2em;
+    line-height: 1.3em;
+}
+
+.signature {
+    font-style: italic;
+    margin-bottom: 2em;
 }

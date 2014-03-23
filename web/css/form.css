@@ -1,4 +1,4 @@
-@charset "CP850";
+@charset "UTF-8";
 /* RESET */
 html, body, div, ul, ol, li, dl, dt, dd, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, fieldset, input, abbr, article, aside, command, details, figcaption, figure, footer, header, hgroup, mark, meter, nav, output, progress, section, summary, time {
   margin: 0;
@@ -76,7 +76,20 @@ article, aside, footer, header, hgroup, nav, section, figure, figcaption {
   text-decoration: none; }
 
 .article-title-small {
-  font-size: 2em; }
+  font-size: 2em;
+  line-height: 1.3em; }
+
+.article-title {
+  line-height: 1.3em; }
+
+.footer-one {
+  float: left;
+  width: 20%; }
+
+.footer-two {
+  float: left; }
+  .footer-two li {
+    list-style: none; }
 
 body {
   font-family: "gentium_basicregular", helvetica, sans-serif;
@@ -155,9 +168,10 @@ body {
               border-width: 10px;
               margin-left: -10px; }
           body > header nav > ul > li:hover {
-            position: relative; }
+            position: relative;
+            cursor: pointer; }
             body > header nav > ul > li:hover:after, body > header nav > ul > li:hover:before {
-              bottom: -97%;
+              bottom: -113%;
               left: 50%;
               border: solid transparent;
               content: " ";
@@ -196,7 +210,7 @@ body {
           body > header nav > ul.prob li.actif, body > header nav > ul.report li.actif {
             position: relative; }
             body > header nav > ul.prob li.actif:after, body > header nav > ul.report li.actif:after {
-              top: -15%;
+              top: -25%;
               left: 50%;
               border: solid transparent;
               content: " ";
@@ -212,7 +226,7 @@ body {
             position: relative; }
             body > header nav > ul.prob li:hover:after, body > header nav > ul.prob li:hover:before, body > header nav > ul.report li:hover:after, body > header nav > ul.report li:hover:before {
               font-weight: bold;
-              top: -15%;
+              top: -32%;
               left: 50%;
               border: solid transparent;
               content: " ";
@@ -867,6 +881,17 @@ section.smalltalks {
     font-family: "dejavu_serifCnBdIt", times, serif;
     font-size: 2em;
     margin-top: 20px; }
+
+a {
+  color: #652d2a; }
+
+h2 {
+  font-size: 2em;
+  line-height: 1.3em; }
+
+.signature {
+  font-style: italic;
+  margin-bottom: 2em; }
 
 #main {
   overflow: hidden;

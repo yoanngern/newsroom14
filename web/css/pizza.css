@@ -23,13 +23,20 @@ figure{
     max-width:450px;
 }
 
+.row ul {
+  position: absolute;
+  right: 0;
+  top: 30%;
+}
+
 .row li{
-    text-align:center;
+    text-align:left;
 }
 
 .graph{
     width:960px;
-    margin-bottom:130px;
+    margin-bottom:50px;
+    position: relative;
 }
 
 .graph figure{
@@ -38,9 +45,10 @@ figure{
 }
 
 .graphs{
-    width:960px;
-    margin-bottom:160px;
+    width:1050px;
+    margin-bottom:20px;
     display:inline-block;
+    position: relative;
 }
 
 .graphs figure{
