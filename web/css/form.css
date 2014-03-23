@@ -324,7 +324,63 @@ body {
     display: block;
     position: absolute;
     left: 0;
-    width: 100%; }
+    width: 100%;
+        /* avant modif
+
+        #help {
+
+            margin: 0 auto;
+            width: $contentWidth;
+            text-align: left;
+
+            & > h1 {
+
+                    h1 {
+                        font-family: $font-title-h1;
+                        font-size: 3.5em;
+                        color: $red;
+                        display: inline-block;
+
+                    span {
+                            display: inline-block;
+                            position: relative;
+
+                            &:after {
+                                border-top: $line solid $red;
+                                display: block;
+                                height: $line;
+                                content: "";
+                                width: $contentWidth;
+                                position: absolute;
+                                top: 1.2em;
+                            }
+
+                            &:after {
+                                margin-left: 10px;
+                                left: 100%;
+                            }
+                        }
+                    }
+            }
+            section {
+                display: inline-block;
+                width: 300px;
+                height: 150px;
+                margin: 10px;
+            }
+        }
+        
+        a {
+            padding: 10px;
+            color: $red;
+            font-size: 1.2em;
+            font-family: $font-title-h3;
+            text-decoration: none;
+        }
+    
+*/
+    /*modif fred*/
+    /* enf of modif fred*/ }
     body > footer section.footer_home {
       width: 1280px;
       overflow: hidden;
@@ -365,36 +421,50 @@ body {
       margin: 0 auto;
       width: 960px;
       text-align: left; }
-      body > footer #help > h1 h1 {
+      body > footer #help h1 {
         font-family: "dejavu_serifcondensed", times, serif;
         font-size: 3.5em;
-        color: #652d2a;
-        display: inline-block; }
-        body > footer #help > h1 h1 span {
-          display: inline-block;
-          position: relative; }
-          body > footer #help > h1 h1 span:after {
-            border-top: 1px solid #652d2a;
-            display: block;
-            height: 1px;
-            content: "";
-            width: 960px;
-            position: absolute;
-            top: 1.2em; }
-          body > footer #help > h1 h1 span:after {
-            margin-left: 10px;
-            left: 100%; }
+        color: white;
+        display: inline-block;
+        width: 100%;
+                /*span {
+                        display: inline-block;
+                        position: relative;
+
+                        &:after {
+                            border-top: $bigLine solid $white;
+                            display: block;
+                            height: $bigLine;
+                            content: "";
+                            width: $contentWidth;
+                            position: absolute;
+                            top: 1.2em;
+                        }
+
+                        &:after {
+                            margin-left: 10px;
+                            left: 100%;
+                        }
+                }*/ }
       body > footer #help section {
         display: inline-block;
-        width: 300px;
-        height: 150px;
-        margin: 10px; }
-    body > footer a {
-      padding: 10px;
-      color: #652d2a;
-      font-size: 1.2em;
-      font-family: "gentium_basicbold", times, serif;
-      text-decoration: none; }
+        width: 30%;
+        margin: 20px auto;
+        margin-right: 3%;
+        border-bottom: 2px solid white; }
+        body > footer #help section h1 {
+          font-weight: bold;
+          font-family: "gentium_basicbold";
+          font-size: 1.3em;
+          color: #1a1a1a;
+          display: inline-block; }
+        body > footer #help section a {
+          padding: 10px;
+          padding-left: 0;
+          color: #652d2a;
+          font-size: 1.3em;
+          font-family: "gentium_basicbold", times, serif;
+          text-decoration: none; }
 
 .arrow {
   position: fixed;

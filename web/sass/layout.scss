@@ -383,34 +383,43 @@ body {
             width: $bigWidth;
             text-align: right;
         }
+
+        /* avant modif
+
         #help {
+
             margin: 0 auto;
             width: $contentWidth;
             text-align: left;
+
             & > h1 {
-                           h1 {
-                font-family: $font-title-h1;
-                font-size: 3.5em;
-                color: $red;
-                display: inline-block;
-                span {
-                    display: inline-block;
-                    position: relative;
-                    &:after {
-                        border-top: $line solid $red;
-                        display: block;
-                        height: $line;
-                        content: "";
-                        width: $contentWidth;
-                        position: absolute;
-                        top: 1.2em;
+
+                    h1 {
+                        font-family: $font-title-h1;
+                        font-size: 3.5em;
+                        color: $red;
+                        display: inline-block;
+
+                    span {
+                            display: inline-block;
+                            position: relative;
+
+                            &:after {
+                                border-top: $line solid $red;
+                                display: block;
+                                height: $line;
+                                content: "";
+                                width: $contentWidth;
+                                position: absolute;
+                                top: 1.2em;
+                            }
+
+                            &:after {
+                                margin-left: 10px;
+                                left: 100%;
+                            }
+                        }
                     }
-                    &:after {
-                        margin-left: 10px;
-                        left: 100%;
-                    }
-                }
-            }
             }
             section {
                 display: inline-block;
@@ -427,8 +436,86 @@ body {
             font-family: $font-title-h3;
             text-decoration: none;
         }
+    
+*/
+    /*modif fred*/
+
+      #help {
+
+            margin: 0 auto;
+            width: $contentWidth;
+            text-align: left;
+
+            h1 {
+                font-family: $font-title-h1;
+                font-size: 3.5em;
+                color: $white;
+                display: inline-block;
+                width:100%;
+
+                /*span {
+                        display: inline-block;
+                        position: relative;
+
+                        &:after {
+                            border-top: $bigLine solid $white;
+                            display: block;
+                            height: $bigLine;
+                            content: "";
+                            width: $contentWidth;
+                            position: absolute;
+                            top: 1.2em;
+                        }
+
+                        &:after {
+                            margin-left: 10px;
+                            left: 100%;
+                        }
+                }*/
+            }
+
+
+            section{
+                    display: inline-block;
+                    width: 30%;
+                    margin: 20px auto;
+                    margin-right:3%;
+                    border-bottom: $bigLine solid $white;
+
+                    h1 {
+                        font-weight:bold;
+                        font-family: "gentium_basicbold";
+                        font-size:1.3em;
+                        color: $black;
+                        display: inline-block;
+                    }
+
+                    p{
+
+                    }
+
+                    a {
+                        padding: 10px;
+                        padding-left:0;
+                        color: $red;
+                        font-size: 1.3em;
+                        font-family: $font-title-h3;
+                        text-decoration: none;
+                     }    
+                }
+            }
+
+
+    /* enf of modif fred*/
+
+
+
+
+
     }
-}
+} //end of body?
+
+
 .arrow {
     position: fixed;
     display: inline-block;
