@@ -82,11 +82,11 @@ body {
   font-family: "gentium_basicregular", helvetica, sans-serif;
   font-size: 15px;
   margin-top: 70px;
-  margin-bottom: 70px; }
+  margin-bottom: 70px;
+  /**********************************************************/ }
   body #background {
     height: 100%;
     background-repeat: repeat;
-    background-image: url("../images/lightpaperfibers.png");
     width: 100%;
     display: block;
     position: fixed;
@@ -94,8 +94,7 @@ body {
     left: 0px;
     z-index: -5;
     min-width: 960px; }
-  body p,
-  body td {
+  body p, body td {
     font-size: 1.3em;
     line-height: 1.25em;
     margin-top: 10px; }
@@ -106,7 +105,8 @@ body {
     margin: 0 auto;
     z-index: 100;
     overflow: visible;
-    height: 9em; }
+    height: 9em;
+    /**********************************************************/ }
     body > header img.logo {
       display: block;
       margin: 10px auto 0; }
@@ -115,6 +115,8 @@ body {
       margin: 30px auto 0; }
       body > header nav > ul {
         margin: 0 auto;
+        margin-right: 80px;
+        margin-left: 80px;
         text-align: center;
         position: static;
         font-size: 1em;
@@ -122,12 +124,13 @@ body {
         line-height: 1.1em;
         border-bottom: 3px solid #652d2a;
         text-transform: uppercase; }
+        body > header nav > ul .top_nav {
+          font-weight: bold; }
         body > header nav > ul > li {
           display: inline-block;
-          width: 11em;
+          width: 10em;
           color: #1a1a1a;
           font-family: "dejavu_sansbook", helvetica, sans-serif;
-          text-decoration: none;
           font-size: 1.05em; }
           body > header nav > ul > li a, body > header nav > ul > li h1 {
             color: #1a1a1a;
@@ -153,7 +156,7 @@ body {
           body > header nav > ul > li:hover {
             position: relative; }
             body > header nav > ul > li:hover:after, body > header nav > ul > li:hover:before {
-              bottom: -95%;
+              bottom: -97%;
               left: 50%;
               border: solid transparent;
               content: " ";
@@ -162,7 +165,7 @@ body {
               position: absolute;
               pointer-events: none; }
             body > header nav > ul > li:hover:after {
-              border-color: rgba(255, 255, 255, 0);
+              border-color: rgba(0, 0, 0, 0);
               border-bottom-color: #ffffff;
               border-width: 10px;
               margin-left: -10px; }
@@ -172,7 +175,8 @@ body {
               border-width: 14px;
               margin-left: -14px; }
           body > header nav > ul > li.actif a, body > header nav > ul > li.actif h1 {
-            color: #652d2a; }
+            color: #652d2a;
+            font-weight: bold; }
       body > header nav > ul.prob, body > header nav > ul.report {
         text-transform: none;
         display: none;
@@ -205,6 +209,7 @@ body {
           body > header nav > ul.prob li:hover, body > header nav > ul.report li:hover {
             position: relative; }
             body > header nav > ul.prob li:hover:after, body > header nav > ul.prob li:hover:before, body > header nav > ul.report li:hover:after, body > header nav > ul.report li:hover:before {
+              font-weight: bold;
               top: -15%;
               left: 50%;
               border: solid transparent;
@@ -224,7 +229,8 @@ body {
               border-width: 14px;
               margin-left: -14px; }
           body > header nav > ul.prob li.actif a, body > header nav > ul.report li.actif a {
-            color: #652d2a; }
+            color: #652d2a;
+            font-weight: bold; }
   body > article {
     width: 960px;
     margin: 0 auto; }
@@ -232,7 +238,7 @@ body {
       z-index: 100;
       min-width: 960px;
       display: block;
-      margin-top: 50px; }
+      margin-top: 100px; }
       body > article section.top section.stats {
         font-family: "gentium_basicitalic", helvetica, sans-serif;
         font-size: 1.55em;
@@ -281,7 +287,7 @@ body {
           body > article section.top header span:after {
             border-top: 2px solid #652d2a;
             display: block;
-            height: 2px;
+            height: 1px;
             content: "";
             width: 960px;
             position: absolute;
@@ -327,7 +333,7 @@ body {
       display: block;
       margin-top: 30px;
       padding-top: 40px;
-      border-bottom: 2px solid #652d2a; }
+      border-bottom: 1px solid #652d2a; }
       body > footer section.footer_home h1 {
         font-family: "dejavu_serifcondensed", times, serif;
         font-size: 3.5em;
@@ -337,9 +343,9 @@ body {
           display: inline-block;
           position: relative; }
           body > footer section.footer_home h1 span:after {
-            border-top: 2px solid #652d2a;
+            border-top: 1px solid #652d2a;
             display: block;
-            height: 2px;
+            height: 1px;
             content: "";
             width: 960px;
             position: absolute;
@@ -368,9 +374,9 @@ body {
           display: inline-block;
           position: relative; }
           body > footer #help > h1 h1 span:after {
-            border-top: 2px solid #652d2a;
+            border-top: 1px solid #652d2a;
             display: block;
-            height: 2px;
+            height: 1px;
             content: "";
             width: 960px;
             position: absolute;
@@ -433,7 +439,7 @@ section.quote {
     text-align: center;
     line-height: 1.5em; }
     section.quote quote:before, section.quote quote:after {
-      border-top: 3px solid #652d2a;
+      border-top: 2px solid #652d2a;
       display: inline-block;
       height: 1px;
       content: " ";
@@ -498,9 +504,9 @@ section.twothird > section {
       display: inline-block;
       position: relative; }
       #main.annuaire > h1 span:after {
-        border-top: 2px solid #652d2a;
+        border-top: 1px solid #652d2a;
         display: block;
-        height: 2px;
+        height: 1px;
         content: "";
         width: 960px;
         position: absolute;
@@ -581,9 +587,9 @@ section.smalltalks {
       display: inline-block;
       position: relative; }
       section.smalltalks h1 span:after {
-        border-top: 2px solid #652d2a;
+        border-top: 1px solid #652d2a;
         display: block;
-        height: 2px;
+        height: 1px;
         content: "";
         width: 960px;
         position: absolute;
@@ -596,16 +602,17 @@ section.smalltalks {
     -moz-columns: 3;
     columns: 3; }
 
+/**********************************************************/
 #main.accueil {
   width: 1280px;
-  margin-top: 30px; }
+  margin-top: 30px;
+  /**********************************************************/ }
   #main.accueil #content {
     width: 960px;
     display: inline-block;
     margin: 0px; }
     #main.accueil #content article.top {
-      margin-top: 10px;
-      margin-bottom: 10px; }
+      margin: 40px auto; }
       #main.accueil #content article.top h1 {
         text-align: left;
         overflow: hidden;
@@ -618,9 +625,9 @@ section.smalltalks {
         display: inline-block;
         position: relative; }
         #main.accueil #content article.top span:after {
-          border-top: 2px solid #652d2a;
+          border-top: 1px solid #652d2a;
           display: block;
-          height: 2px;
+          height: 1px;
           content: "";
           width: 960px;
           position: absolute;
@@ -634,7 +641,7 @@ section.smalltalks {
       display: inline-block; }
       #main.accueil #content section.left article {
         margin-top: 10px;
-        margin-bottom: 10px; }
+        margin-bottom: 30px; }
         #main.accueil #content section.left article h1 {
           text-align: left;
           overflow: hidden;
@@ -646,9 +653,9 @@ section.smalltalks {
           display: inline-block;
           position: relative; }
           #main.accueil #content section.left article span:after {
-            border-top: 2px solid #652d2a;
+            border-top: 1px solid #652d2a;
             display: block;
-            height: 2px;
+            height: 1px;
             content: "";
             width: 960px;
             position: absolute;
@@ -680,9 +687,9 @@ section.smalltalks {
         color: #652d2a;
         margin-bottom: 5px; }
         #main.accueil #content section.right span:after {
-          border-top: 2px solid #652d2a;
+          border-top: 1px solid #652d2a;
           display: block;
-          height: 2px;
+          height: 1px;
           content: "";
           width: 960px;
           position: absolute;
@@ -691,7 +698,7 @@ section.smalltalks {
           margin-left: 10px;
           left: 100%; }
       #main.accueil #content section.right article {
-        margin-bottom: 50px; }
+        margin-bottom: 80px; }
         #main.accueil #content section.right article img {
           width: 100%; }
   #main.accueil #sidebar {
@@ -754,9 +761,9 @@ section.smalltalks {
       display: inline-block;
       position: relative; }
       #main.accueil .quiz h1 span:after {
-        border-top: 2px solid white;
+        border-top: 1px solid white;
         display: block;
-        height: 2px;
+        height: 1px;
         content: "";
         width: 960px;
         position: absolute;

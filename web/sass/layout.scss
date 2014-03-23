@@ -7,22 +7,24 @@
  $contentWidth:960px;
  $bigWidth:1280px;
  $minHeight:600px;
- $line:2px;
- $quoteLine:3px;
+ $line:1px;
+ $bigLine:2px;
+ $quoteLine:2px;
 
  //marge entre article
  $articleMargin:15px;
 
 
- body {
+body {
     font-family: $font-text;
     font-size: 15px;
     margin-top:70px;
     margin-bottom:70px;
+
     #background {
         height: 100%;
         background-repeat: repeat;
-        background-image: url('../images/lightpaperfibers.png');
+        //background-image: url('../images/lightpaperfibers.png');
         width: 100%;
         display: block;
         position: fixed;
@@ -31,12 +33,13 @@
         z-index: -5;
         min-width: 960px;
     }
-    p,
-    td {
+
+    p,td {
         font-size: 1.3em;
         line-height: 1.25em;
         margin-top: 10px;
     }
+
     & > header {
         max-width: 1280px;
         width: 100%;
@@ -45,15 +48,25 @@
         z-index: 100;
         overflow: visible;
         height: 9em;
+
         img.logo {
             display: block;
             margin: 10px auto 0;
         }
+
+// Navigation
+/**********************************************************/
+
         nav {
+
             width: $contentWidth;
             margin: 30px auto 0;
+
             &>ul {
+
                 margin: 0 auto;
+                margin-right:80px;
+                margin-left:80px;
                 text-align: center;
                 position: static;
                 font-size: 1em;
@@ -61,12 +74,17 @@
                 line-height: 1.1em;
                 border-bottom: 3px solid $red;
                 text-transform: uppercase;
+                
+                .top_nav{
+                    font-weight:bold;           
+                }
+
                 &>li {
                     display: inline-block;
-                    width: 11em;
+                    width: 10em;
                     color: $black;
                     font-family: $font-nav;
-                    text-decoration: none;
+                    //text-decoration: none;
                     font-size: 1.05em;
                     a, h1 {
                         color: $black;
@@ -94,8 +112,10 @@
                     }
                     &:hover {
                         position: relative;
+                        
                         &:after, &:before {
-                            bottom: -95%;
+                            //bottom: -95%;
+                            bottom:-97%;
                             left: 50%;
                             border: solid transparent;
                             content: " ";
@@ -104,25 +124,32 @@
                             position: absolute;
                             pointer-events: none;
                         }
+
                         &:after {
-                            border-color: rgba(255, 255, 255, 0);
+                            //border-color: rgba(255, 255, 255, 0);
+                            border-color: rgba(0, 0, 0, 0);
                             border-bottom-color: #ffffff;
                             border-width: 10px;
                             margin-left: -10px;
+
                         }
+                        
                         &:before {
                             border-color: rgba(101, 45, 42, 0);
                             border-bottom-color: #652d2a;
                             border-width: 14px;
                             margin-left: -14px;
                         }
+                        
                     }
                     &.actif a,
                     &.actif h1 {
                         color: $red;
+                        font-weight:bold;
                     }
                 }
             }
+
             &>ul.prob,
             &>ul.report {
                 text-transform: none;
@@ -158,6 +185,7 @@
                     &:hover {
                         position: relative;
                         &:after, &:before {
+                            font-weight:bold;
                             top: -15%;
                             left: 50%;
                             border: solid transparent;
@@ -182,19 +210,27 @@
                     }
                     &.actif a {
                         color: $red;
+                        font-weight:bold;
                     }
                 }
             }
         }
     }
+
+// End of navigation
+/**********************************************************/
+
+
     & > article {
         width: $contentWidth;
         margin: 0 auto;
+
         section.top {
             z-index: 100;
             min-width: 960px;
             display: block;
-            margin-top: 50px;
+            margin-top: 100px;
+
             section.stats {
                 font-family: $font-text-italic;
                 font-size: 1.55em;
@@ -205,6 +241,7 @@
                 display: inline-block;
                 position: relative;
                 bottom: -0.5em;
+
                 &> p {
                     display: inline-block;
                     width: (0.5 * $contentWidth) - 115;
@@ -212,6 +249,7 @@
                     line-height: 1em;
                     margin-top: 0;
                 }
+
                 &> figure {
                     width: 100px;
                     height: 100px;
@@ -219,6 +257,7 @@
                     margin-left: 8px;
                     margin-bottom: 0;
                     vertical-align: top;
+
                     img {
                         width: 100%;
                     }
@@ -233,7 +272,7 @@
             }
             header {
                 width: $contentWidth;
-                border-bottom: 2px solid $red;
+                border-bottom: $bigLine solid $red;
                 padding-bottom: 20px;
                 clear: both;
                 h1 {
@@ -248,7 +287,7 @@
                     display: inline-block;
                     position: relative;
                     &:after {
-                        border-top: $line solid $red;
+                        border-top: $bigLine solid $red;
                         display: block;
                         height: $line;
                         content: "";
@@ -640,16 +679,23 @@ section.smalltalks {
     }
     border-bottom:2px solid $red;
 }
+
+
+// Homepage
+/**********************************************************/
+
 #main.accueil {
     width: $bigWidth;
     margin-top: 30px;
+
     #content {
         width: $contentWidth;
         display: inline-block;
         margin: 0px;
+
         article.top {
-            margin-top: 10px;
-            margin-bottom:10px;
+            margin: 40px auto;
+
             h1 {
                 text-align: left;
                 overflow: hidden;
@@ -659,9 +705,11 @@ section.smalltalks {
                 color: $red;
                 margin-bottom:10px;
             }
+
             span {
                 display: inline-block;
                 position: relative;
+
                 &:after {
                     border-top: $line solid $red;
                     display: block;
@@ -671,6 +719,7 @@ section.smalltalks {
                     position: absolute;
                     top: 1.2em;
                 }
+
                 &:after {
                     margin-left: 10px;
                     left: 100%;
@@ -681,9 +730,10 @@ section.smalltalks {
             width: 60%;
             overflow: hidden;
             display: inline-block;
+
             article {
                 margin-top:10px;
-                margin-bottom:10px;
+                margin-bottom:30px;
 
                 h1 {
                     text-align: left;
@@ -716,6 +766,7 @@ section.smalltalks {
                 }
             }
         }
+
         section.right {
             margin-top: $articleMargin;
             width: 30%;
@@ -754,7 +805,7 @@ section.smalltalks {
                 }
             }
             article {
-                margin-bottom: 50px;
+                margin-bottom: 80px;
                 img {
                     width: 100%;
                 }
@@ -857,6 +908,12 @@ section.smalltalks {
             }
 
 }
+
+
+// End of Homepage
+/**********************************************************/
+
+
 span.em {
     display: block;
     margin: 0.4em 0;

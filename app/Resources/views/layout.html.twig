@@ -27,7 +27,7 @@
         <header>
             <img src="{{ asset('images/logo.png') }}" alt="logo" class="logo" />
             <nav>
-                <ul>
+                <ul class ="top_nav">
                     <li class="{% if page == 'accueil' %}actif{% endif %}"><a href="{{ path('comem_newsroom_home') }}">Accueil</a></li>
                     
                     <li class="prob {% if (page == 'alimentation') or (page == 'vetements') or (page == 'logement') or (page == 'sante') or (page == 'social') %}actif{% endif %}">
