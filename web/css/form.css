@@ -867,6 +867,14 @@ section.smalltalks {
 a {
   color: #652d2a; }
 
+h2 {
+  font-size: 2em;
+  line-height: 1.3em; }
+
+.signature {
+  font-style: italic;
+  margin-bottom: 2em; }
+
 #main {
   overflow: hidden;
   padding-bottom: 40px; }
