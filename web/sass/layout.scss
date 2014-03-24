@@ -958,16 +958,18 @@ section.smalltalks {
       margin-bottom: 10px;
       padding-left: 5px;
 
-      h2 {
+      h1 {
         text-align: left;
         color:$red;
         font-family: $font-title-h1;
-        background-color:$white;
         text-decoration: none;
         font-weight: bold;
         font-size: 2em;
         display: block;
         z-index:9999;
+      }
+      h2{
+        color:$red;
       }
       a{
         color:$red;
