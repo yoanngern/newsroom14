@@ -164,14 +164,13 @@ body {
               position: absolute;
               pointer-events: none;
               border-color: rgba(101, 45, 42, 0);
-              border-bottom-color: #652d2a;
               border-width: 10px;
               margin-left: -10px; }
           body > header nav > ul > li:hover {
             position: relative;
             cursor: pointer; }
             body > header nav > ul > li:hover:after, body > header nav > ul > li:hover:before {
-              bottom: -113%;
+              bottom: -122%;
               left: 50%;
               border: solid transparent;
               content: " ";
@@ -218,7 +217,6 @@ body {
               width: 0;
               position: absolute;
               pointer-events: none;
-              border-color: rgba(101, 45, 42, 0);
               border-top-color: #652d2a;
               border-width: 10px;
               margin-left: -10px; }
@@ -349,61 +347,8 @@ body {
     position: absolute;
     left: 0;
     width: 100%;
-        /* avant modif
-
-        #help {
-
-            margin: 0 auto;
-            width: $contentWidth;
-            text-align: left;
-
-            & > h1 {
-
-                    h1 {
-                        font-family: $font-title-h1;
-                        font-size: 3.5em;
-                        color: $red;
-                        display: inline-block;
-
-                    span {
-                            display: inline-block;
-                            position: relative;
-
-                            &:after {
-                                border-top: $line solid $red;
-                                display: block;
-                                height: $line;
-                                content: "";
-                                width: $contentWidth;
-                                position: absolute;
-                                top: 1.2em;
-                            }
-
-                            &:after {
-                                margin-left: 10px;
-                                left: 100%;
-                            }
-                        }
-                    }
-            }
-            section {
-                display: inline-block;
-                width: 300px;
-                height: 150px;
-                margin: 10px;
-            }
-        }
-        
-        a {
-            padding: 10px;
-            color: $red;
-            font-size: 1.2em;
-            font-family: $font-title-h3;
-            text-decoration: none;
-        }
-    
-*/
-    /*modif fred*/ }
+    /**********************************************************/
+    /**********************************************************/ }
     body > footer section.footer_home {
       width: 1280px;
       overflow: hidden;
@@ -450,26 +395,7 @@ body {
         font-size: 3.5em;
         color: white;
         display: inline-block;
-        width: 100%;
-                /*span {
-                        display: inline-block;
-                        position: relative;
-
-                        &:after {
-                            border-top: $bigLine solid $white;
-                            display: block;
-                            height: $bigLine;
-                            content: "";
-                            width: $contentWidth;
-                            position: absolute;
-                            top: 1.2em;
-                        }
-
-                        &:after {
-                            margin-left: 10px;
-                            left: 100%;
-                        }
-                }*/ }
+        width: 100%; }
       body > footer #help #annuaireTheme {
         -webkit-columns: 3;
         -moz-columns: 3;
@@ -783,7 +709,7 @@ section.smalltalks {
       display: inline-block; }
       #main.accueil #content section.left article {
         margin-top: 10px;
-        margin-bottom: 30px;
+        margin-bottom: 50px;
         /**********************************************************/
         /**********************************************************/ }
         #main.accueil #content section.left article h1 {
@@ -792,7 +718,8 @@ section.smalltalks {
           width: 960px;
           font-family: "dejavu_serifcondensed", times, serif;
           font-size: 2.5em;
-          color: #652d2a; }
+          color: #652d2a;
+          margin-bottom: 20px; }
           #main.accueil #content section.left article h1 span {
             display: inline-block;
             position: relative; }
@@ -823,7 +750,8 @@ section.smalltalks {
         #main.accueil #content section.left article .firstletter + span {
           margin-left: -0.5em; }
         #main.accueil #content section.left article img {
-          width: 100%; }
+          width: 100%;
+          margin: 10px auto; }
     #main.accueil #content section.right {
       margin-top: 15px;
       width: 30%;

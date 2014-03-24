@@ -116,7 +116,7 @@ body {
                             position: absolute;
                             pointer-events: none;
                             border-color: rgba(101, 45, 42, 0);
-                            border-bottom-color: #652d2a;
+                            //border-bottom-color: #652d2a;
                             border-width: 10px;
                             margin-left: -10px;
                         }
@@ -127,7 +127,7 @@ body {
                         
                         &:after, &:before {
                             //bottom: -95%;
-                            bottom:-113%;
+                            bottom:-122%;
                             left: 50%;
                             border: solid transparent;
                             content: " ";
@@ -189,7 +189,7 @@ body {
                             width: 0;
                             position: absolute;
                             pointer-events: none;
-                            border-color: rgba(101, 45, 42, 0);
+                            //border-color: rgba(101, 45, 42, 0);
                             border-top-color: #652d2a;
                             border-width: 10px;
                             margin-left: -10px;
@@ -412,61 +412,8 @@ body {
             text-align: right;
         }
 
-        /* avant modif
-
-        #help {
-
-            margin: 0 auto;
-            width: $contentWidth;
-            text-align: left;
-
-            & > h1 {
-
-                    h1 {
-                        font-family: $font-title-h1;
-                        font-size: 3.5em;
-                        color: $red;
-                        display: inline-block;
-
-                    span {
-                            display: inline-block;
-                            position: relative;
-
-                            &:after {
-                                border-top: $line solid $red;
-                                display: block;
-                                height: $line;
-                                content: "";
-                                width: $contentWidth;
-                                position: absolute;
-                                top: 1.2em;
-                            }
-
-                            &:after {
-                                margin-left: 10px;
-                                left: 100%;
-                            }
-                        }
-                    }
-            }
-            section {
-                display: inline-block;
-                width: 300px;
-                height: 150px;
-                margin: 10px;
-            }
-        }
-        
-        a {
-            padding: 10px;
-            color: $red;
-            font-size: 1.2em;
-            font-family: $font-title-h3;
-            text-decoration: none;
-        }
-    
-*/
-    /*modif fred*/
+//Footer annuaire d'aide par thème
+/**********************************************************/
 
       #help {
             margin-top: 35px;
@@ -475,32 +422,11 @@ body {
             text-align: left;
 
             h1 {
-
                 font-family: $font-title-h1;
                 font-size: 3.5em;
                 color: $white;
                 display: inline-block;
                 width:100%;
-
-                /*span {
-                        display: inline-block;
-                        position: relative;
-
-                        &:after {
-                            border-top: $bigLine solid $white;
-                            display: block;
-                            height: $bigLine;
-                            content: "";
-                            width: $contentWidth;
-                            position: absolute;
-                            top: 1.2em;
-                        }
-
-                        &:after {
-                            margin-left: 10px;
-                            left: 100%;
-                        }
-                }*/
             }
 
             #annuaireTheme{
@@ -538,10 +464,18 @@ body {
                             font-family: $font-title-h3;
                             text-decoration: none;
                          }    
-                    }
 
-            }
-        }
+                    }//section
+
+            }//#annuaireTheme
+
+        }//#help
+
+
+//End of footer annuaire d'aide par thème
+/**********************************************************/
+
+
     }
 } //end of body?
 
@@ -902,7 +836,7 @@ section.smalltalks {
 
             article {
                 margin-top:10px;
-                margin-bottom:30px;
+                margin-bottom:50px;
 
                 h1 {
                     text-align: left;
@@ -911,29 +845,31 @@ section.smalltalks {
                     font-family: $font-title-h1;
                     font-size: 2.5em;
                     color: $red;
+                    margin-bottom: 20px;
 
                     span {
-                    display: inline-block;
-                    position: relative;
-                    &:after {
-                        border-top: $line solid $red;
-                        display: block;
-                        height: $line;
-                        content: "";
-                        width: $contentWidth;
-                        position: absolute;
-                        top: 1.2em;
-                        width: 200px;
-                    }
-                    &:after {
-                        margin-left: 10px;
-                        left: 100%;
-                    }
-                }
-                
-                }
+                        display: inline-block;
+                        position: relative;
+                        &:after {
+                            border-top: $line solid $red;
+                            display: block;
+                            height: $line;
+                            content: "";
+                            width: $contentWidth;
+                            position: absolute;
+                            top: 1.2em;
+                            width: 200px;
+                        }
+                        &:after {
+                            margin-left: 10px;
+                            left: 100%;
+                        }
 
-                                //Lettrine
+                    }//span
+
+                }//h1
+
+                //Lettrine
                 /**********************************************************/
                 .firstletter{ 
                   display      : block;
@@ -958,6 +894,7 @@ section.smalltalks {
 
                 img {
                     width: 100%;
+                    margin: 10px auto;
                 }
             }
         }
