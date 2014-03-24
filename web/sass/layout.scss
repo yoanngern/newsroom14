@@ -420,6 +420,7 @@ body {
       margin: 0 auto;
       width: $contentWidth;
       text-align: left;
+      overflow: hidden;
 
       h1 {
         font-family: $font-title-h1;
@@ -427,7 +428,32 @@ body {
         color: $white;
         display: inline-block;
         width:100%;
-      }
+        
+            span {
+                display: inline-block;
+                position: relative;
+                
+                &:after {
+                    border-top: $bigLine solid $white;
+                    display: block;
+                    height: $line;
+                    content: "";
+                    width: $contentWidth;
+                    position: absolute;
+                    top: 1.2em;
+                }
+                
+                &:after {
+                    margin-left: 10px;
+                    left: 100%;
+                }
+            }
+          
+            
+        }
+      
+      
+      
 
       #annuaireTheme{
 
