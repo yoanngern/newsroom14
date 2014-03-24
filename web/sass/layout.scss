@@ -290,6 +290,7 @@ $articleMargin:15px;
             section {
                 width: $contentWidth;
             }
+<<<<<<< HEAD
         }
         section.bottom {
             width: $contentWidth;
@@ -299,6 +300,62 @@ $articleMargin:15px;
             }
             &:first-child {
                 margin-top: 0;
+=======
+
+          }
+          &.actif a,
+          &.actif h1 {
+            color: $red;
+            font-family: $font-nav-top;
+          }
+        }
+      }
+
+      &>ul.prob,
+      &>ul.report {
+        text-transform: none;
+        display: none;
+        text-decoration: none;
+        list-style: none;
+        width: $contentWidth;
+        height: 2em;
+        line-height: 2em;
+        font-size: 0.9em;
+        margin: 5px auto 0;
+        border: none;
+        font-family: $font-nav-bottom;
+        li {
+          display: inline-block;
+          width: 11em;
+          &.actif {
+            position: relative;
+            &:after {
+              top: -25%;
+              left: 50%;
+              border: solid transparent;
+              content: " ";
+              height: 0;
+              width: 0;
+              position: absolute;
+              pointer-events: none;
+              //border-color: rgba(101, 45, 42, 0);
+              border-top-color: #652d2a;
+              border-width: 10px;
+              margin-left: -10px;
+            }
+          }
+          &:hover {
+            position: relative;
+            &:after, &:before {
+              top: -15%;
+              left: 50%;
+              border: solid transparent;
+              content: " ";
+              height: 0;
+              width: 0;
+              position: absolute;
+              pointer-events: none;
+>>>>>>> d6fca1eee14b110d8d7c94d500df7612165e42a6
             }
             & > footer {
                 text-align: center;
@@ -324,6 +381,14 @@ $articleMargin:15px;
             a:hover {
                 text-decoration: underline;
             }
+<<<<<<< HEAD
+=======
+          }
+          &.actif a {
+            color: $red;
+            font-family: $font-nav-top;
+          }
+>>>>>>> d6fca1eee14b110d8d7c94d500df7612165e42a6
         }
     }
     & > footer {
@@ -549,6 +614,7 @@ $articleMargin:15px;
             }
         }
     }
+<<<<<<< HEAD
     #main.annuaire {
         overflow: hidden;
         padding-bottom: 40px;
@@ -556,6 +622,55 @@ $articleMargin:15px;
         & > h1 {
             font-size: 3em;
             font-family: $font-title-h1;
+=======
+
+    //Footer annuaire d'aide par thème
+    /**********************************************************/
+
+    #help {
+      margin-top: 35px;
+      margin: 0 auto;
+      width: $contentWidth;
+      text-align: left;
+
+      h1 {
+        font-family: $font-title-h1;
+        font-size: 3.5em;
+        color: $white;
+        display: inline-block;
+        width:100%;
+      }
+
+      #annuaireTheme{
+
+        @include x-columns(3);
+
+
+        section{
+          display: inline-block;
+          //width: 30%;
+          margin: 20px auto;
+          margin-right:3%;
+          padding-bottom:20px;
+          border-bottom: $bigLine solid $white;
+          vertical-align: top;
+
+
+          h1 {
+            font-family: "gentium_basicbold";
+            font-size:1.4em;
+            color: $black;
+            display: inline-block;
+          }
+
+          p{
+            margin: 10px auto;
+          }
+
+          a {
+            padding: 10px;
+            padding-left:0;
+>>>>>>> d6fca1eee14b110d8d7c94d500df7612165e42a6
             color: $red;
             padding: 5px;
             span {
@@ -642,6 +757,65 @@ $articleMargin:15px;
                 content: "*";
             }
         }
+<<<<<<< HEAD
+=======
+      }
+    }
+    
+    a {
+        padding: 0 0 0 5px !important;
+        margin-top: 10px;
+        display: block;
+        color: $red;
+        font-size: 1.2em;
+        font-family: $font-title-h3;
+        text-decoration: none;
+        
+        &:hover {
+            text-decoration: underline;
+        }
+      }
+    
+  }
+}
+section.portrait {
+  margin-top: 30px;
+  &>h1 {
+    font-family: $font-title-h2;
+    font-size: 2.5em;
+  }
+  &>h2 {
+    font-size: 2.4em;
+    margin-top: -15px;
+    margin-bottom: 15px;
+  }
+  &>img {
+    width: 100%;
+  }
+  &>section.question {
+    margin-top: 50px;
+    h3 {
+      color: $red;
+      font-family: $font-title-h3;
+      font-size: 1.5em;
+    }
+    p {
+      font-family: $font-text-italic;
+      font-size: 1.5em;
+      padding: 0;
+    }
+  }
+  &>table {
+    margin-top: 30px;
+    width: 60%;
+  }
+  &>footer {
+    margin-top: 60px;
+    font-size: 1.3em;
+    line-height: 1.25em;
+    &:before {
+      content: "*";
+>>>>>>> d6fca1eee14b110d8d7c94d500df7612165e42a6
     }
     section.smalltalks {
         width: $contentWidth;
@@ -963,6 +1137,7 @@ $articleMargin:15px;
             }
         }
     }
+<<<<<<< HEAD
     // End of Homepage
  }
     /**********************************************************/
@@ -977,6 +1152,81 @@ $articleMargin:15px;
         display: block;
         margin: 0.4em 0;
         font-family: $font-text-italic;
+=======
+  }
+
+  #sidebar {
+    width: $bigWidth - $contentWidth - 15px;
+    float: right;
+    display: inline-block;
+    margin-top: 4.1em;
+
+    .annuaire {
+      //background-color: lighten($red, 20%);
+      //border-radius:10px;
+      margin-bottom: 10px;
+      padding-left: 5px;
+
+      h1 {
+        text-align: left;
+        color:$red;
+        font-family: $font-title-h1;
+        text-decoration: none;
+        font-size: 2em;
+        display: block;
+        z-index:9999;
+      }
+      h2{
+        color:$red;
+      }
+      a{
+        color:$red;
+      }
+      input {
+        width: 90%;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        height: 25px;
+        margin-left: 4%;
+      }
+      .headAnnuaire {
+        border-bottom: 2px solid $white;
+        padding-left: 5px;
+        padding-right: 5px;
+      }
+      #results {
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-right: 5px;
+        overflow: auto;
+        height: 500px;
+        margin-top: 10px;
+
+      }
+      .result {
+        padding-left: 5px;
+        margin-bottom: 10px;
+        border-bottom: 1px solid $red;
+        h2 {
+          color: $red;
+          font-family: $font-title-h3;
+          font-size: 1.3em;
+          cursor: pointer;
+          margin-bottom:5px;
+        }
+        a {
+          color: $red;
+        }
+        a:hover {
+          color: lightgrey;
+        }
+      }
+      #search{
+        border: 2px solid $red;
+        border-radius:0px;
+        position:relative;
+      }
+>>>>>>> d6fca1eee14b110d8d7c94d500df7612165e42a6
     }
     header.about {
         &>h2 {
