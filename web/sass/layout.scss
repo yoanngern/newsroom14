@@ -825,8 +825,54 @@ section.smalltalks {
                 font-size: 2.5em;
                 color: $red;
                 margin-bottom:10px;
+
+                span {
+                display: inline-block;
+                position: relative;
+
+                &:after {
+                    border-top: $line solid $red;
+                    display: block;
+                    height: $line;
+                    content: "";
+                    width: $contentWidth;
+                    position: absolute;
+                    top: 1.2em;
+                }
+
+                &:after {
+                    margin-left: 10px;
+                    left: 100%;
+                }
+
+            }
+        }
+
+            p{
+                @include x-columns(2);
+
+                //Lettrine
+                /**********************************************************/
+                .firstletter{ 
+                  display      : block;
+                  float        : left;
+                  margin-top   : -0.205em; /* use -0.205em for two lines or -0.63em for three*/
+                  margin-left  : 0;
+                  margin-right : 0.5em;
+                  height       : 2.5em;
+                }
+
+                .firstletter span{
+                  font-size    : 3.33em;   /* use 3.33em for two lines or 5.6em for three */
+                  line-height  : 1.0em;
+                }
+
+                .firstletter + span{
+                  margin-left  : -0.5em;
+                }
             }
 
+            /*
             span {
                 display: inline-block;
                 position: relative;
@@ -845,7 +891,7 @@ section.smalltalks {
                     margin-left: 10px;
                     left: 100%;
                 }
-            }
+            }*/
         }
         section.left {
             width: 60%;
@@ -1063,3 +1109,5 @@ h2 {
     font-style: italic;
     margin-bottom: 2em;
 }
+
+

@@ -1,4 +1,4 @@
-@charset "UTF-8";
+@charset "CP850";
 /* RESET */
 html, body, div, ul, ol, li, dl, dt, dd, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, fieldset, input, abbr, article, aside, command, details, figcaption, figure, footer, header, hgroup, mark, meter, nav, output, progress, section, summary, time {
   margin: 0;
@@ -714,7 +714,27 @@ section.smalltalks {
     display: inline-block;
     margin: 0px; }
     #main.accueil #content article.top {
-      margin: 40px auto; }
+      margin: 40px auto;
+            /*
+            span {
+                display: inline-block;
+                position: relative;
+
+                &:after {
+                    border-top: $line solid $red;
+                    display: block;
+                    height: $line;
+                    content: "";
+                    width: $contentWidth;
+                    position: absolute;
+                    top: 1.2em;
+                }
+
+                &:after {
+                    margin-left: 10px;
+                    left: 100%;
+                }
+            }*/ }
       #main.accueil #content article.top h1 {
         text-align: left;
         overflow: hidden;
@@ -723,20 +743,39 @@ section.smalltalks {
         font-size: 2.5em;
         color: #652d2a;
         margin-bottom: 10px; }
-      #main.accueil #content article.top span {
-        display: inline-block;
-        position: relative; }
-        #main.accueil #content article.top span:after {
-          border-top: 2px solid #652d2a;
+        #main.accueil #content article.top h1 span {
+          display: inline-block;
+          position: relative; }
+          #main.accueil #content article.top h1 span:after {
+            border-top: 2px solid #652d2a;
+            display: block;
+            height: 2px;
+            content: "";
+            width: 960px;
+            position: absolute;
+            top: 1.2em; }
+          #main.accueil #content article.top h1 span:after {
+            margin-left: 10px;
+            left: 100%; }
+      #main.accueil #content article.top p {
+        -webkit-columns: 2;
+        -moz-columns: 2;
+        columns: 2;
+        /**********************************************************/ }
+        #main.accueil #content article.top p .firstletter {
           display: block;
-          height: 2px;
-          content: "";
-          width: 960px;
-          position: absolute;
-          top: 1.2em; }
-        #main.accueil #content article.top span:after {
-          margin-left: 10px;
-          left: 100%; }
+          float: left;
+          margin-top: -0.205em;
+          /* use -0.205em for two lines or -0.63em for three*/
+          margin-left: 0;
+          margin-right: 0.5em;
+          height: 2.5em; }
+        #main.accueil #content article.top p .firstletter span {
+          font-size: 3.33em;
+          /* use 3.33em for two lines or 5.6em for three */
+          line-height: 1.0em; }
+        #main.accueil #content article.top p .firstletter + span {
+          margin-left: -0.5em; }
     #main.accueil #content section.left {
       width: 60%;
       overflow: hidden;
