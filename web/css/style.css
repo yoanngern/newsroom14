@@ -761,6 +761,7 @@ section.smalltalks {
         -webkit-columns: 2;
         -moz-columns: 2;
         columns: 2;
+        /**********************************************************/
         /**********************************************************/ }
         #main.accueil #content article.top p .firstletter {
           display: block;
@@ -782,7 +783,9 @@ section.smalltalks {
       display: inline-block; }
       #main.accueil #content section.left article {
         margin-top: 10px;
-        margin-bottom: 30px; }
+        margin-bottom: 30px;
+        /**********************************************************/
+        /**********************************************************/ }
         #main.accueil #content section.left article h1 {
           text-align: left;
           overflow: hidden;
@@ -790,21 +793,35 @@ section.smalltalks {
           font-family: "dejavu_serifcondensed", times, serif;
           font-size: 2.5em;
           color: #652d2a; }
-        #main.accueil #content section.left article span {
-          display: inline-block;
-          position: relative; }
-          #main.accueil #content section.left article span:after {
-            border-top: 2px solid #652d2a;
-            display: block;
-            height: 2px;
-            content: "";
-            width: 960px;
-            position: absolute;
-            top: 1.2em;
-            width: 200px; }
-          #main.accueil #content section.left article span:after {
-            margin-left: 10px;
-            left: 100%; }
+          #main.accueil #content section.left article h1 span {
+            display: inline-block;
+            position: relative; }
+            #main.accueil #content section.left article h1 span:after {
+              border-top: 2px solid #652d2a;
+              display: block;
+              height: 2px;
+              content: "";
+              width: 960px;
+              position: absolute;
+              top: 1.2em;
+              width: 200px; }
+            #main.accueil #content section.left article h1 span:after {
+              margin-left: 10px;
+              left: 100%; }
+        #main.accueil #content section.left article .firstletter {
+          display: block;
+          float: left;
+          margin-top: -0.205em;
+          /* use -0.205em for two lines or -0.63em for three*/
+          margin-left: 0;
+          margin-right: 0.5em;
+          height: 2.5em; }
+        #main.accueil #content section.left article .firstletter span {
+          font-size: 3.33em;
+          /* use 3.33em for two lines or 5.6em for three */
+          line-height: 1.0em; }
+        #main.accueil #content section.left article .firstletter + span {
+          margin-left: -0.5em; }
         #main.accueil #content section.left article img {
           width: 100%; }
     #main.accueil #content section.right {
