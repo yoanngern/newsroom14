@@ -19,8 +19,6 @@ $articleMargin:15px;
 body {
   font-family: $font-text;
   font-size: 15px;
-  margin-top:70px;
-  margin-bottom:70px;
 
   #background {
     height: 100%;
@@ -52,7 +50,7 @@ body {
 
     img.logo {
       display: block;
-      margin: 10px auto 0;
+      margin: 30px auto 0;
     }
 
 
@@ -369,6 +367,7 @@ body {
     position: absolute;
     left: 0;
     width: 100%;
+      margin-top: 30px;
     section.footer_home {
       width: $bigWidth;
       overflow: hidden;
