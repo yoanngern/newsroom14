@@ -39,7 +39,7 @@ $(document).ready(function() {
                 var detail=$("<div>").addClass("detail").attr("style","display:none;");
 
                 if(description.text().length>10) detail.append(description);
-                if(link.text().length>40) detail.append(link);
+                if(link.text().length>10) detail.append(link);
                 if(adress.text().length>10)detail.append(adress);
                 if(phone.text().length>15) detail.append(phone);
 
