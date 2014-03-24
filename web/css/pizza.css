@@ -39,6 +39,10 @@ figure{
     position: relative;
 }
 
+.graph h2{
+    text-align:center;
+}
+
 .graph figure{
     width:450px;
     margin:auto;
@@ -49,6 +53,10 @@ figure{
     margin-bottom:20px;
     display:inline-block;
     position: relative;
+}
+
+.graphs h2{
+    text-align:center;
 }
 
 .graphs figure{
