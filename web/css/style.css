@@ -1,4 +1,4 @@
-@charset "CP850";
+@charset "UTF-8";
 /* RESET */
 html, body, div, ul, ol, li, dl, dt, dd, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, fieldset, input, abbr, article, aside, command, details, figcaption, figure, footer, header, hgroup, mark, meter, nav, output, progress, section, summary, time {
   margin: 0;
@@ -100,13 +100,13 @@ body {
   body #background {
     height: 100%;
     background-repeat: repeat;
-    width: 100%;
+    /*width: 100%;*/
     display: block;
     position: fixed;
     top: 0px;
     left: 0px;
     z-index: -5;
-    min-width: 960px; }
+    /*min-width: 960px;*/ }
   body p, body td {
     font-size: 1.3em;
     line-height: 1.25em;
@@ -164,6 +164,7 @@ body {
               position: absolute;
               pointer-events: none;
               border-color: rgba(101, 45, 42, 0);
+              border-bottom-color: #652d2a;
               border-width: 10px;
               margin-left: -10px; }
           body > header nav > ul > li:hover {
@@ -179,6 +180,7 @@ body {
               position: absolute;
               pointer-events: none; }
             body > header nav > ul > li:hover:after {
+              border-color: rgba(255, 255, 255, 0);
               border-color: rgba(0, 0, 0, 0);
               border-bottom-color: #ffffff;
               border-width: 10px;
@@ -190,7 +192,7 @@ body {
               margin-left: -14px; }
           body > header nav > ul > li.actif a, body > header nav > ul > li.actif h1 {
             color: #652d2a;
-            font-weight: bold; }
+            font-family: "dejavu_sansbold", helvetica, sans-serif; }
       body > header nav > ul.prob, body > header nav > ul.report {
         text-transform: none;
         display: none;
@@ -223,7 +225,6 @@ body {
           body > header nav > ul.prob li:hover, body > header nav > ul.report li:hover {
             position: relative; }
             body > header nav > ul.prob li:hover:after, body > header nav > ul.prob li:hover:before, body > header nav > ul.report li:hover:after, body > header nav > ul.report li:hover:before {
-              font-weight: bold;
               top: -15%;
               left: 50%;
               border: solid transparent;
@@ -244,7 +245,7 @@ body {
               margin-left: -14px; }
           body > header nav > ul.prob li.actif a, body > header nav > ul.report li.actif a {
             color: #652d2a;
-            font-weight: bold; }
+            font-family: "dejavu_sansbold", helvetica, sans-serif; }
   body > article {
     width: 960px;
     margin: 0 auto; }
@@ -408,7 +409,6 @@ body {
           border-bottom: 2px solid white;
           vertical-align: top; }
           body > footer #help #annuaireTheme section h1 {
-            font-weight: bold;
             font-family: "gentium_basicbold";
             font-size: 1.4em;
             color: #1a1a1a;
@@ -570,6 +570,16 @@ section.twothird > section {
         -ms-border-radius: 3px;
         -o-border-radius: 3px;
         border-radius: 3px; }
+    #main.annuaire article a {
+      padding: 0 0 0 5px !important;
+      margin-top: 10px;
+      display: block;
+      color: #652d2a;
+      font-size: 1.2em;
+      font-family: "gentium_basicbold", times, serif;
+      text-decoration: none; }
+      #main.annuaire article a:hover {
+        text-decoration: underline; }
 
 section.portrait {
   margin-top: 30px; }
@@ -634,6 +644,7 @@ section.smalltalks {
 #main.accueil {
   width: 1280px;
   margin-top: 30px;
+  overflow: hidden;
   /**********************************************************/ }
   #main.accueil #content {
     width: 960px;
@@ -808,7 +819,6 @@ section.smalltalks {
         color: #652d2a;
         font-family: "dejavu_serifcondensed", times, serif;
         text-decoration: none;
-        font-weight: bold;
         font-size: 2em;
         display: block;
         z-index: 9999; }
@@ -839,7 +849,7 @@ section.smalltalks {
         border-bottom: 1px solid #652d2a; }
         #main.accueil #sidebar .annuaire .result h2 {
           color: #652d2a;
-          font-weight: bold;
+          font-family: "gentium_basicbold", times, serif;
           font-size: 1.3em;
           cursor: pointer;
           margin-bottom: 5px; }
