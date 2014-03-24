@@ -625,11 +625,6 @@ section.twothird {
           font-family: $font-text-italic;
         }
       }
-      span.name {
-        text-transform: uppercase;
-        padding-top: 30px;
-        display: block;
-      }
     }
   }
 }
@@ -1091,22 +1086,28 @@ section.smalltalks {
 
   // End of Homepage
   /**********************************************************/
-
-
-  span.em {
+}
+span.name {
+        text-transform: uppercase;
+        margin-top: 1em;
+        display: block;
+    font-size: 1.1em;
+    text-align: left;
+}
+span.em {
     display: block;
     margin: 0.4em 0;
     font-family: $font-text-italic;
-  }
-  header.about {
+}
+header.about {
     &>h2 {
       font-family: $font-title-h2;
       font-size: 2em;
       margin-top: 20px;
 
     }
-  }
 }
+
 
 a {
   color: $red;
