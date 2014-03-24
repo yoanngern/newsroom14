@@ -958,9 +958,8 @@ section.smalltalks {
       margin-bottom: 10px;
       padding-left: 5px;
 
-      h1 {
+      h2 {
         text-align: left;
-        //color: $white;
         color:$red;
         font-family: $font-title-h1;
         background-color:$white;
@@ -969,6 +968,9 @@ section.smalltalks {
         font-size: 2em;
         display: block;
         z-index:9999;
+      }
+      a{
+        color:$red;
       }
       input {
         width: 90%;
