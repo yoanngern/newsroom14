@@ -41,7 +41,7 @@ $(document).ready(function() {
                 if(description.text().length>10) detail.append(description);
                 if(link.text().length>10) detail.append(link);
                 if(adress.text().length>10)detail.append(adress);
-                if(phone.text().length>17) detail.append(phone);
+                if(phone.text().length>7) detail.append(phone);
 
 
                 var result=$("<div>").addClass("result").attr("data-id",id).append(title).append(detail);
