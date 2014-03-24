@@ -170,7 +170,7 @@ body {
             position: relative;
             cursor: pointer; }
             body > header nav > ul > li:hover:after, body > header nav > ul > li:hover:before {
-              bottom: -122%;
+              bottom: -100%;
               left: 50%;
               border: solid transparent;
               content: " ";
@@ -224,7 +224,7 @@ body {
             position: relative; }
             body > header nav > ul.prob li:hover:after, body > header nav > ul.prob li:hover:before, body > header nav > ul.report li:hover:after, body > header nav > ul.report li:hover:before {
               font-weight: bold;
-              top: -32%;
+              top: -15%;
               left: 50%;
               border: solid transparent;
               content: " ";
@@ -641,26 +641,26 @@ section.smalltalks {
     margin: 0px; }
     #main.accueil #content article.top {
       margin: 40px auto;
-            /*
-            span {
-                display: inline-block;
-                position: relative;
+      /*
+      span {
+          display: inline-block;
+          position: relative;
 
-                &:after {
-                    border-top: $line solid $red;
-                    display: block;
-                    height: $line;
-                    content: "";
-                    width: $contentWidth;
-                    position: absolute;
-                    top: 1.2em;
-                }
+          &:after {
+              border-top: $line solid $red;
+              display: block;
+              height: $line;
+              content: "";
+              width: $contentWidth;
+              position: absolute;
+              top: 1.2em;
+          }
 
-                &:after {
-                    margin-left: 10px;
-                    left: 100%;
-                }
-            }*/ }
+          &:after {
+              margin-left: 10px;
+              left: 100%;
+          }
+      }*/ }
       #main.accueil #content article.top h1 {
         text-align: left;
         overflow: hidden;
@@ -687,22 +687,25 @@ section.smalltalks {
         -webkit-columns: 2;
         -moz-columns: 2;
         columns: 2;
-        /**********************************************************/
-        /**********************************************************/ }
-        #main.accueil #content article.top p .firstletter {
-          display: block;
-          float: left;
-          margin-top: -0.205em;
-          /* use -0.205em for two lines or -0.63em for three*/
-          margin-left: 0;
-          margin-right: 0.5em;
-          height: 2.5em; }
-        #main.accueil #content article.top p .firstletter span {
-          font-size: 3.33em;
-          /* use 3.33em for two lines or 5.6em for three */
-          line-height: 1.0em; }
-        #main.accueil #content article.top p .firstletter + span {
-          margin-left: -0.5em; }
+        /*
+          display      : block;
+          float        : left;
+          margin-top   : -0.205em;
+          margin-left  : 0;
+          margin-right : 0.5em;
+          height       : 2.5em;
+        }
+
+        .firstletter span{
+          font-size    : 3.33em;  
+          line-height  : 1.0em;
+        }
+
+        .firstletter + span{
+          margin-left  : -0.5em;
+        }
+        //end of Lettrine
+        */ }
     #main.accueil #content section.left {
       width: 60%;
       overflow: hidden;
@@ -710,8 +713,27 @@ section.smalltalks {
       #main.accueil #content section.left article {
         margin-top: 10px;
         margin-bottom: 50px;
-        /**********************************************************/
-        /**********************************************************/ }
+        /*
+        .firstletter{
+          display      : block;
+          float        : left;
+          margin-top   : -0.205em; 
+          margin-left  : 0;
+          margin-right : 0.5em;
+          height       : 2.5em;
+        }
+
+        .firstletter span{
+          font-size    : 3.33em;
+          line-height  : 1.0em;
+        }
+
+        .firstletter + span{
+          margin-left  : -0.5em;
+        }
+
+        //end of Lettrine
+        */ }
         #main.accueil #content section.left article h1 {
           text-align: left;
           overflow: hidden;
@@ -735,20 +757,6 @@ section.smalltalks {
             #main.accueil #content section.left article h1 span:after {
               margin-left: 10px;
               left: 100%; }
-        #main.accueil #content section.left article .firstletter {
-          display: block;
-          float: left;
-          margin-top: -0.205em;
-          /* use -0.205em for two lines or -0.63em for three*/
-          margin-left: 0;
-          margin-right: 0.5em;
-          height: 2.5em; }
-        #main.accueil #content section.left article .firstletter span {
-          font-size: 3.33em;
-          /* use 3.33em for two lines or 5.6em for three */
-          line-height: 1.0em; }
-        #main.accueil #content section.left article .firstletter + span {
-          margin-left: -0.5em; }
         #main.accueil #content section.left article img {
           width: 100%;
           margin: 10px auto; }
@@ -799,12 +807,15 @@ section.smalltalks {
         text-align: left;
         color: #652d2a;
         font-family: "dejavu_serifcondensed", times, serif;
-        background-color: white;
         text-decoration: none;
         font-weight: bold;
         font-size: 2em;
         display: block;
         z-index: 9999; }
+      #main.accueil #sidebar .annuaire h2 {
+        color: #652d2a; }
+      #main.accueil #sidebar .annuaire a {
+        color: #652d2a; }
       #main.accueil #sidebar .annuaire input {
         width: 90%;
         border-radius: 5px;
@@ -824,14 +835,16 @@ section.smalltalks {
         margin-top: 10px; }
       #main.accueil #sidebar .annuaire .result {
         padding-left: 5px;
-        margin-bottom: 10px; }
+        margin-bottom: 10px;
+        border-bottom: 1px solid #652d2a; }
         #main.accueil #sidebar .annuaire .result h2 {
-          color: white;
+          color: #652d2a;
           font-weight: bold;
           font-size: 1.3em;
-          cursor: pointer; }
+          cursor: pointer;
+          margin-bottom: 5px; }
         #main.accueil #sidebar .annuaire .result a {
-          color: white; }
+          color: #652d2a; }
         #main.accueil #sidebar .annuaire .result a:hover {
           color: lightgrey; }
       #main.accueil #sidebar .annuaire #search {

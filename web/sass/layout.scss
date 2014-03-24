@@ -786,18 +786,17 @@ section.smalltalks {
         @include x-columns(2);
 
         //Lettrine
-        /**********************************************************/
-        .firstletter{
+        /*
           display      : block;
           float        : left;
-          margin-top   : -0.205em; /* use -0.205em for two lines or -0.63em for three*/
+          margin-top   : -0.205em;
           margin-left  : 0;
           margin-right : 0.5em;
           height       : 2.5em;
         }
 
         .firstletter span{
-          font-size    : 3.33em;   /* use 3.33em for two lines or 5.6em for three */
+          font-size    : 3.33em;  
           line-height  : 1.0em;
         }
 
@@ -805,7 +804,7 @@ section.smalltalks {
           margin-left  : -0.5em;
         }
         //end of Lettrine
-        /**********************************************************/
+        */
       }
 
       /*
@@ -870,18 +869,18 @@ section.smalltalks {
         }//h1
 
         //Lettrine
-        /**********************************************************/
+        /*
         .firstletter{
           display      : block;
           float        : left;
-          margin-top   : -0.205em; /* use -0.205em for two lines or -0.63em for three*/
+          margin-top   : -0.205em; 
           margin-left  : 0;
           margin-right : 0.5em;
           height       : 2.5em;
         }
 
         .firstletter span{
-          font-size    : 3.33em;   /* use 3.33em for two lines or 5.6em for three */
+          font-size    : 3.33em;
           line-height  : 1.0em;
         }
 
@@ -890,7 +889,7 @@ section.smalltalks {
         }
 
         //end of Lettrine
-        /**********************************************************/
+        */
 
 
         img {
@@ -958,16 +957,18 @@ section.smalltalks {
       margin-bottom: 10px;
       padding-left: 5px;
 
-      h2 {
+      h1 {
         text-align: left;
         color:$red;
         font-family: $font-title-h1;
-        background-color:$white;
         text-decoration: none;
         font-weight: bold;
         font-size: 2em;
         display: block;
         z-index:9999;
+      }
+      h2{
+        color:$red;
       }
       a{
         color:$red;
