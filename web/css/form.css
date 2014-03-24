@@ -390,13 +390,28 @@ body {
       margin-top: 35px;
       margin: 0 auto;
       width: 960px;
-      text-align: left; }
+      text-align: left;
+      overflow: hidden; }
       body > footer #help h1 {
         font-family: "dejavu_serifcondensed", times, serif;
         font-size: 3.5em;
         color: white;
         display: inline-block;
         width: 100%; }
+        body > footer #help h1 span {
+          display: inline-block;
+          position: relative; }
+          body > footer #help h1 span:after {
+            border-top: 2px solid white;
+            display: block;
+            height: 2px;
+            content: "";
+            width: 960px;
+            position: absolute;
+            top: 1.2em; }
+          body > footer #help h1 span:after {
+            margin-left: 10px;
+            left: 100%; }
       body > footer #help #annuaireTheme {
         -webkit-columns: 3;
         -moz-columns: 3;
