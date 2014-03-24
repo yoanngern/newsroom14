@@ -116,7 +116,7 @@ body {
               position: absolute;
               pointer-events: none;
               border-color: rgba(101, 45, 42, 0);
-              //border-bottom-color: #652d2a;
+              border-bottom-color: #652d2a;
               border-width: 10px;
               margin-left: -10px;
             }
@@ -138,7 +138,7 @@ body {
             }
 
             &:after {
-              //border-color: rgba(255, 255, 255, 0);
+              border-color: rgba(255, 255, 255, 0);
               border-color: rgba(0, 0, 0, 0);
               border-bottom-color: #ffffff;
               border-width: 10px;
