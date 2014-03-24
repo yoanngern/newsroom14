@@ -1,7 +1,17 @@
 {% extends "::theme.html.twig" %}
 
 {% block stats %}
-    
+    <p>« 40% des 15-25 ans ressentent un sentiment de solitude »</p>
+    <figure>
+        <!--<img alt="" src="{{ asset('images/stats.png') }}" />-->
+        <div class="row">
+                <ul data-pie-id="pie">
+                    <li data-value="40"></li>
+                    <li data-value="60"></li>
+                </ul>
+                <div id="pie"></div>
+        </div>
+    </figure>
 {% endblock %}
 
 {% block lead %}
